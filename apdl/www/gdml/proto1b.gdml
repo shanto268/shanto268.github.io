@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<gdml xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://service-spi.web.cern.ch/service-spi/app/releases/GDML/schema/gdml.xsd">
+
+  <define/>
+
+  <materials>
+    <isotope N="12" Z="6" name="C120x7ff75758ee00">
+      <atom unit="g/mole" value="12"/>
+    </isotope>
+    <isotope N="13" Z="6" name="C130x7ff75758ea40">
+      <atom unit="g/mole" value="13.0034"/>
+    </isotope>
+    <element name="C0x7ff75758e700">
+      <fraction n="0.9893" ref="C120x7ff75758ee00"/>
+      <fraction n="0.0107" ref="C130x7ff75758ea40"/>
+    </element>
+    <isotope N="14" Z="7" name="N140x7ff75758b030">
+      <atom unit="g/mole" value="14.0031"/>
+    </isotope>
+    <isotope N="15" Z="7" name="N150x7ff75758e160">
+      <atom unit="g/mole" value="15.0001"/>
+    </isotope>
+    <element name="N0x7ff75758de00">
+      <fraction n="0.99632" ref="N140x7ff75758b030"/>
+      <fraction n="0.00368" ref="N150x7ff75758e160"/>
+    </element>
+    <isotope N="16" Z="8" name="O160x7ff75758db30">
+      <atom unit="g/mole" value="15.9949"/>
+    </isotope>
+    <isotope N="17" Z="8" name="O170x7ff75758d7c0">
+      <atom unit="g/mole" value="16.9991"/>
+    </isotope>
+    <isotope N="18" Z="8" name="O180x7ff75758d800">
+      <atom unit="g/mole" value="17.9992"/>
+    </isotope>
+    <element name="O0x7ff75758d440">
+      <fraction n="0.99757" ref="O160x7ff75758db30"/>
+      <fraction n="0.00038" ref="O170x7ff75758d7c0"/>
+      <fraction n="0.00205" ref="O180x7ff75758d800"/>
+    </element>
+    <isotope N="36" Z="18" name="Ar360x7ff75758ce30">
+      <atom unit="g/mole" value="35.9675"/>
+    </isotope>
+    <isotope N="38" Z="18" name="Ar380x7ff75758ca80">
+      <atom unit="g/mole" value="37.9627"/>
+    </isotope>
+    <isotope N="40" Z="18" name="Ar400x7ff75758d780">
+      <atom unit="g/mole" value="39.9624"/>
+    </isotope>
+    <element name="Ar0x7ff75758c740">
+      <fraction n="0.003365" ref="Ar360x7ff75758ce30"/>
+      <fraction n="0.000632" ref="Ar380x7ff75758ca80"/>
+      <fraction n="0.996003" ref="Ar400x7ff75758d780"/>
+    </element>
+    <material name="G4_AIR0x7ff7575de580" state="gas">
+      <T unit="K" value="293.15"/>
+      <MEE unit="eV" value="85.7"/>
+      <D unit="g/cm3" value="0.00120479"/>
+      <fraction n="0.000124000124000124" ref="C0x7ff75758e700"/>
+      <fraction n="0.755267755267755" ref="N0x7ff75758de00"/>
+      <fraction n="0.231781231781232" ref="O0x7ff75758d440"/>
+      <fraction n="0.0128270128270128" ref="Ar0x7ff75758c740"/>
+    </material>
+    <isotope N="12" Z="6" name="C120x7ff757589e60">
+      <atom unit="g/mole" value="12"/>
+    </isotope>
+    <isotope N="13" Z="6" name="C130x7ff757588800">
+      <atom unit="g/mole" value="13.0034"/>
+    </isotope>
+    <element name="Carbon0x7ff757588b40">
+      <fraction n="0.9893" ref="C120x7ff757589e60"/>
+      <fraction n="0.0107" ref="C130x7ff757588800"/>
+    </element>
+    <isotope N="1" Z="1" name="H10x7ff757588880">
+      <atom unit="g/mole" value="1.00782503081372"/>
+    </isotope>
+    <isotope N="2" Z="1" name="H20x7ff757551860">
+      <atom unit="g/mole" value="2.01410199966617"/>
+    </isotope>
+    <element name="Hydrogen0x7ff7560c5c00">
+      <fraction n="0.999885" ref="H10x7ff757588880"/>
+      <fraction n="0.000115" ref="H20x7ff757551860"/>
+    </element>
+    <material name="Scintillator0x7ff756f4af40" state="solid">
+      <T unit="K" value="293.15"/>
+      <MEE unit="eV" value="64.6844741120544"/>
+      <D unit="g/cm3" value="1.032"/>
+      <fraction n="0.914544377696929" ref="Carbon0x7ff757588b40"/>
+      <fraction n="0.0854556223030713" ref="Hydrogen0x7ff7560c5c00"/>
+    </material>
+    <isotope N="204" Z="82" name="Pb2040x7ff7560bda40">
+      <atom unit="g/mole" value="203.973"/>
+    </isotope>
+    <isotope N="206" Z="82" name="Pb2060x7ff7560bcd00">
+      <atom unit="g/mole" value="205.974"/>
+    </isotope>
+    <isotope N="207" Z="82" name="Pb2070x7ff7560bcd40">
+      <atom unit="g/mole" value="206.976"/>
+    </isotope>
+    <isotope N="208" Z="82" name="Pb2080x7ff7560bcd80">
+      <atom unit="g/mole" value="207.977"/>
+    </isotope>
+    <element name="Pb0x7ff7560bc9c0">
+      <fraction n="0.014" ref="Pb2040x7ff7560bda40"/>
+      <fraction n="0.241" ref="Pb2060x7ff7560bcd00"/>
+      <fraction n="0.221" ref="Pb2070x7ff7560bcd40"/>
+      <fraction n="0.524" ref="Pb2080x7ff7560bcd80"/>
+    </element>
+    <material name="lead0x7ff756072c40" state="solid">
+      <T unit="K" value="293.15"/>
+      <MEE unit="eV" value="823"/>
+      <D unit="g/cm3" value="11.34"/>
+      <fraction n="1" ref="Pb0x7ff7560bc9c0"/>
+    </material>
+  </materials>
+
+  <solids>
+    <box lunit="mm" name="RefPlane10x7ff7560a7fc0" x="998" y="998" z="2"/>
+    <box lunit="mm" name="TrayPlane10x7ff7560a6a80" x="600" y="600" z="2"/>
+    <box lunit="mm" name="TrayPlane20x7ff7560a5440" x="600" y="600" z="2"/>
+    <box lunit="mm" name="sBAR0x7ff75609f400" x="600" y="50" z="50"/>
+    <box lunit="mm" name="Tray10x7ff7560a4dd0" x="600" y="500" z="50"/>
+    <box lunit="mm" name="Station10x7ff7560a9340" x="2000" y="2000" z="1750.86"/>
+    <box lunit="mm" name="SC80x7ff7560aaa00" x="3000" y="3000" z="1750.86"/>
+    <box lunit="mm" name="TestObj0x7ff7560963c0" x="203.2" y="203.2" z="203.2"/>
+    <box lunit="mm" name="World0x7ff7560ab000" x="20000" y="20000" z="20000"/>
+  </solids>
+
+  <structure>
+    <volume name="RefPlane10x7ff7560a5740">
+      <materialref ref="G4_AIR0x7ff7575de580"/>
+      <solidref ref="RefPlane10x7ff7560a7fc0"/>
+    </volume>
+    <volume name="TrayPlane10x7ff7560a6700">
+      <materialref ref="G4_AIR0x7ff7575de580"/>
+      <solidref ref="TrayPlane10x7ff7560a6a80"/>
+    </volume>
+    <volume name="TrayPlane20x7ff7560a50c0">
+      <materialref ref="G4_AIR0x7ff7575de580"/>
+      <solidref ref="TrayPlane20x7ff7560a5440"/>
+    </volume>
+    <volume name="sBAR0x7ff75609f0c0">
+      <materialref ref="Scintillator0x7ff756f4af40"/>
+      <solidref ref="sBAR0x7ff75609f400"/>
+    </volume>
+    <volume name="Tray10x7ff7560a2e80">
+      <materialref ref="G4_AIR0x7ff7575de580"/>
+      <solidref ref="Tray10x7ff7560a4dd0"/>
+      <physvol name="sBAR0x7ff75609f470">
+        <volumeref ref="sBAR0x7ff75609f0c0"/>
+        <position name="sBAR0x7ff75609f470_pos" unit="mm" x="0" y="-225" z="0"/>
+      </physvol>
+      <physvol copynumber="1" name="sBAR0x7ff75609e760">
+        <volumeref ref="sBAR0x7ff75609f0c0"/>
+        <position name="sBAR0x7ff75609e760_pos" unit="mm" x="0" y="-175" z="0"/>
+      </physvol>
+      <physvol copynumber="2" name="sBAR0x7ff75609da60">
+        <volumeref ref="sBAR0x7ff75609f0c0"/>
+        <position name="sBAR0x7ff75609da60_pos" unit="mm" x="0" y="-125" z="0"/>
+      </physvol>
+      <physvol copynumber="3" name="sBAR0x7ff75609c680">
+        <volumeref ref="sBAR0x7ff75609f0c0"/>
+        <position name="sBAR0x7ff75609c680_pos" unit="mm" x="0" y="-75" z="0"/>
+      </physvol>
+      <physvol copynumber="4" name="sBAR0x7ff75609b980">
+        <volumeref ref="sBAR0x7ff75609f0c0"/>
+        <position name="sBAR0x7ff75609b980_pos" unit="mm" x="0" y="-25" z="0"/>
+      </physvol>
+      <physvol copynumber="5" name="sBAR0x7ff75609ac80">
+        <volumeref ref="sBAR0x7ff75609f0c0"/>
+        <position name="sBAR0x7ff75609ac80_pos" unit="mm" x="0" y="25" z="0"/>
+      </physvol>
+      <physvol copynumber="6" name="sBAR0x7ff756099f80">
+        <volumeref ref="sBAR0x7ff75609f0c0"/>
+        <position name="sBAR0x7ff756099f80_pos" unit="mm" x="0" y="75" z="0"/>
+      </physvol>
+      <physvol copynumber="7" name="sBAR0x7ff756099340">
+        <volumeref ref="sBAR0x7ff75609f0c0"/>
+        <position name="sBAR0x7ff756099340_pos" unit="mm" x="0" y="125" z="0"/>
+      </physvol>
+      <physvol copynumber="8" name="sBAR0x7ff756098640">
+        <volumeref ref="sBAR0x7ff75609f0c0"/>
+        <position name="sBAR0x7ff756098640_pos" unit="mm" x="0" y="175" z="0"/>
+      </physvol>
+      <physvol copynumber="9" name="sBAR0x7ff756097600">
+        <volumeref ref="sBAR0x7ff75609f0c0"/>
+        <position name="sBAR0x7ff756097600_pos" unit="mm" x="0" y="225" z="0"/>
+      </physvol>
+    </volume>
+    <volume name="Station10x7ff7560a9000">
+      <materialref ref="G4_AIR0x7ff7575de580"/>
+      <solidref ref="Station10x7ff7560a9340"/>
+      <physvol name="RefPlane10x7ff7560a8030">
+        <volumeref ref="RefPlane10x7ff7560a5740"/>
+      </physvol>
+      <physvol name="TrayPlane10x7ff7560a63c0">
+        <volumeref ref="TrayPlane10x7ff7560a6700"/>
+        <position name="TrayPlane10x7ff7560a63c0_pos" unit="mm" x="0" y="0" z="812.965"/>
+      </physvol>
+      <physvol name="TrayPlane20x7ff7560a4d80">
+        <volumeref ref="TrayPlane20x7ff7560a50c0"/>
+        <position name="TrayPlane20x7ff7560a4d80_pos" unit="mm" x="0" y="0" z="-812.965"/>
+      </physvol>
+      <physvol name="Tray10x7ff7560a2b40">
+        <volumeref ref="Tray10x7ff7560a2e80"/>
+        <position name="Tray10x7ff7560a2b40_pos" unit="mm" x="0" y="0" z="850.43"/>
+      </physvol>
+      <physvol copynumber="1" name="Tray10x7ff7560a1e80">
+        <volumeref ref="Tray10x7ff7560a2e80"/>
+        <position name="Tray10x7ff7560a1e80_pos" unit="mm" x="0" y="0" z="775.5"/>
+        <rotation name="Tray10x7ff7560a1e80_rot" unit="deg" x="0" y="0" z="90"/>
+      </physvol>
+      <physvol copynumber="2" name="Tray10x7ff7560a14e0">
+        <volumeref ref="Tray10x7ff7560a2e80"/>
+        <position name="Tray10x7ff7560a14e0_pos" unit="mm" x="0" y="0" z="-775.5"/>
+      </physvol>
+      <physvol copynumber="3" name="Tray10x7ff7560a0100">
+        <volumeref ref="Tray10x7ff7560a2e80"/>
+        <position name="Tray10x7ff7560a0100_pos" unit="mm" x="0" y="0" z="-850.43"/>
+        <rotation name="Tray10x7ff7560a0100_rot" unit="deg" x="0" y="0" z="90"/>
+      </physvol>
+    </volume>
+    <volume name="SC80x7ff7560aa6c0">
+      <materialref ref="G4_AIR0x7ff7575de580"/>
+      <solidref ref="SC80x7ff7560aaa00"/>
+      <physvol name="Station10x7ff7560a93b0">
+        <volumeref ref="Station10x7ff7560a9000"/>
+      </physvol>
+    </volume>
+    <volume name="TestObj0x7ff756096080">
+      <materialref ref="lead0x7ff756072c40"/>
+      <solidref ref="TestObj0x7ff7560963c0"/>
+    </volume>
+    <volume name="World0x7ff7560a7880">
+      <materialref ref="G4_AIR0x7ff7575de580"/>
+      <solidref ref="World0x7ff7560ab000"/>
+      <physvol name="SC80x7ff7560aa380">
+        <volumeref ref="SC80x7ff7560aa6c0"/>
+      </physvol>
+      <physvol name="TestObj0x7ff756096430">
+        <volumeref ref="TestObj0x7ff756096080"/>
+        <position name="TestObj0x7ff756096430_pos" unit="mm" x="0" y="0" z="1485.03"/>
+      </physvol>
+    </volume>
+  </structure>
+
+  <setup name="Default" version="1.0">
+    <world ref="World0x7ff7560a7880"/>
+  </setup>
+
+</gdml>
