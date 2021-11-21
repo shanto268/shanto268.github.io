@@ -554,19 +554,27 @@
                             <p> </p>
                         </li>
                         <li class="icon fa-line-chart">
-                            <h3>Stock Market Analysis and Personal Finance</h3>
+                            <h3>Stock Market and Personal Finance</h3>
                             <p></p>
                         </li>
                         <li class="icon fa-steam">
-                            <h3>Automaton Designing</h3>
+                            <h3>Automation</h3>
                             <p></p>
                         </li>
 
+                        <li class="icon fa-comment-o">
+                            <h3>Thinking</h3>
+                            <p></p>
+                        </li>
                         <li class="icon fa-cloud-upload">
                             <h3>Day Dreaming</h3>
                             <p> </p>
                         </li>
 
+                        <li class="fa icon feature fa-refresh ">
+                            <h3>Self Evaluation and Exploration</h3>
+                            <p> </p>
+                        </li>
                         <li class="icon fa-futbol-o">
                             <h3>Football (Soccer)</h3>
                             <p> </p>
