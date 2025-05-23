@@ -14,17 +14,17 @@ Being a small part of these organizations has left a big mark on me. Each experi
 ---
 
 ### Summer of Quantum in LA
-**Founding Director**  
+**Lead Organizer**  
 _Los Angeles, CA_  
 2025-Present  
 
-- Spearheaded a ten-week public engagement initiative to educate and inspire diverse audiences about quantum mechanics.
+- Founded and led a 10-week citywide public science initiative uniting USC, Caltech, UCLA, and local institutions to celebrate the International Year of Quantum (IYQ2025).
 
-- Organized events in collaboration with UCLA, Caltech, USC, and local partners as part of the International Year of Quantum Science and Technology.
+- Built and mobilized a 100+ volunteer team; oversaw programming, outreach, sponsorship, university partnerships, and community engagement across Los Angeles.
 
-- Designed programs to foster discussions among students, educators, researchers, industry professionals, and the entertainment sector.
+- Directed strategy and execution of multi-site events including public talks, lab tours, K–12 outreach, and community activations, reaching thousands of participants.
 
-- Led outreach efforts to make quantum science more accessible through interactive and innovative experiences.
+Interested in getting involved or supporting us? Find out more and sign up to volunteer or sponsor [here](https://quantum-la.social/).
 
 ---
 

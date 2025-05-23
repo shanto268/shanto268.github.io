@@ -58,7 +58,10 @@ _styles: >
   }
 ---
 
+> **Note:** This article is not yet complete 😭
+
 **This is work that I have done with Dr. Jia Li at Texas Tech University from January 2019 to May 2020. Dr. Li had to leave TTU and the US temporarily during the pandemic and we lost touch so we never got the chance to publish on this work. Nevertheless, find the article below as written during May of 2020.**
+
 
 # Abstract:
 

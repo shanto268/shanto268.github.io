@@ -5,68 +5,73 @@ description: Advanced Particle Detector Lab
 img: assets/img/research/apd/thumbnail.png
 importance: 2
 category: undergrad-research
+related_publications: true
 giscus_comments: true
 toc:
   sidebar: left
 ---
 
-This was my first real dive into science and research—an unforgettable experience that shaped how I approach problems, collaboration, and technology. I got to be part of something much bigger than myself, surrounded by brilliant people, building actual instruments that detect particles from space. It doesn’t get cooler than that.
+**Feb 2018 - July 2021**
 
-I’m deeply grateful to the lab, the professors (Dr. Akchurin and Dr. Kunori - UNBELIEVABLY AMAZING INDIVIDUALS), and my wonderful colleagues—none of this would’ve been possible without their mentorship, patience, and support. One day, when I *do* have the moneys™, I promise I’ll help fund projects like this.
+This project was my entry point into the world of research—and it couldn't have been a better beginning. It was the first time physics stopped being just equations on a page and became something concrete, experimental, and real. I learned what it means to build hardware from the ground up, to collaborate in a lab where ideas move fast and hands do the work, and to chase questions that don't yet have answers. We were a small team building muon telescopes that could see through dense structures using nothing but cosmic rays.
+
+Dr. Akchurin and Dr. Kunori were more than just exceptional scientists—they were patient, generous mentors who took the time to guide and challenge us. The lab became a foundation for how I think, work, and learn. A lot of what I do now traces back to that time. And one day, when I'm in a position to do so, I hope to support projects like this—because they open doors the way this one did for me.
+
 
 ## Project at-a-glance:
 
-We built compact, modular **muon telescopes** capable of detecting cosmic ray muons to perform 3D imaging of dense objects—a technique known as **muon tomography**. These telescopes use plastic scintillators, light guides (like Winston cones), and silicon photomultipliers (SiPMs) to detect particle tracks, and software pipelines to reconstruct internal structures of scanned volumes.
+We developed portable, modular **muon telescopes** for high-resolution 3D imaging of dense structures via **muon tomography** {% cite 10.1063/10.0002046%}. By measuring how atmospheric muons scatter and lose energy while traversing materials, we could reconstruct internal densities—noninvasively, and with remarkable precision. These devices combined plastic scintillators, custom optical concentrators, SiPMs or PMTs, and complex software pipelines for event reconstruction.
 
-## My Involvement: 
+## What I Did:
 
-We got a paper out for **Prototype v1** [{% cite 10.1063/10.0002046 %}]—not exactly Pulitzer material, but hey, it's peer-reviewed and it's real. That said, the majority of what I worked on didn't make it into a formal publication (classic research life), so this docsite is a tribute to all that off-paper but not-off-value work.
+I wore many hats on this project—experimentalist, programmer, detector builder, problem solver—and somewhere in the middle of it all, both my love for experimental physics *and* my life as a programmer began. This was the first time physics stopped being abstract and became something hands-on, messy, and deeply rewarding. I joined the [**Advanced Particle Detector Lab**](https://www.depts.ttu.edu/phas/apdl/) during my sophomore year to get experience in real experimental physics—and I’ve been part of it ever since.
 
-### Winston-Cones:
+There’s no way I can explain everything I did here in any reasonable amount of time, but find below a rough sketch. Beyond any specific task, the most valuable thing I learned was how to **debug complex systems**—to think clearly when nothing is working, isolate failure modes, and engineer around chaos. That, and the eternal truth: **Vim >> Emacs**.
 
-I contributed to the design and manufacturing process of Winston cones—non-imaging light concentrators that guide photons from scintillators into SiPMs with minimal loss. We prototyped multiple geometries and reflective coatings to optimize light collection efficiency.
+- **Optics and Signal Efficiency:** Started in the optics wing, where I helped design custom Winston cones to improve light collection. I fabricated over 50 scintillator bars, calibrated and installed 40 SiPMs and 44 PMTs, and increased our photon yield from ~20% to ~78%.
 
-### Monte-Carlo Simulations:
+- **Telescope Hardware & Assembly:** Led the electrical and mechanical assembly of the full muon telescope system during the summer of 2019. Built and calibrated over 80 detection channels using SiPMs and PMTs, and learned practical fabrication and CAD skills in the process.
 
-I ran Geant4-based Monte Carlo simulations to understand particle trajectories, energy deposition profiles, and optimize detector geometry for different target materials. These simulations informed design tweaks and shielding strategies.
+- **DAQ Systems (Arduino + CAMAC):** Developed the full data acquisition stack. Initially worked with Arduino-based DAQ and resolved severe bottlenecks by implementing a multithreaded sync mechanism. Later, transitioned to a **CAMAC-based system** and integrated FPGAs, reducing channel deadtime by ~300x. Codebases: [Arduino DAQ](https://github.com/shanto268/data_acquisition_code_arduino_ttumuon), [CAMAC Crates](https://github.com/shanto268/CrateCode), [DAQ Framework](https://github.com/shanto268/HEP_DAQ), and [Crate Analysis](https://github.com/shanto268/CrateAnalysis).
 
-### Readout Electronics Setup:
+- **Geant4 Simulations:** Validated our detector design and experimental results through extensive Monte Carlo simulations. Contributed to modeling of scattering and absorption: [Prototype 1B](https://github.com/shanto268/mc_prototype_1b), [Prototype 2](https://github.com/shanto268/mc_prototype_2), [Two-Tray System](https://github.com/shanto268/mc_simulation_two_tray_system), and [WTP-focused MC](https://github.com/shanto268/monte_carlo_sim_muon_detector-wtp).
 
-Helped build and debug the entire readout chain: custom amplifier boards, biasing circuits for SiPMs, digitizers, and a triggering logic system. Got a crash course in signal integrity, grounding nightmares, and just how noisy the real world is.
+- **GUI-Driven Simulation Tools:** Built an interactive front-end for rapid geometry testing in Geant4: [muon simulation GUI](https://github.com/shanto268/mc_simulation_wtp_gui).
 
-### Prototype v1 Assembly and Data Taking:
+- **Signal Processing & Event Reconstruction:** Designed the analysis pipeline for converting raw signals to usable muon flux maps. Developed [event reconstruction and visualization tools](https://github.com/shanto268/event_display), along with [scattering analysis](https://github.com/shanto268/scattering_absorption_analysis) and [raw data analysis scripts](https://github.com/shanto268/muon_analysis_code_experimental_data_ttumuon).
 
-I was on the team that physically assembled and deployed the first working version of the telescope. We ran calibration routines using cosmic muons and radioactive sources, and collected the data used in our first publication.
+- **Imaging & Contrast Enhancement:** Used contrast ratio methods for material discrimination: [ratio plot analysis](https://github.com/shanto268/ratio_plot_water_tower).
 
-### Prototype v2 Assembly:
+- **Machine Learning for Tomography:** Proposed and implemented the use of **Recurrent Neural Networks (RNNs)** and **LSTMs** to recover and interpolate missing hit data, improving the resolution of muon images by reducing data discards by 85%. Related repos: [focus stacking](https://github.com/shanto268/focus-stacking), [photon time studies](https://github.com/shanto268/PhotonTimeStudies), and [object detection analysis](https://github.com/shanto268/object_detection_analysis).
 
-Led much of the mechanical integration work for Prototype v2. This version was sleeker, more modular, and easier to align. Learned the joys of 3D CAD, acrylic machining, and adhesive regrets.
-
-### Prototype v2 DAQ Setup:
-
-Wrote Python scripts for automated data acquisition, timestamp synchronization, and hit reconstruction. Also implemented remote monitoring tools to keep tabs on the system during long runs.
-
-### Muon Tomography Software:
-
-Contributed to developing the 3D reconstruction pipeline: from raw hit processing to event filtering and voxel-wise tomographic inversion. Integrated statistical priors for noise suppression and improved spatial resolution.
-
-### Muon2Photon Analysis with RNNs:
-
-Started an exploratory project using recurrent neural networks to classify muon events and distinguish them from potential gamma/electron backgrounds. Early results were promising, but this was cut short before full deployment.
-
-### 3D Tomograph Generation:
-
-Helped render 3D tomographic images of scanned objects. Used voxel-based mapping techniques and visualized reconstructed densities using custom OpenGL and matplotlib pipelines. Looked pretty. Felt cooler.
 
 ## Presentations:
 
-- Poster and oral presentation at [insert conference name]
-- Internal lab seminars and demo day showcases
-- Outreach talk for high school students interested in physics
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <iframe src="../../assets/img/research/apd/aps.pdf" width="100%" height="600px" class="rounded z-depth-1">
+        </iframe>
+    </div>
+</div>
 
-## Achievements and Awards:
+- APS March Meeting 2021 — Oral Presentation
+- Texas Tech Physics Colloquium 2021
+- APS Texas Section 2020 — Poster (UT Arlington)
+- APS Texas Section 2019 — Poster (Texas Tech University)
+- APS Far West Section 2019 (Stanford University) — Poster
+- TTU Virtual Research Conference 2020 — Oral Presentation
 
-- Undergraduate Research Grant Recipient
-- Best Poster Award at [insert applicable event]
-- Invited speaker at [insert if any]
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        <iframe src="../../assets/img/research/apd/poster.pdf" width="100%" height="600px" class="rounded z-depth-1">
+        </iframe>
+    </div>
+</div>
 
+## Awards:
+
+- TRUE Undergraduate Research Travel Award (2019)
+- APS Travel Award (2019)
+- First Place Poster, TTU Physics Department Poster Competition (2019)
+- Outstanding Poster, APS Texas Section (2019) 
+- Honorable Mention, APS Far West Section (2019)

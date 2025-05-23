@@ -10,6 +10,7 @@ toc:
   sidebar: left
 ---
 
+**Spring 2020**
 
 This [project repository](https://github.com/shanto268/BangTheDiceGame) is for an OOP project that we had for our OOP course. We had to recreate a GUI Bang! the Dice Game using JAVA. This repository contains our attempt.
 

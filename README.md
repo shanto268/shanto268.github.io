@@ -4,10 +4,5 @@ My website using the [al-folio](https://github.com/alshedivat/al-folio) template
 
 ## To Do:
 
-- [ ] update school projects
-- [ ] finalize CV page
-- [ ] add Jia Li project to cv
-- [ ] update LFL projects
 - [ ] deploy on github pages
 - [ ] link to my domain
-- [ ] add `https://github.com/souzatharsis/podcastfy` mp3's to projects page
