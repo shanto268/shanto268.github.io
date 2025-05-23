@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://sadmanahmedshanto.com/sitemap.xml
+Sitemap: https://shanto268.github.io/sitemap.xml
