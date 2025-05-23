@@ -4,5 +4,4 @@ My website using the [al-folio](https://github.com/alshedivat/al-folio) template
 
 ## To Do:
 
-- [ ] deploy on github pages
-- [ ] link to my domain
+- [ ] update techMRT and QP projects
