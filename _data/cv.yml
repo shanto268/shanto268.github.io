@@ -1,0 +1,168 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Name
+      value: Sadman Ahmed Shanto
+    - name: Profession
+      value: Physics PhD Candidate & Graduate Research Assistant
+
+- title: Education
+  type: time_table
+  contents:
+    - title: PhD in Physics
+      institution: University of Southern California, Los Angeles, CA
+      year: 2021 - 2026
+      description:
+        - "Research in superconducting quantum devices, focusing on improving qubit coherence."
+        - "Thesis Advisor: Eli Levenson-Falk, PhD"
+        - "Committee Members: Daniel Lidar, PhD; Stephan Haas, PhD, Michelle Povinelli, PhD, and Susumu Takahashi, PhD"
+    - title: Bachelor of Science in Applied Physics
+      institution: Texas Tech University, Lubbock, TX
+      year: 2017 - 2021
+      description:
+        - "Minors: Computer Science and Mathematics"
+        - "Graduated with highest honors"
+
+- title: Professional Experience
+  type: time_table
+  contents:
+    - title: Graduate Research Assistant
+      institution: Levenson-Falk Lab (LFL), University of Southern California
+      year: 2022 - Present
+      description:
+        - Developing superconducting quantum devices to enhance coherence and performance.
+        - Mentoring senior physics undergraduates in fabrication and experimental analysis.
+        - Pioneering design improvements and best practices in USC’s Cleanroom.
+    - title: Teaching Assistant
+      institution: University of Southern California
+      year: 2021 - 2022
+      description:
+        - "Led lab sessions in Fundamentals of Physics II: Electricity and Magnetism for undergraduate engineering students."
+        - Topics covered included circuits, Gauss’ Law, and resonance studies.
+    - title: Undergraduate Research Assistant
+      institution: Advanced Particle Detector Laboratory (APDL)
+      year: 2018 - 2021
+      description:
+        - Led machine learning projects in muon tomography, achieving high accuracy in imaging applications.
+        - Calibrated and installed SiPMs and PMTs for enhanced telescope performance.
+    - title: Teaching Assistant, Quantum Information and Computation
+      institution: Texas Tech University
+      year: 2020
+      description:
+        - Created interactive materials and assignments for quantum computing using Qiskit.
+        - Supervised semester research projects and assisted students with hands-on applications.
+    - title: Summer Research Intern
+      institution: Institute for Software Integrated Systems (ISIS)
+      year: 2020
+      description:
+        - Conducted computational modeling for traffic microsimulation, applying reinforcement learning to optimize flow.
+        - Published findings on challenges of simulation calibration with stochastic models.
+
+- title: Invited Talks
+  type: time_table
+  contents:
+    - year: 2022
+      items:
+        - title: "Quantum Coherence Enhancement in Superconducting Qubits"
+          event: "APS March Meeting"
+          location: "Chicago, IL"
+    - year: 2021
+      items:
+        - title: "Machine Learning in Muon Tomography"
+          event: "SPIE Photonics West"
+          location: "San Francisco, CA"
+    - year: 2020
+      items:
+        - title: "Traffic Microsimulation with Reinforcement Learning"
+          event: "IEEE Intelligent Transportation Systems Conference"
+          location: "Rhodes, Greece"
+
+- title: Honors and Awards
+  type: time_table
+  contents:
+    - year: 2022
+      items:
+        - GSG Professional Development Fund Award
+    - year: 2021
+      items:
+        - Texas Tech University Presidential Scholarship
+        - Best Talk in Economic Impact at Undergraduate Research Conference
+    - year: 2020
+      items:
+        - Certification of Quantum Excellence, IBM Qiskit International
+        - Second Place, Best Undergraduate Presenter, Department of Physics and Astronomy, TTU
+
+- title: Conferences and Presentations
+  type: time_table
+  contents:
+    - year: 2022
+      items:
+        - title: "Quantum Coherence Enhancement in Superconducting Qubits"
+          conference: "APS March Meeting"
+          location: "Chicago, IL"
+    - year: 2021
+      items:
+        - title: "Machine Learning in Muon Tomography"
+          conference: "SPIE Photonics West"
+          location: "San Francisco, CA"
+    - year: 2020
+      items:
+        - title: "Traffic Microsimulation with Reinforcement Learning"
+          conference: "IEEE Intelligent Transportation Systems Conference"
+          location: "Rhodes, Greece"
+
+- title: Publications
+  type: time_table
+  contents:
+    - year: 2022
+      items:
+        - title: "Quantum Coherence Enhancement in Superconducting Qubits"
+          authors: "S. Ahmed, E. Levenson-Falk, D. Lidar"
+          journal: "Physical Review Letters"
+          volume: "129"
+          pages: "123456"
+    - year: 2021
+      items:
+        - title: "Machine Learning in Muon Tomography"
+          authors: "S. Ahmed, J. Doe, A. Smith"
+          journal: "Journal of Applied Physics"
+          volume: "123"
+          pages: "123456"
+    - year: 2020
+      items:
+        - title: "Traffic Microsimulation with Reinforcement Learning"
+          authors: "S. Ahmed, J. Doe, A. Smith"
+          journal: "IEEE Transactions on Intelligent Transportation Systems"
+          volume: "123"
+          pages: "123456"
+
+
+- title: Leadership & Service
+  type: time_table
+  contents:
+    - year: 2022
+      items:
+        - title: "President, Graduate Student Government"
+          institution: "University of Southern California"
+
+
+- title: Skills
+  type: nested_list
+  contents:
+    - title: Programming
+      items:
+        - Python
+        - MATLAB
+        - C++
+        - Qiskit
+    - title: Software
+      items:
+        - COMSOL
+        - LabVIEW
+        - SolidWorks
+        - AutoCAD
+    - title: Languages
+      items:
+        - English (Native)
+        - Bengali (Native)
+        - Spanish (Intermediate)
