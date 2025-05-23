@@ -1,0 +1,33 @@
+# github_users:
+#  - shanto268
+repo_description_lines_max: 2
+
+github_repos:
+  # - LFL-Lab/SQuADDS
+  - shanto268/lab_manager
+  - shanto268/DishCord
+  # - shanto268/where_at
+  - shanto268/summer-of-quantum-LA-2025
+  - shanto268/lfl_fridge_monitoring
+  - shanto268/QuantumDeviceSEM
+  - shanto268/markdown2calendar
+  - shanto268/insta_llama_grub
+  - shanto268/pyNote
+  - shanto268/SuperPass
+  - shanto268/pushover_notifier
+  - shanto268/snip2tex
+  - shanto268/SPC_ClassScheduler_WebApp
+  - shanto268/research_logger_reporter
+  - shanto268/custom_mass_email
+  - shanto268/mobile_sensor_project
+  - shanto268/PhotonTimeStudies
+  - shanto268/event_display
+  - shanto268/sas_math_software
+  # - shanto268/geometrical_optics
+  # - shanto268/BangTheDiceGame
+  - shanto268/HealthCareSystems
+  # - shanto268/Hospital-Management-System
+  - shanto268/generation_of_natural_trees_from_fractals
+  - shanto268/Car_Following_Model_Simulation_Optimization_and_Analysis
+  - shanto268/whatsapp_image_fixer
+  - shanto268/information_encoding_prime_numbers
