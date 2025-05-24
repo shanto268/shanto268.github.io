@@ -5,6 +5,7 @@ description: Open Quantum Systems Course @ USC
 img: assets/img/research/academic/oqs_thumbnail.png
 importance: 5
 category: classes
+citation: True
 giscus_comments: true
 toc:
   sidebar: left

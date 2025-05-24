@@ -5,3 +5,5 @@ My website using the [al-folio](https://github.com/alshedivat/al-folio) template
 ## To Do:
 
 - [ ] update techMRT and QP projects
+- [ ] add slider for tomograms in apdl
+- [ ] add charts/plots for other projects

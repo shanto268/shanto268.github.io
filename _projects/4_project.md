@@ -5,6 +5,7 @@ description: Center for Multidisciplinary Research in Traffic
 img: assets/img/research/academic/techmrt_thumbnail.png
 importance: 4
 category: undergrad-research
+citation: True
 giscus_comments: true
 date: 2020-04-05
 

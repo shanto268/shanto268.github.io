@@ -5,6 +5,7 @@ description: Mechanics Course @ USC
 img: assets/img/research/academic/mechanics_thumbnail.png
 importance: 5
 category: classes
+citation: True
 giscus_comments: true
 toc:
   sidebar: left

@@ -6,6 +6,7 @@ img: assets/img/research/academic/math-ttu_thumbnail.png
 importance: 6
 category: classes
 giscus_comments: true
+citation: True
 date: 2018-10-01
 
 authors:

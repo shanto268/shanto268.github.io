@@ -6,6 +6,7 @@ img: assets/img/research/academic/oop_thumbnail.png
 importance: 7
 category: classes
 giscus_comments: true
+citation: True
 toc:
   sidebar: left
 ---
