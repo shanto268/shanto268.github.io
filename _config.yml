@@ -136,7 +136,7 @@ related_blog_posts:
 giscus:
   repo: shanto268/discussions # <your-github-user-name>/<your-github-repo-name>
   repo_id: R_kgDONLDRlA # leave empty or specify your repo_id (see https://giscus.app/)
-  category: General# name of the category under which discussions will be created
+  category: General # name of the category under which discussions will be created
   category_id: DIC_kwDONLDRlM4CkA6Z # leave empty or specify your category_id (see https://giscus.app/)
   mapping: pathname # identify discussions by post title
   strict: 1 # use strict identification mode
