@@ -40,6 +40,7 @@ There is no doubt in my mind that one day I will be running my own business. I r
 - We recognize great value is created on top of networks
 - We would much rather starve than serve the enemies of America
 - We want "busy bees" - folks whose task is to explore random opportunities for no short term gain but simply to get exposure to positive luck
+- If we are providing a service where women and children don't feel safe - WE ARE DOING THINGS WRONG!
 - My company and its constituents will come first over me. ALWAYS.
 
 Please remember, these are just my personal thoughts at time $$t$$, where $$t$$ denotes the current point in my mental timeline, subject to stochastic jumps, non-Markovian memory effects, and frequent Bayesian updates. All opinions are therefore functions of $$t$$ and may be discontinuous and non-differentiable. They don’t represent the views of any organization, past, present, or future, and shouldn’t be taken as advice or policy. I’ll do my best to keep this list updated as I grow and change myself :)
