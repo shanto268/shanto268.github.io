@@ -34,6 +34,16 @@
     }
   ],
   "work": [
+   {
+      "name": "Quantum Elements Inc.",
+      "position": "Summer Research Intern",
+      "location": "Thousand Oaks, CA, USA",
+      "startDate": "2025-05-01",
+      "endDate": "2025-08-31",
+      "highlights": [
+        "Developing core components of Quantum Elements' AI-native quantum OS for scalable simulation, hardware optimization, and real-time control (projects under NDA)."
+      ]
+    },
     {
       "name": "Levenson-Falk Lab (LFL), University of Southern California",
       "position": "Graduate Research Assistant",
@@ -859,12 +869,13 @@
     {
       "name": "A Review of Design Concerns in Superconducting Quantum Circuits",
       "publisher": "Materials for Quantum Technology",
-      "releaseDate": "2025", // Note: The original entry does not have a specific date, only a year.
-      "doi": "arXiv:2411.16967", // Since there's no DOI, using the arXiv identifier.
-      "url": "https://arxiv.org/abs/2411.16967",
+      "releaseDate": "2025",
+      "doi": "10.1088/2633-4356/ade10d",
+      "url": "https://iopscience.iop.org/article/10.1088/2633-4356/ade10d",
       "authors": ["Eli M. Levenson-Falk", "Sadman Ahmed Shanto"],
       "summary": "An invited review paper on design concerns in superconducting quantum circuits, to be published in Materials for Quantum Technology.",
-      "pdf": "https://arxiv.org/abs/2411.16967"
+      "pdf": "https://iopscience.iop.org/article/10.1088/2633-4356/ade10d/pdf",
+      "arxiv": "2411.16967"
     },
 
     {
