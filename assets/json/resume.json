@@ -34,6 +34,16 @@
     }
   ],
   "work": [
+    {
+      "name": "Google",
+      "position": "Research Intern",
+      "location": "Mountain View, CA, USA",
+      "startDate": "2024-09-01",
+      "endDate": "Present",
+      "highlights": [
+        "SR @ Google Quantum AI"
+      ]
+    },
    {
       "name": "Quantum Elements Inc.",
       "position": "Summer Research Intern",
