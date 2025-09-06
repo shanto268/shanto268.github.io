@@ -1,0 +1,41 @@
+# About Me
+
+Sadman Ahmed Shanto is a PhD candidate in Physics at the University of Southern California, focusing on quantum hardware. He is currently a Research Intern at Google Quantum AI. He received his BSc in Applied Physics with minors in Math and Computer Science from Texas Tech University in 2021. Since 2022, he has been a Graduate Research Assistant at the Levenson-Falk Lab.
+
+# Research Projects
+
+## SQuADDS (Superconducting Qubit And Device Design and Simulation)
+An open-source database project to advance research in superconducting quantum device designs. It provides a workflow for generating and simulating device designs to predict Hamiltonian parameters accurately.
+- **Paper**: [SQuADDS: A Database for Superconducting Quantum Device Design and Simulation](https://quantum-journal.org/papers/q-2024-09-09-1465/)
+- **GitHub**: [https://github.com/LFL-Lab/SQuADDS](https://github.com/LFL-Lab/SQuADDS)
+- **Docsite**: [https://lfl-lab.github.io/SQuADDS/](https://lfl-lab.github.io/SQuADDS/)
+- **Hugging Face**: [https://huggingface.co/datasets/SQuADDS/SQuADDS_DB](https://huggingface.co/datasets/SQuADDS/SQuADDS_DB)
+
+## Understanding Quasiparticles (Levenson-Falk Lab)
+
+## Muon Telescopes (Advanced Particle Detector Lab)
+- **Feb 2018 - July 2021**: Developed portable, modular muon telescopes for 3D imaging of dense structures using muon tomography. This involved designing optics, building and calibrating detectors, developing DAQ systems, running Geant4 simulations, and implementing machine learning for tomography.
+
+## Microsimulation Traffic Calibration (Institute For Software Integrated Systems)
+- **Summer 2020**: Worked on calibrating traffic models using aggregate data to study individual driver behavior and mitigate phantom traffic jams.
+
+## Self-Driving Car Behavior Modelling (Center for Multidisciplinary Research in Traffic)
+- **Jan 2019 - May 2020**: Investigated spontaneous platoon formation in heterogeneous traffic flow with human-driven and autonomous vehicles using a Cellular Automata model.
+
+# Class Projects
+
+- **Experimentally Verified Design and Simulation of Fluxonium Systems** (Fall 2023)
+- **Charge Noise Modeling in a Trimon System** (Spring 2023)
+- **Quantum Wells and Resonant Tunneling** (Fall 2022)
+- **Koopman Operator Theory for Dynamical Systems** (Fall 2021)
+- **Quantum Random Walks and VQE** (Spring 2021)
+- **Bang!: The Dice Game** (Spring 2020)
+- **Transmittance of Light through Air-Water Boundaries at Different Optical Depths** (Fall 2018)
+- **Physics Lab** (Intermediate Physics Lab Course @ TTU)
+
+# Personal Interests
+
+Shanto is passionate about technology, business and philosophy. He enjoys exploring Los Angeles, urbanism, and thinking deeply about various topics. He loves documentaries, world history, and long conversations with friends. He also enjoys soccer, long walks, and biking. He is inspired by great minds in math, science, engineering, philosophy, and business.
+
+## Business Values
+- A list of personal values he hopes to implement in a future business, emphasizing initiative, ownership, kindness, and innovation.

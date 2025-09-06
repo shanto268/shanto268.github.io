@@ -30,4 +30,4 @@ In 2021, I received my BSc in Applied Physics with minors in Math and Computer S
 
 Since 2022, I have been having the time of my life deep in the quantum trenches at the [Levenson-Falk Lab](https://dornsife.usc.edu/lfl/) as a Graduate Research Assistant. 
 
-Presently, I am at Google Quantum AI working as a Research Intern.
+Presently, I am at [Google Quantum AI](https://quantumai.google/) working as a Research Intern.
