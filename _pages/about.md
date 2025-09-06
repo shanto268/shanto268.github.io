@@ -28,4 +28,6 @@ I am Shanto, a PhD candidate in Physics (focusing on quantum hardware) at the Un
 
 In 2021, I received my BSc in Applied Physics with minors in Math and Computer Science from Texas Tech University 🔴⚫️
 
-Since 2022, I have been having the time of my life deep in the quantum trenches at the [Levenson-Falk Lab](https://dornsife.usc.edu/lfl/) as a Graduate Research Assistant
+Since 2022, I have been having the time of my life deep in the quantum trenches at the [Levenson-Falk Lab](https://dornsife.usc.edu/lfl/) as a Graduate Research Assistant. 
+
+Presently, I am at Google Quantum AI working as a Research Intern.

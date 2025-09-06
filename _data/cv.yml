@@ -26,6 +26,11 @@
 - title: Professional Experience
   type: time_table
   contents:
+    - title: Research Intern
+      institution: Google, Mountain View, CA
+      year: August 2025 - Present
+      description:
+        - SR @ Google Quantum AI
     - title: Graduate Research Assistant
       institution: Levenson-Falk Lab (LFL), University of Southern California
       year: 2022 - Present
