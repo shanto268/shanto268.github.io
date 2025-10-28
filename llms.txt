@@ -1,6 +1,6 @@
 # About Me
 
-Sadman Ahmed Shanto is a PhD candidate in Physics at the University of Southern California, focusing on quantum hardware. He is currently a Research Intern at Google Quantum AI. He received his BSc in Applied Physics with minors in Math and Computer Science from Texas Tech University in 2021. Since 2022, he has been a Graduate Research Assistant at the Levenson-Falk Lab.
+Sadman Ahmed Shanto is a PhD candidate in Physics at the University of Southern California, focusing on quantum hardware. He is currently a Research Intern at Google Quantum AI, working on R&D for Quantum Processors. He received his BSc in Applied Physics with minors in Math and Computer Science from Texas Tech University in 2021. Since 2022, he has been a Graduate Research Assistant at the Levenson-Falk Lab.
 
 # Research Projects
 
@@ -21,6 +21,9 @@ An open-source database project to advance research in superconducting quantum d
 
 ## Self-Driving Car Behavior Modelling (Center for Multidisciplinary Research in Traffic)
 - **Jan 2019 - May 2020**: Investigated spontaneous platoon formation in heterogeneous traffic flow with human-driven and autonomous vehicles using a Cellular Automata model.
+
+## AI-Driven Quantum Experimentation (Quantum Elements Inc.)
+- **Summer 2025**: Engineered a production-ready agentic AI framework for autonomous calibration of quantum experiments, including architecting and deploying the full-stack backend infrastructure on AWS.
 
 # Class Projects
 
