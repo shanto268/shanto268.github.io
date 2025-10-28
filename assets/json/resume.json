@@ -51,7 +51,9 @@
       "startDate": "2025-05-01",
       "endDate": "2025-08-22",
       "highlights": [
-        "Developing core components of Quantum Elements' AI-native quantum OS for scalable simulation, hardware optimization, and real-time control (projects under NDA)."
+        "Engineered a production-ready agentic AI framework with multi-agent coordination, evaluation, and tracing pipelines for autonomous calibration and diagnostics of superconducting quantum experiments.",
+        "Architected and deployed full-stack backend infrastructure—custom APIs, scalable databases, and containerized microservices on AWS—integrating Quantum Elements’ ML models, simulators, and databases with the AI agent ecosystem.",
+        "Built the infrastructure enabling autonomous execution of superconducting quantum experiments, allowing AI agents to calibrate, measure, diagnose, and analyze results through integrated MCP servers and ML-driven control workflows."
       ]
     },
     {
