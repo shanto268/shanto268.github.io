@@ -38,38 +38,54 @@
       institution: Quantum Elements Inc., Thousand Oaks, CA
       year: May 2025 - August 2025
       description:
-        - Built an agentic AI framework and backend infrastructure for autonomous calibration and diagnostics of superconducting quantum experiments.
+        - "Engineered a production-ready agentic AI framework with multi-agent coordination, evaluation, and tracing pipelines for autonomous calibration and diagnostics of superconducting quantum experiments."
+        - "Architected and deployed full-stack backend infrastructure—custom APIs, scalable databases, and containerized microservices on AWS—integrating Quantum Elements' ML models, simulators, and databases with the AI agent ecosystem."
+        - "Built the infrastructure enabling autonomous execution of superconducting quantum experiments, allowing AI agents to calibrate, measure, diagnose, and analyze results through integrated MCP servers and ML-driven control workflows."
     - title: Graduate Research Assistant
       institution: Levenson-Falk Lab (LFL), University of Southern California
       year: 2022 - Present
       description:
-        - Superconducting quantum hardware - design, fabrication, and measurement.
-        - Lead developer of SQuADDS; ML-driven inverse design for quantum chips.
+        - "Lead developer of SQuADDS, an open-source platform accelerating quantum device design from weeks to minutes; widely adopted across research and industry labs."
+        - "Developed and validated high-yield nanofabrication processes for nanobridge-SQUID resonators with 15 nm features, scaling functional device yield from <2% to >90%."
+        - "Designed and fabricated superconducting circuits including nanobridge-based resonators, offset-charge-sensitive transmons, and custom Josephson parametric amplifiers."
+        - "Engineered full-stack experimental infrastructure—from cryogenic systems (Oxford Instruments, BlueFors) and microwave chains to automated measurement platforms using QUA, Labber, and AlazarTech hardware."
+        - "Created an HMM-based inference pipeline to extract real-time quasiparticle occupation states from I/Q trajectory data."
+        - "Leading experiments on Andreev bound state spectroscopy and nanoSQUID-based QP traps to mitigate quasiparticle-induced decoherence in superconducting qubits."
+        - "Extended SQuADDS to support interpretable ML workflows using Kolmogorov-Arnold Networks (KANs) for inverse design."
+        - "Collaborating with NVIDIA and Fermilab on explainable AI methods for quantum device design workflows."
+        - "Leading open-source integration of AWS Quantum's EM solver Palace with Quantum-Metal for scalable cloud-based simulation pipelines."
     - title: Teaching Assistant
       institution: University of Southern California
       year: 2021 - 2022
       description:
-        - "Fundamentals of Physics II: Electricity and Magnetism."
+        - "Led lab sessions in Fundamentals of Physics II: Electricity and Magnetism for undergraduate engineering students."
+        - "Topics covered included circuits, Gauss' Law, Faraday's Law, and resonance studies."
     - title: Undergraduate Research Assistant
       institution: Advanced Particle Detector Laboratory (APDL), Texas Tech University
       year: 2018 - 2021
       description:
-        - Muon telescope design, DAQ, and ML-based muon tomography.
+        - "Led optical-system upgrades for muon telescopes; developed custom Winston cones that improved signal efficiency from 20% to 78%."
+        - "Built DAQ systems with Arduino, CAMAC crates, and custom PCBs; reduced channel deadtime by 300x using multithreaded sync and FPGA logic."
+        - "Developed Geant4-based MC simulation and a custom ML architecture for 3D tomographic reconstruction from 2D muon detector data."
     - title: Summer Research Intern
       institution: Institute for Software Integrated Systems (ISIS), Vanderbilt University
       year: 2020
       description:
-        - Microsimulation calibration and RL for traffic flow.
+        - "Built a calibration pipeline for microscopic traffic models, parallelized with Ray for 10x+ speedup."
+        - "Contributed to the Flow RL framework for closed-loop learning in calibrated traffic environments."
+        - "Co-authored a peer-reviewed conference paper on microsimulation calibration."
     - title: Teaching Assistant, Quantum Information and Computation
       institution: Texas Tech University
       year: 2020
       description:
-        - Introduction to Quantum Information and Computation (Qiskit-based).
+        - "Developed interactive Jupyter notebooks using IBM's Qiskit for quantum information education."
+        - "Covered quantum teleportation, Grover's Algorithm, VQE, and Jordan's Algorithm."
     - title: Undergraduate Research Assistant
       institution: Texas Tech Multidisciplinary Research in Transportation (TechMRT)
       year: 2019 - 2020
       description:
-        - Open-source AV/HV traffic simulator with RL-based control strategies.
+        - "Developed an open-source simulator for heterogeneous AV/HV traffic using an extended Nagel-Schreckenberg CA model."
+        - "Integrated RL agents to study flow stability and throughput; co-authored a journal paper on AV/HV composition effects."
 
 - title: Invited Talks
   type: time_table
