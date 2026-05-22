@@ -13,6 +13,39 @@ Being a small part of these organizations has left a big mark on me. Each experi
 
 ---
 
+### Quantum Device Consortium (QDC)
+**Board Member**  
+_International_  
+2025-Present  
+
+- Serve on the board of the Quantum Device Consortium, an international body coordinating community standards, tooling, and open infrastructure for superconducting quantum device design.
+
+- Help guide consortium-wide priorities for open-source quantum hardware design tools and cross-institutional collaboration.
+
+---
+
+### quantum-metal (formerly qiskit-metal)
+**Maintainer**  
+_Open Source_  
+2025-Present  
+
+- Core maintainer of `quantum-metal`, an open-source Python framework for the design, simulation, and analysis of superconducting quantum devices.
+
+- Review contributions, triage issues, and shape the roadmap for the next generation of community-driven superconducting chip design tooling.
+
+---
+
+### Quantum Device Design Workshop (QDW)
+**Workshop Organizer**  
+_Los Angeles, CA_  
+2025-2026  
+
+- Co-organized the Quantum Device Design Workshop, bringing together researchers and industry practitioners working on superconducting quantum chip design, simulation, and fabrication.
+
+- Helped curate the technical program, coordinate speakers, and run hands-on tutorial sessions on design automation tooling.
+
+---
+
 ### Summer of Quantum in LA
 **Lead Organizer**  
 _Los Angeles, CA_  
@@ -28,12 +61,23 @@ Interested in getting involved or supporting us? Find out more and sign up to vo
 
 ---
 
+### Quantum Computing Student Association (QCSA)
+**Board Member**  
+_Los Angeles, CA_  
+2025-Present  
+
+- Board member of QCSA, supporting student-led programming around quantum computing education, research, and community.
+
+- Help coordinate technical workshops, networking events, and outreach activities for graduate and undergraduate students interested in quantum information science.
+
+---
+
 ### American Physical Society (APS)  
 **Member and Student Ambassador**  
 _North America_  
-2019-Present  
+2019-2026
 
-- Represented APS at the 2025 Annual Leadership Meeting and **Congressional Visits Day (CVD)** in Washington, D.C., advocating for increased R&D funding in physical sciences, STEM workforce development, and comprehensive immigration reforms to support researchers.  
+- Represented APS at the 2025 and 2026 Annual Leadership Meetings and **Congressional Visits Days (CVD)** in Washington, D.C., advocating for increased R&D funding in physical sciences, STEM workforce development, and comprehensive immigration reforms to support researchers.  
 
 - Engaged in bipartisan discussions on the reauthorization of the **National Quantum Initiative Act**, highlighting the critical role of quantum research in shaping the nation’s future.  
 

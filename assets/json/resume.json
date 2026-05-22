@@ -3,7 +3,7 @@
     "name": "Sadman Ahmed Shanto",
     "email": "shanto@usc.edu",
     "url": "https://sadmanahmedshanto.com",
-    "summary": "Physics PhD Candidate @ USC",
+    "summary": "Experimental physicist building superconducting quantum hardware and design automation tools. Physics PhD Candidate @ USC and Research Intern @ Google Quantum AI.",
     "location": {
       "address": "920 Bloom Walk",
       "postalCode": "CA 90007",
@@ -20,7 +20,7 @@
       "area": "Physics",
       "studyType": "Doctor of Philosophy (PhD)",
       "startDate": "2021-08-18",
-      "endDate": "2026-01-01"
+      "endDate": "2026-12-01"
     },
     {
       "institution": "Texas Tech University (TTU)",
@@ -63,14 +63,16 @@
       "startDate": "2022-01-01",
       "endDate": "Present",
       "highlights": [
-        "Lead developer of SQuADDS, an open-source platform for quantum device design, simulation, and fabrication-readiness; accelerated design iteration from weeks to minutes and adopted across multiple labs.",
-        "Developed and validated custom high-yield fabrication processes for nanobridge-SQUID resonators (15 nm features), increasing functional device yield from <2% to >90%.",
+        "Lead developer of SQuADDS, an open-source platform accelerating quantum device design from weeks to minutes; widely adopted across research and industry labs for simulation, optimization, and fabrication-ready layout generation.",
+        "Developed and validated high-yield nanofabrication processes for nanobridge-SQUID resonators with 15 nm features, scaling functional device yield from <2% to >90%.",
         "Designed and fabricated superconducting circuits including nanobridge-based resonators, offset-charge-sensitive transmons, and custom Josephson parametric amplifiers for probing quasiparticle dynamics and enhancing qubit readout.",
-        "Engineered full-stack experimental systems, including cryogenic infrastructure (Oxford Instruments, BlueFors), filtering and microwave chains, CPW PCB design, mounting, and advanced packaging techniques.",
-        "Built automated measurement infrastructure using QUA, Labber, and AlazarTech acquisition systems; integrated parametric sweeps and custom calibration routines across multiple platforms.",
+        "Engineered full-stack experimental infrastructure—from cryogenic systems (Oxford Instruments, BlueFors) and microwave chains to automated measurement platforms using QUA, Labber, and AlazarTech hardware—integrating parametric sweeps, calibration routines, and advanced packaging for superconducting quantum devices.",
         "Created a highly accurate Hidden Markov Model (HMM)-based inference pipeline to extract real-time quasiparticle occupation states from I/Q trajectory data, enabling detailed dynamic modeling of QP trapping and release.",
         "Leading experiments on Andreev bound state spectroscopy and nanoSQUID-based QP traps to investigate and mitigate quasiparticle-induced decoherence in superconducting qubits.",
         "Extended SQuADDS to support interpretable ML workflows using Kolmogorov-Arnold Networks (KANs) to learn mapping between device geometry and target Hamiltonians.",
+        "Collaborating with NVIDIA and Fermilab to develop explainable AI methods for quantum device design workflows, enabling physics-driven interpretability to uncover design principles and accelerate optimization of superconducting circuits.",
+        "Leading open-source integration of AWS Quantum's EM solver Palace with Quantum-Metal, enabling scalable cloud-based simulation pipelines for the quantum hardware community.",
+        "Designed and maintain HPC-based simulation and analysis pipelines for TB-scale datasets, optimizing for throughput, fault tolerance, and operational stability.",
         "Mentored undergraduate researchers, master's students, and junior PhD students on quantum circuit design, measurement automation, and fabrication processes."
       ]
     },
@@ -82,10 +84,12 @@
       "endDate": "2021-08-01",
       "highlights": [
         "Led end-to-end design of optical system upgrades for muon telescopes; developed custom Winston cones that improved signal efficiency from 20% to 78%.",
-        "Co-designed and assembled both SiPM- and PMT-based muon telescopes; built DAQ systems using Arduino, CAMAC crates, and custom PCBs with wireless synchronization.",
+        "Co-designed and assembled both SiPM- and PMT-based muon telescopes; machined 50+ scintillator bars; engineered calibration and installation of 40 SiPMs and 44 PMTs.",
+        "Built DAQ systems using Arduino, CAMAC crates, and custom PCBs with wireless synchronization; implemented multithreaded sync and FPGA logic to reduce channel deadtime by 300x.",
         "Wrote real-time data acquisition and analysis software, converting raw readout into muon flux maps; deployed automated pipelines on the university HPC, with cloud-style report generation.",
         "Built and validated full Geant4-based Monte Carlo simulation of the experimental system, including physics modeling of photon scattering and muon interactions.",
-        "Developed a custom ML architecture that inferred photon time-of-propagation to reconstruct 3D tomograms from 2D detector arrays.",
+        "Developed a custom ML architecture that uses TDC-based photon time-of-propagation measurements to infer depth information, enabling 3D tomographic reconstruction from 2D detector plane data.",
+        "Implemented RNN/LSTM models to recover missing hit data, improving data efficiency and significantly enhancing image resolution from sparse muon events.",
         "Actively involved in multiple data-taking campaigns, including first experimental run; maintained 24/7 operations and emergency response support.",
         "Presented work at national conferences, winning multiple awards for technical talks and posters on detector design and reconstruction algorithms.",
         "Co-authored peer-reviewed publications on both the initial prototype and next-generation telescope design.",
@@ -172,6 +176,27 @@
     }
   ],
   "outreach": [
+    {
+      "title": "Delegate, APS Congressional Visits Day",
+      "organization": "APS",
+      "location": "Washington, DC, USA",
+      "date": "2026",
+      "description": "Promoted APS's mission to Congress."
+    },
+    {
+      "title": "Invited Representative, APS Annual Leadership Meeting",
+      "organization": "APS",
+      "location": "Washington, DC, USA",
+      "date": "2026",
+      "description": "Participated in APS leadership activities."
+    },
+    {
+      "title": "Quantum Engineering Ethics Hackathon Judge",
+      "organization": "QEE",
+      "location": "Los Angeles, CA, USA",
+      "date": "2025",
+      "description": "Served as judge for the Quantum Engineering Ethics Hackathon."
+    },
     {
       "title": "Delegate, APS Congressional Visits Day",
       "organization": "APS",
@@ -306,6 +331,33 @@
   ],
   "talks": [
     {
+      "position": "Invited Talk at U of I Quantum Circuit Conference (UIQC 2026)",
+      "organization": "University of Illinois Urbana-Champaign",
+      "location": "Urbana-Champaign, USA",
+      "url": "",
+      "startDate": "2026-05-01",
+      "endDate": "2026-05-01",
+      "highlights": ["Towards Generalizable Machine Learning Models for Superconducting QPU Design"]
+    },
+    {
+      "position": "Invited Talk at Lawrence Berkeley National Lab",
+      "organization": "LBNL",
+      "location": "Online",
+      "url": "",
+      "startDate": "2026-02-01",
+      "endDate": "2026-02-01",
+      "highlights": ["Integrating Superconducting Quantum Chip Design into ARTEMIS Solver"]
+    },
+    {
+      "position": "Invited Talks at NVIDIA and Fermilab",
+      "organization": "NVIDIA & Fermilab",
+      "location": "Online",
+      "url": "",
+      "startDate": "2026-01-01",
+      "endDate": "2026-01-01",
+      "highlights": ["ML for Quantum Chip Design"]
+    },
+    {
       "position": "Invited Lectures for Quantum Design Workshop @ UCLA",
       "organization": "Quantum Design Workshop @ UCLA",
       "location": "Los Angeles, USA",
@@ -318,6 +370,15 @@
           "Designing Fabrication-Ready Superconducting Quantum Chips"
         ]
       ]
+    },
+    {
+      "position": "Invited Lecture for QEE @ USC",
+      "organization": "Quantum Engineering and Ethics (QEE) @ USC",
+      "location": "Los Angeles, USA",
+      "url": "",
+      "startDate": "2025-01-01",
+      "endDate": "2025-01-01",
+      "highlights": ["Introduction to Quantum Device Design"]
     },
     {
       "position": "Invited Lecture for Quantum Device Course @ USC",
@@ -505,6 +566,18 @@
   ],
   "awards": [
     {
+      "title": "Peer Recognition Award",
+      "date": "2026",
+      "awarder": "Google Quantum AI",
+      "location": "Santa Barbara, CA, USA"
+    },
+    {
+      "title": "Peer Recognition Award",
+      "date": "2025",
+      "awarder": "Google Quantum AI",
+      "location": "Mountain View, CA, USA"
+    },
+    {
       "title": "Best Presenter Award",
       "date": "2025",
       "awarder": "Dornsife Industry Days",
@@ -666,20 +739,49 @@
       "keywords": [
         "Qiskit",
         "Qiskit Metal",
+        "Quantum-Metal",
         "QUA",
         "scqubits",
         "Cirq",
         "PennyLane",
+        "Labber",
+        "AlazarTech PCIe Digitizer",
+        "OPX+",
+        "Zurich Instruments"
+      ]
+    },
+    {
+      "name": "Layout & Verification",
+      "level": "Advanced",
+      "icon": "fa-solid fa-vector-square",
+      "keywords": [
+        "gdsfactory",
+        "gdspy",
+        "gplugins",
         "KLayout",
-        "Labber API",
-        "Circuit Pro"
+        "kfactory",
+        "KQCircuits",
+        "phidl",
+        "Siemens nmDRC",
+        "SiEPIC-Tools",
+        "SQDMetal"
       ]
     },
     {
       "name": "Simulation and Modeling",
       "level": "Advanced",
       "icon": "fa-solid fa-sim-card",
-      "keywords": ["Ansys HFSS", "Ansys Q3D", "AWS Palace", "COMSOL", "Elmer"]
+      "keywords": [
+        "Ansys HFSS",
+        "Ansys Q3D",
+        "AWR Office",
+        "COMSOL",
+        "Elmer",
+        "Keysight ADS",
+        "meep",
+        "Palace",
+        "tidy3d"
+      ]
     },
     {
       "name": "Quantum Computing Control Systems",
@@ -757,7 +859,11 @@
         "AutoML",
         "JAX",
         "LightGBM",
-        "Hyperopt"
+        "Hyperopt",
+        "HMMLearn",
+        "pyKAN",
+        "interpret",
+        "TFX"
       ]
     },
     {
@@ -878,6 +984,58 @@
     }
   ],
   "publications": [
+    {
+      "name": "Component-Level Inverse Design of Transmon Qubits Using Neural Networks",
+      "publisher": "In Preparation",
+      "releaseDate": "2026",
+      "authors": [
+        "Oliver Seidel",
+        "Firas Abouzahr",
+        "Anirban Chakraborty",
+        "Sadman Ahmed Shanto",
+        "Sayandip Das",
+        "Sophia Sussman",
+        "Daniel Baxter",
+        "Jonathan Asaadi",
+        "Nicholas Pancotti",
+        "Henry Yang",
+        "Brucek Khailany",
+        "Enectali Figueroa-Feliciano",
+        "Eli M. Levenson-Falk",
+        "Taylor L. Patti"
+      ],
+      "summary": "Neural-network-based component-level inverse design framework for transmon qubits, in preparation (2026)."
+    },
+    {
+      "name": "AgentQ: An LLM-Agentic Framework for Time-Domain Superconducting Quantum Chip Simulation",
+      "publisher": "In Preparation",
+      "releaseDate": "2026",
+      "authors": [
+        "Yifeng Tang",
+        "Sadman Ahmed Shanto",
+        "Kevin Wang",
+        "Nicholas Pancotti",
+        "Andrew Nonaka",
+        "Eli M. Levenson-Falk",
+        "Zhi Yao"
+      ],
+      "summary": "An LLM-agentic framework for automated time-domain simulation of superconducting quantum chips, in preparation (2026)."
+    },
+    {
+      "name": "Universal Hamiltonian Control in a Planar Trimon Circuit",
+      "publisher": "Under Review at PRX Quantum",
+      "releaseDate": "2026",
+      "authors": [
+        "Vivek Maurya",
+        "Daria Kowsari",
+        "Kumar Saurav",
+        "Sadman Ahmed Shanto",
+        "R. Vijay",
+        "Daniel A. Lidar",
+        "Eli M. Levenson-Falk"
+      ],
+      "summary": "Demonstration of universal Hamiltonian control in a planar trimon circuit, under review at PRX Quantum (2026)."
+    },
     {
       "name": "A Review of Design Concerns in Superconducting Quantum Circuits",
       "publisher": "Materials for Quantum Technology",
