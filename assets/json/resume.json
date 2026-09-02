@@ -3,7 +3,7 @@
     "name": "Sadman Ahmed Shanto",
     "email": "shanto@usc.edu",
     "url": "https://sadmanahmedshanto.com",
-    "summary": "Experimental physicist building superconducting quantum hardware and design automation tools. Physics PhD Candidate @ USC and Research Intern @ Google Quantum AI.",
+    "summary": "Experimental physicist building superconducting quantum hardware and design automation tools. Physics PhD candidate at USC (Levenson-Falk Lab), creator of SQuADDS, and former Research Intern at Google Quantum AI.",
     "location": {
       "address": "920 Bloom Walk",
       "postalCode": "CA 90007",
@@ -20,7 +20,19 @@
       "area": "Physics",
       "studyType": "Doctor of Philosophy (PhD)",
       "startDate": "2021-08-18",
-      "endDate": "2026-12-01"
+      "endDate": "2027-01-01",
+      "courses": [
+        "Expected Graduation: January 2027"
+      ]
+    },
+    {
+      "institution": "University of Southern California (USC)",
+      "location": "Los Angeles, CA",
+      "url": "https://www.usc.edu/",
+      "area": "Physics",
+      "studyType": "Master of Arts (MA)",
+      "startDate": "2021-08-18",
+      "endDate": "2026-05-15"
     },
     {
       "institution": "Texas Tech University (TTU)",
@@ -30,7 +42,9 @@
       "studyType": "Bachelor of Science (BSc)",
       "startDate": "2017-08-22",
       "endDate": "2021-05-14",
-      "courses": ["Minors: Computer Science & Mathematics"]
+      "courses": [
+        "Minors: Computer Science & Mathematics"
+      ]
     }
   ],
   "work": [
@@ -39,21 +53,22 @@
       "position": "Research Intern",
       "location": "Mountain View, CA, USA",
       "startDate": "2025-08-25",
-      "endDate": "Present",
+      "endDate": "2026-08-31",
       "highlights": [
         "R&D for Quantum Processors @ Google Quantum AI"
       ]
     },
-   {
+    {
       "name": "Quantum Elements Inc.",
       "position": "Summer Research Intern",
       "location": "Thousand Oaks, CA, USA",
       "startDate": "2025-05-01",
       "endDate": "2025-08-22",
       "highlights": [
-        "Engineered a production-ready agentic AI framework with multi-agent coordination, evaluation, and tracing pipelines for autonomous calibration and diagnostics of superconducting quantum experiments.",
-        "Architected and deployed full-stack backend infrastructure—custom APIs, scalable databases, and containerized microservices on AWS—integrating Quantum Elements’ ML models, simulators, and databases with the AI agent ecosystem.",
-        "Built the infrastructure enabling autonomous execution of superconducting quantum experiments, allowing AI agents to calibrate, measure, diagnose, and analyze results through integrated MCP servers and ML-driven control workflows."
+        "Built a production agentic AI framework that runs superconducting quantum experiments end to end, coordinating multiple specialized agents so they can calibrate, measure, diagnose, and analyze results without a physicist in the loop.",
+        "Architected the full-stack backend underneath it, with custom APIs, scalable databases, and containerized microservices on AWS, uniting the company's ML models, simulators, and instrument control into one system agents could act on through MCP servers.",
+        "Designed the evaluation and tracing layer that made agent behavior measurable, turning open-ended autonomous runs into tracked metrics and reproducible traces engineers could debug.",
+        "Contributed modular calibration nodes and DAG-based calibration graphs to QUAlibrate, Quantum Machines' open-source framework for large-scale QPUs, cutting processor tune-up from hours to minutes."
       ]
     },
     {
@@ -63,17 +78,16 @@
       "startDate": "2022-01-01",
       "endDate": "Present",
       "highlights": [
-        "Lead developer of SQuADDS, an open-source platform accelerating quantum device design from weeks to minutes; widely adopted across research and industry labs for simulation, optimization, and fabrication-ready layout generation.",
-        "Developed and validated high-yield nanofabrication processes for nanobridge-SQUID resonators with 15 nm features, scaling functional device yield from <2% to >90%.",
-        "Designed and fabricated superconducting circuits including nanobridge-based resonators, offset-charge-sensitive transmons, and custom Josephson parametric amplifiers for probing quasiparticle dynamics and enhancing qubit readout.",
-        "Engineered full-stack experimental infrastructure—from cryogenic systems (Oxford Instruments, BlueFors) and microwave chains to automated measurement platforms using QUA, Labber, and AlazarTech hardware—integrating parametric sweeps, calibration routines, and advanced packaging for superconducting quantum devices.",
-        "Created a highly accurate Hidden Markov Model (HMM)-based inference pipeline to extract real-time quasiparticle occupation states from I/Q trajectory data, enabling detailed dynamic modeling of QP trapping and release.",
-        "Leading experiments on Andreev bound state spectroscopy and nanoSQUID-based QP traps to investigate and mitigate quasiparticle-induced decoherence in superconducting qubits.",
-        "Extended SQuADDS to support interpretable ML workflows using Kolmogorov-Arnold Networks (KANs) to learn mapping between device geometry and target Hamiltonians.",
-        "Collaborating with NVIDIA and Fermilab to develop explainable AI methods for quantum device design workflows, enabling physics-driven interpretability to uncover design principles and accelerate optimization of superconducting circuits.",
-        "Leading open-source integration of AWS Quantum's EM solver Palace with Quantum-Metal, enabling scalable cloud-based simulation pipelines for the quantum hardware community.",
-        "Designed and maintain HPC-based simulation and analysis pipelines for TB-scale datasets, optimizing for throughput, fault tolerance, and operational stability.",
-        "Mentored undergraduate researchers, master's students, and junior PhD students on quantum circuit design, measurement automation, and fabrication processes."
+        "Creator and lead developer of SQuADDS, an open-source platform that takes superconducting device design from weeks to minutes; published in Quantum (2024) and adopted by academic and industrial groups worldwide for simulation, optimization, and fabrication-ready layout generation.",
+        "Leading the development of generalizable foundation ML models for quantum device simulation and design, in collaboration with NVIDIA, Northeastern University, and Fermilab.",
+        "Co-leading development of an agent harness with Lawrence Berkeley National Laboratory that carries a device from design through simulation to tape-out readiness end to end.",
+        "Developed and validated a high-yield nanofabrication process for nanobridge-SQUID resonators with 15 nm features, scaling functional device yield from under 2% to over 90%.",
+        "Designed, fabricated, and measured nanobridge resonators, offset-charge-sensitive transmons, “trimon” devices, “dissipator” devices and custom Josephson parametric amplifiers to probe quasiparticle dynamics and improve qubit readout, along with the PCBs, packages, and cryogenic microwave chain that house and measure them.",
+        "Built a Hidden Markov Model inference pipeline that extracts real-time quasiparticle occupation from I/Q trajectory data, enabling direct dynamic modeling of quasiparticle trapping and release.",
+        "Leading Andreev bound state spectroscopy and nanoSQUID quasiparticle trap experiments to characterize and mitigate quasiparticle-induced decoherence in superconducting qubits.",
+        "Led the creation of a fully automated design-to-simulation-to-GDS pipeline for the lab, with the Ansys and Palace simulation stack on USC's HPC cluster.",
+        "Leading the open-source integration of AWS Quantum's EM solver Palace with Quantum-Metal, giving the hardware community scalable cloud-based simulation pipelines.",
+        "Mentored five graduate and six undergraduate researchers through device design, fabrication, and measurement projects."
       ]
     },
     {
@@ -83,17 +97,10 @@
       "startDate": "2018-11-01",
       "endDate": "2021-08-01",
       "highlights": [
-        "Led end-to-end design of optical system upgrades for muon telescopes; developed custom Winston cones that improved signal efficiency from 20% to 78%.",
-        "Co-designed and assembled both SiPM- and PMT-based muon telescopes; machined 50+ scintillator bars; engineered calibration and installation of 40 SiPMs and 44 PMTs.",
-        "Built DAQ systems using Arduino, CAMAC crates, and custom PCBs with wireless synchronization; implemented multithreaded sync and FPGA logic to reduce channel deadtime by 300x.",
-        "Wrote real-time data acquisition and analysis software, converting raw readout into muon flux maps; deployed automated pipelines on the university HPC, with cloud-style report generation.",
-        "Built and validated full Geant4-based Monte Carlo simulation of the experimental system, including physics modeling of photon scattering and muon interactions.",
-        "Developed a custom ML architecture that uses TDC-based photon time-of-propagation measurements to infer depth information, enabling 3D tomographic reconstruction from 2D detector plane data.",
-        "Implemented RNN/LSTM models to recover missing hit data, improving data efficiency and significantly enhancing image resolution from sparse muon events.",
-        "Actively involved in multiple data-taking campaigns, including first experimental run; maintained 24/7 operations and emergency response support.",
-        "Presented work at national conferences, winning multiple awards for technical talks and posters on detector design and reconstruction algorithms.",
-        "Co-authored peer-reviewed publications on both the initial prototype and next-generation telescope design.",
-        "Supervisors: Shuichi Kunori, PhD. & Nural Akchurin, PhD."
+        "Led the end-to-end redesign of the optical system for muon telescopes, developing custom Winston cones that raised signal collection efficiency from 20% to 78%.",
+        "Co-designed and assembled both SiPM- and PMT-based muon telescopes, machining 50+ scintillator bars and calibrating 40 SiPMs and 44 PMTs.",
+        "Built DAQ systems on Arduino, CAMAC crates, and custom PCBs with wireless synchronization, using multithreaded sync and FPGA logic to cut channel deadtime by 300x, and wrote the real-time acquisition and analysis software that turns raw readout into muon flux maps on the university HPC.",
+        "Validated the instrument against a full Geant4 Monte Carlo of photon scattering and muon interactions, then built ML reconstruction methods, TDC photon time-of-propagation for depth inference and RNN/LSTM recovery of missing hits, that lift 2D detector data into 3D tomographic images."
       ]
     },
     {
@@ -103,12 +110,8 @@
       "startDate": "2020-06-01",
       "endDate": "2020-08-01",
       "highlights": [
-        "Built a full-stack calibration pipeline for microscopic traffic models, addressing parameter identifiability and stochastic noise under multi-objective constraints.",
-        "Parallelized simulation-optimization workflows using Ray; achieved 10x+ speedup in sweep-based calibration experiments.",
-        "Designed tools to convert simulation output from the Intelligent Driver Model (IDM) into radar-style datasets for validation against real-world aggregate metrics.",
-        "Contributed to the Flow RL framework, enabling closed-loop learning in calibrated traffic environments; supported end-to-end tuning and evaluation.",
-        "Co-authored a peer-reviewed conference paper on microsimulation calibration using aggregate measurements.",
-        "Supervisors: Daniel Work, PhD. & George Gunter, PhD."
+        "Built a full-stack calibration pipeline for microscopic traffic models, handling parameter identifiability and stochastic noise under multi-objective constraints, and parallelized the simulation-optimization sweeps with Ray for a 10x+ speedup.",
+        "Developed tooling to convert Intelligent Driver Model output into radar-style datasets for validation against real-world aggregate measurements, and contributed to Berkeley's Flow framework for closed-loop reinforcement learning in calibrated traffic environments."
       ]
     },
     {
@@ -118,11 +121,8 @@
       "startDate": "2019-01-01",
       "endDate": "2020-06-01",
       "highlights": [
-        "Developed an open-source simulator for heterogeneous AV/HV traffic using an extended Nagel-Schreckenberg CA model; supported both rule-based and learning agents.",
-        "Designed AV control strategies for shared-lane mobility and dynamic lane switching; revealed emergent behaviors like intelligent herding and platoon formation.",
-        "Integrated reinforcement learning for AVs to adapt to local density gradients; demonstrated benefits in flow stability and throughput in multi-lane networks.",
-        "Analyzed macro-scale flow metrics derived from microscopic simulation rules; co-authored a journal paper identifying system-wide effects of AV/HV composition.",
-        "Supervisor: Jia Li, PhD"
+        "Built an open-source simulator for mixed autonomous and human traffic on an extended Nagel-Schreckenberg cellular automaton, supporting both rule-based and learning agents.",
+        "Designed AV control strategies for shared-lane mobility and dynamic lane switching with RL agents that adapt to local density gradients, surfacing emergent behaviors such as intelligent herding and platoon formation and quantifying the system-wide flow effects of AV/HV composition."
       ]
     }
   ],
@@ -337,7 +337,9 @@
       "url": "",
       "startDate": "2026-05-01",
       "endDate": "2026-05-01",
-      "highlights": ["Towards Generalizable Machine Learning Models for Superconducting QPU Design"]
+      "highlights": [
+        "Towards Generalizable Machine Learning Models for Superconducting QPU Design"
+      ]
     },
     {
       "position": "Invited Talk at Lawrence Berkeley National Lab",
@@ -346,7 +348,9 @@
       "url": "",
       "startDate": "2026-02-01",
       "endDate": "2026-02-01",
-      "highlights": ["Integrating Superconducting Quantum Chip Design into ARTEMIS Solver"]
+      "highlights": [
+        "Integrating Superconducting Quantum Chip Design into ARTEMIS Solver"
+      ]
     },
     {
       "position": "Invited Talks at NVIDIA and Fermilab",
@@ -355,7 +359,9 @@
       "url": "",
       "startDate": "2026-01-01",
       "endDate": "2026-01-01",
-      "highlights": ["ML for Quantum Chip Design"]
+      "highlights": [
+        "ML for Quantum Chip Design"
+      ]
     },
     {
       "position": "Invited Lectures for Quantum Design Workshop @ UCLA",
@@ -378,7 +384,9 @@
       "url": "",
       "startDate": "2025-01-01",
       "endDate": "2025-01-01",
-      "highlights": ["Introduction to Quantum Device Design"]
+      "highlights": [
+        "Introduction to Quantum Device Design"
+      ]
     },
     {
       "position": "Invited Lecture for Quantum Device Course @ USC",
@@ -387,9 +395,10 @@
       "url": "",
       "startDate": "2024-11-01",
       "endDate": "2024-11-01",
-      "highlights": ["Designing a 'fab-ready' chip with SQuADDS"]
+      "highlights": [
+        "Designing a 'fab-ready' chip with SQuADDS"
+      ]
     },
-
     {
       "position": "Intro to Superconducting Quantum Circuits Designs",
       "organization": "Quantum Engineering and Ethics (QEE) Q^3 Hackathon",
@@ -397,7 +406,9 @@
       "url": "",
       "startDate": "2025-04-07",
       "endDate": "2025-04-07",
-      "highlights": ["Invited Lecture"]
+      "highlights": [
+        "Invited Lecture"
+      ]
     },
     {
       "position": "Qiskit Fall Fest 2024",
@@ -406,7 +417,10 @@
       "url": "",
       "startDate": "2024-10-11",
       "endDate": "2024-10-14",
-      "highlights": ["Invited Lectures", "Final Projects Judge"]
+      "highlights": [
+        "Invited Lectures",
+        "Final Projects Judge"
+      ]
     },
     {
       "position": "Lincoln Labs",
@@ -415,7 +429,9 @@
       "url": "",
       "startDate": "2024-07-01",
       "endDate": "2024-07-01",
-      "highlights": ["Invited Presentation"]
+      "highlights": [
+        "Invited Presentation"
+      ]
     },
     {
       "position": "Fermilab",
@@ -424,7 +440,9 @@
       "url": "",
       "startDate": "2024-06-15",
       "endDate": "2024-06-29",
-      "highlights": ["Invited Lectures"]
+      "highlights": [
+        "Invited Lectures"
+      ]
     },
     {
       "position": "Lincoln Labs",
@@ -433,7 +451,9 @@
       "url": "",
       "startDate": "2024-01-01",
       "endDate": "2024-01-01",
-      "highlights": ["Invited Talk"]
+      "highlights": [
+        "Invited Talk"
+      ]
     },
     {
       "position": "PHYS 593: Practicum in Teaching Physics and Astronomy, USC",
@@ -442,7 +462,9 @@
       "url": "",
       "startDate": "2022-01-01",
       "endDate": "2024-12-01",
-      "highlights": ["Invited Lectures"]
+      "highlights": [
+        "Invited Lectures"
+      ]
     },
     {
       "position": "Texas Tech University",
@@ -451,7 +473,9 @@
       "url": "",
       "startDate": "2021-01-01",
       "endDate": "2021-01-01",
-      "highlights": ["Invited Colloquium"]
+      "highlights": [
+        "Invited Colloquium"
+      ]
     },
     {
       "position": "SPS and Women In Physics, TTU",
@@ -460,7 +484,9 @@
       "url": "",
       "startDate": "2020-01-01",
       "endDate": "2020-05-01",
-      "highlights": ["Invited Lectures"]
+      "highlights": [
+        "Invited Lectures"
+      ]
     },
     {
       "position": "Institute for Software Integrated Systems",
@@ -543,7 +569,9 @@
       "url": "",
       "startDate": "2019-10-01",
       "endDate": "2019-10-01",
-      "highlights": ["Best Presentation Award"]
+      "highlights": [
+        "Best Presentation Award"
+      ]
     },
     {
       "position": "University Research Conference, TTU",
@@ -552,7 +580,9 @@
       "startDate": "2021-09-01",
       "endDate": "2021-09-01",
       "url": "",
-      "highlights": ["Best Presentation Award"]
+      "highlights": [
+        "Best Presentation Award"
+      ]
     },
     {
       "position": "Quantum 2020 (Institute Of Physics)",
@@ -566,7 +596,13 @@
   ],
   "awards": [
     {
-      "title": "Peer Recognition Award",
+      "title": "Peer Recognition Award (x3)",
+      "date": "2025 - 2026",
+      "awarder": "Google Quantum AI",
+      "location": "Mountain View, CA, USA"
+    },
+    {
+      "title": "Peer Recognition Award (x2)",
       "date": "2026",
       "awarder": "Google Quantum AI",
       "location": "Santa Barbara, CA, USA"
@@ -712,252 +748,183 @@
   ],
   "skills": [
     {
+      "name": "Layout & Verification",
+      "level": "Expert",
+      "icon": "fa-solid fa-drafting-compass",
+      "keywords": [
+        "KLayout",
+        "gdsfactory",
+        "gdswell",
+        "Quantum-Metal",
+        "KQCircuits",
+        "Calibre nmDRC"
+      ]
+    },
+    {
+      "name": "PDKs",
+      "level": "Expert",
+      "icon": "fa-solid fa-industry",
+      "keywords": [
+        "John O’Brien Nanofabrication Lab @ USC",
+        "Lincoln Lab SQUILL Foundry PDK",
+        "SkyWater Foundry PDKs",
+        "GlobalFoundry PDKs",
+        "Google Quantum AI Foundry PDKs"
+      ]
+    },
+    {
+      "name": "Quantum Measurements",
+      "level": "Expert",
+      "icon": "fa-solid fa-atom",
+      "keywords": [
+        "QUA",
+        "OPX+",
+        "Labber",
+        "Zurich Instruments",
+        "AlazarTech PCIe Digitizer",
+        "PyVISA"
+      ]
+    },
+    {
+      "name": "RF & Microwave Simulation",
+      "level": "Expert",
+      "icon": "fa-solid fa-wave-square",
+      "keywords": [
+        "Ansys HFSS Suite",
+        "Ansys Lumerical",
+        "AWS Palace",
+        "scikit-rf",
+        "COMSOL",
+        "Elmer",
+        "AWR Office",
+        "Keysight ADS",
+        "tidy3d",
+        "femwell"
+      ]
+    },
+    {
+      "name": "Fabrication & Cleanroom",
+      "level": "Expert",
+      "icon": "fa-solid fa-microchip",
+      "keywords": [
+        "EBL",
+        "Photolithography",
+        "Lift-off",
+        "RIE",
+        "ICP",
+        "ALD",
+        "Sputtering",
+        "CMP",
+        "FIB",
+        "Dicing",
+        "SEM",
+        "Metrology"
+      ]
+    },
+    {
+      "name": "Microwave & Packaging",
+      "level": "Expert",
+      "icon": "fa-solid fa-satellite-dish",
+      "keywords": [
+        "Altium Designer",
+        "Ansys SIwave",
+        "RF Board Layout",
+        "PCB & Package Design",
+        "Wirebonding",
+        "Electroplating"
+      ]
+    },
+    {
+      "name": "Cryogenics",
+      "level": "Expert",
+      "icon": "fa-solid fa-snowflake",
+      "keywords": [
+        "BlueFors",
+        "Oxford Instruments",
+        "RF Chain Setup",
+        "Cryo Filtering",
+        "Vacuum Pumps",
+        "Leak Detection"
+      ]
+    },
+    {
       "name": "Programming Languages",
       "level": "Expert",
       "icon": "fa-solid fa-code",
       "keywords": [
         "Python",
         "C++",
-        "C",
-        "Bash/ZSH",
-        "Lua",
-        "Java",
-        "Matlab",
-        "R",
-        "Julia",
-        "TeX",
-        "Go",
-        "Swift",
-        "Mathematica",
-        "Rust"
+        "Bash",
+        "Rust",
+        "Julia"
       ]
     },
     {
-      "name": "Quantum Computing Software",
+      "name": "HPC & Cloud",
       "level": "Expert",
-      "icon": "fa-solid fa-atom",
+      "icon": "fa-solid fa-server",
       "keywords": [
-        "Qiskit",
-        "Qiskit Metal",
-        "Quantum-Metal",
-        "QUA",
-        "scqubits",
-        "Cirq",
-        "PennyLane",
-        "Labber",
-        "AlazarTech PCIe Digitizer",
-        "OPX+",
-        "Zurich Instruments"
-      ]
-    },
-    {
-      "name": "Layout & Verification",
-      "level": "Advanced",
-      "icon": "fa-solid fa-vector-square",
-      "keywords": [
-        "gdsfactory",
-        "gdspy",
-        "gplugins",
-        "KLayout",
-        "kfactory",
-        "KQCircuits",
-        "phidl",
-        "Siemens nmDRC",
-        "SiEPIC-Tools",
-        "SQDMetal"
-      ]
-    },
-    {
-      "name": "Simulation and Modeling",
-      "level": "Advanced",
-      "icon": "fa-solid fa-sim-card",
-      "keywords": [
-        "Ansys HFSS",
-        "Ansys Q3D",
-        "AWR Office",
-        "COMSOL",
-        "Elmer",
-        "Keysight ADS",
-        "meep",
-        "Palace",
-        "tidy3d"
-      ]
-    },
-    {
-      "name": "Quantum Computing Control Systems",
-      "level": "Advanced",
-      "icon": "fa-solid fa-microchip",
-      "keywords": ["Quantum Machines OPX", "Zurich Instruments", "QICK"]
-    },
-    {
-      "name": "Cryogenic and Vacuum Systems",
-      "level": "Advanced",
-      "icon": "fa-solid fa-temperature-low",
-      "keywords": [
-        "Bluefors",
-        "Oxford Instruments",
-        "Turbo and Scroll Pumps",
-        "Helium Compressors",
-        "Leak Detectors"
-      ]
-    },
-    {
-      "name": "Packaging",
-      "level": "Advanced",
-      "icon": "fa-solid fa-box",
-      "keywords": [
-        "Wirebonding",
-        "Soldering",
-        "CPW and Microstrip Design",
-        "RF Packaging",
-        "Cavity Design",
-        "Electroplating"
-      ]
-    },
-    {
-      "name": "Fabrication and Cleanroom",
-      "level": "Expert",
-      "icon": "fa-solid fa-tools",
-      "keywords": [
-        "EBL",
-        "Laser Lithography",
-        "Photolithography",
-        "SEM",
-        "FIB",
-        "STM",
-        "E-Beam Evaporation",
-        "Thermal Evaporation",
-        "ALD",
-        "Sputtering",
-        "RIE",
-        "ICP Etching",
-        "Dicing",
-        "Lift-off",
-        "Wet Etching",
-        "Dry Etching",
-        "CMP",
-        "Class 100/1000 Cleanroom",
-        "Profilometry",
-        "Process Optimization",
-        "Metrology",
-        "Recipe Calibration"
-      ]
-    },
-    {
-      "name": "Machine Learning and AI",
-      "level": "Advanced",
-      "icon": "fa-solid fa-robot",
-      "keywords": [
-        "TensorFlow",
-        "PyTorch",
-        "Keras",
-        "Scikit-learn",
-        "XGBoost",
-        "HuggingFace",
-        "Transformers",
-        "Ray",
-        "AutoML",
-        "JAX",
-        "LightGBM",
-        "Hyperopt",
-        "HMMLearn",
-        "pyKAN",
-        "interpret",
-        "TFX"
-      ]
-    },
-    {
-      "name": "Data Analysis",
-      "level": "Advanced",
-      "icon": "fa-solid fa-chart-line",
-      "keywords": [
-        "Numpy",
-        "Pandas",
-        "Vaex",
-        "Matplotlib",
-        "Seaborn",
-        "Plotly",
-        "Dask",
-        "Apache Spark",
-        "SQL",
-        "Dash",
-        "StatsModels",
-        "SymPy"
-      ]
-    },
-    {
-      "name": "High-Performance Computing & Cloud Platforms",
-      "level": "Advanced",
-      "icon": "fa-solid fa-cloud",
-      "keywords": [
-        "AWS",
-        "GCP",
-        "Azure",
+        "SLURM",
+        "OpenMPI",
         "Docker",
         "Kubernetes",
-        "OpenMPI",
-        "SLURM",
-        "Ray",
-        "Dask",
-        "TensorFlow Extended (TFX)"
+        "AWS",
+        "GCP"
       ]
     },
     {
-      "name": "Database and Big Data",
-      "level": "Intermediate",
+      "name": "Backend & Databases",
+      "level": "Expert",
       "icon": "fa-solid fa-database",
       "keywords": [
+        "FastAPI",
+        "REST",
         "PostgreSQL",
         "MongoDB",
-        "Apache Hadoop",
         "Apache Spark",
-        "AWS RDS"
+        "Vercel"
       ]
     },
     {
-      "name": "DevOps and Version Control",
-      "level": "Advanced",
+      "name": "Version Control & DevOps",
+      "level": "Expert",
       "icon": "fa-solid fa-code-branch",
       "keywords": [
         "Git",
+        "Gerrit",
         "GitHub",
-        "GitLab",
-        "CI/CD Pipelines",
-        "Docker",
-        "Kubernetes"
+        "GitHub Actions",
+        "Argo",
+        "Bazel"
       ]
     },
     {
-      "name": "Digital Electronics & Embedded Systems",
-      "level": "Intermediate",
-      "icon": "fa-solid fa-microchip",
+      "name": "ML",
+      "level": "Expert",
+      "icon": "fa-solid fa-brain",
       "keywords": [
-        "FPGA Design",
-        "Verilog",
-        "Vivado Design Suite",
-        "KiCad",
-        "LTspice",
-        "Arduino",
-        "Raspberry Pi",
-        "PCB Design",
-        "Siemens nmDRC"
+        "PyTorch",
+        "JAX",
+        "HuggingFace",
+        "Ray",
+        "Scikit-learn",
+        "pyKAN",
+        "HMMLearn",
+        "InterpretML",
+        "TensorFlow"
       ]
     },
     {
-      "name": "Web Development and APIs",
-      "level": "Intermediate",
-      "icon": "fa-solid fa-globe",
+      "name": "LLMs",
+      "level": "Expert",
+      "icon": "fa-solid fa-robot",
       "keywords": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Node.js",
-        "Flask",
-        "FastAPI",
-        "Django",
-        "REST APIs",
-        "GraphQL",
-        "WebSockets"
+        "LangChain",
+        "Multi-Agent Orchestration (LangGraph)",
+        "RAG",
+        "Fine-tuning (LoRA/PEFT)",
+        "Evals & Tracing (LangSmith)",
+        "Tool calling (SKILLS.md, MCP)"
       ]
     }
   ],
@@ -986,25 +953,26 @@
   "publications": [
     {
       "name": "Component-Level Inverse Design of Transmon Qubits Using Neural Networks",
-      "publisher": "In Preparation",
+      "publisher": "arXiv:2607.20795",
       "releaseDate": "2026",
       "authors": [
-        "Oliver Seidel",
+        "Olivia Seidel",
         "Firas Abouzahr",
-        "Anirban Chakraborty",
+        "Abhishek Chakraborty",
         "Sadman Ahmed Shanto",
-        "Sayandip Das",
-        "Sophia Sussman",
+        "Saikat Das",
         "Daniel Baxter",
         "Jonathan Asaadi",
-        "Nicholas Pancotti",
-        "Henry Yang",
+        "Nicola Pancotti",
+        "Haoyu Yang",
         "Brucek Khailany",
+        "Sara Sussman",
         "Enectali Figueroa-Feliciano",
         "Eli M. Levenson-Falk",
         "Taylor L. Patti"
       ],
-      "summary": "Neural-network-based component-level inverse design framework for transmon qubits, in preparation (2026)."
+      "summary": "Neural-network component-level inverse design framework for transmon qubits; preprint on arXiv (2026).",
+      "url": "https://arxiv.org/abs/2607.20795"
     },
     {
       "name": "AgentQ: An LLM-Agentic Framework for Time-Domain Superconducting Quantum Chip Simulation",
@@ -1042,12 +1010,14 @@
       "releaseDate": "2025",
       "doi": "10.1088/2633-4356/ade10d",
       "url": "https://iopscience.iop.org/article/10.1088/2633-4356/ade10d",
-      "authors": ["Eli M. Levenson-Falk", "Sadman Ahmed Shanto"],
+      "authors": [
+        "Eli M. Levenson-Falk",
+        "Sadman Ahmed Shanto"
+      ],
       "summary": "An invited review paper on design concerns in superconducting quantum circuits, to be published in Materials for Quantum Technology.",
       "pdf": "https://iopscience.iop.org/article/10.1088/2633-4356/ade10d/pdf",
       "arxiv": "2411.16967"
     },
-
     {
       "name": "SQuADDS: A validated design database and simulation workflow for superconducting qubit design",
       "publisher": "Quantum",
@@ -1149,7 +1119,12 @@
       "releaseDate": "2020-01-01",
       "doi": "10.1063/10.0002046",
       "url": "https://doi.org/10.1063/10.0002046",
-      "authors": ["R. Perez", "Sadman Ahmed Shanto", "M. Moosajee", "S. Cano"],
+      "authors": [
+        "R. Perez",
+        "Sadman Ahmed Shanto",
+        "M. Moosajee",
+        "S. Cano"
+      ],
       "summary": "Development and application of a portable muon telescope for high-resolution muography, published in JURP.",
       "pdf": "https://pubs.aip.org/aip/jurp/article-pdf/doi/10.1063/10.0002046/15689099/100006_1_online.pdf"
     }

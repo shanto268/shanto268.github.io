@@ -1,28 +1,39 @@
 # Sadman Ahmed Shanto
 
-> Experimental physicist building superconducting quantum hardware and design automation tools. Physics PhD Candidate at the University of Southern California (Levenson-Falk Lab) and Research Intern at Google Quantum AI.
+> Experimental physicist building superconducting quantum hardware and design automation tools. Physics PhD Candidate at the University of Southern California (Levenson-Falk Lab). Formerly Research Intern at Google Quantum AI (Aug 2025 - Aug 2026) and Quantum Elements Inc (May 2025 - Aug 2025).
 
 - Website: https://sadmanahmedshanto.com
 - Email: shanto@usc.edu
 - GitHub: https://github.com/shanto268
-- Expected PhD graduation: December 2026
+- ORCID: https://orcid.org/0000-0002-6325-4601
+- Google Scholar: https://scholar.google.com/citations?user=c9UcuUYAAAAJ
+- LinkedIn: https://linkedin.com/in/sshanto
+- CV page: https://sadmanahmedshanto.com/cv/
+- Expected PhD graduation: January 2027
+- MA in Physics, University of Southern California, May 2026
+
+**Name variants**: Sadman Ahmed Shanto; Sadman Shanto; S. A. Shanto; Shanto, S.A. (publication byline); "Shanto" (preferred short form).
+
+**Affiliations**: University of Southern California (USC), Department of Physics and Astronomy; Levenson-Falk Lab (LFL); formerly Google Quantum AI; formerly Quantum Elements Inc.; formerly Texas Tech University.
+
+**Primary expertise**: superconducting qubits, quantum hardware design automation, electromagnetic simulation, nanofabrication, machine learning for chip design, agentic AI for scientific instrumentation.
 
 ## Machine-readable resume
 
 The single source of truth for structured CV data (work, education, publications, talks, awards, outreach, skills, languages, references, etc.) lives in the JSON Resume schema:
 
 - [resume.json](https://sadmanahmedshanto.com/assets/json/resume.json) — full structured CV (JSON Resume format). LLMs should ingest this for any detailed CV/profile question.
-- [CV PDF (May 2026)](https://sadmanahmedshanto.com/assets/pdf/shanto_usc_may2026.pdf) — latest human-readable CV.
+- [CV PDF (September 2026)](https://sadmanahmedshanto.com/assets/pdf/shanto_usc_sept2026.pdf) — latest human-readable CV.
 - [CV page](https://sadmanahmedshanto.com/cv/) — rendered CV on the website.
 
 # About Me
 
-Sadman Ahmed Shanto is a PhD candidate in Physics at the University of Southern California (expected graduation: December 2026), focusing on superconducting quantum hardware and ML-driven design automation. He is currently a Research Intern at Google Quantum AI working on R&D for Quantum Processors. He received his BSc in Applied Physics with minors in Math and Computer Science from Texas Tech University in 2021. Since 2022, he has been a Graduate Research Assistant in the [Levenson-Falk Lab](https://dornsife.usc.edu/lfl/) at USC.
+Sadman Ahmed Shanto is a PhD candidate in Physics at the University of Southern California (expected graduation: January 2027), focusing on superconducting quantum hardware and ML-driven design automation. He earned his MA in Physics from USC in May 2026. From August 2025 to August 2026 he was a Research Intern at Google Quantum AI working on R&D for Quantum Processors. He received his BSc in Applied Physics with minors in Math and Computer Science from Texas Tech University in 2021. Since 2022, he has been a Graduate Research Assistant in the [Levenson-Falk Lab](https://dornsife.usc.edu/lfl/) at USC.
 
 # Research Projects
 
 ## SQuADDS (Superconducting Qubit And Device Design and Simulation)
-An open-source database and design-automation platform for superconducting quantum devices, accelerating chip design from weeks to minutes. Widely adopted across academic and industry labs for simulation, optimization, and fabrication-ready layout generation. Now extended with interpretable ML workflows (Kolmogorov-Arnold Networks) for inverse design.
+An open-source database and design-automation platform for superconducting quantum devices, accelerating chip design from weeks to minutes. Widely adopted across academic and industry labs for simulation, optimization, and fabrication-ready layout generation. Published in Quantum (2024) and now extended toward generalizable foundation ML models for quantum device simulation and design.
 - **Paper**: [SQuADDS: A Database for Superconducting Quantum Device Design and Simulation](https://quantum-journal.org/papers/q-2024-09-09-1465/)
 - **GitHub**: [https://github.com/LFL-Lab/SQuADDS](https://github.com/LFL-Lab/SQuADDS)
 - **Docsite**: [https://lfl-lab.github.io/SQuADDS/](https://lfl-lab.github.io/SQuADDS/)
@@ -33,17 +44,24 @@ An open-source database and design-automation platform for superconducting quant
 - Built an HMM-based inference pipeline to extract real-time quasiparticle occupation states from I/Q trajectory data.
 - Leading experiments on Andreev bound state spectroscopy and nanoSQUID-based QP traps to mitigate quasiparticle-induced decoherence in superconducting qubits.
 
-## ML for Quantum Chip Design (LFL × NVIDIA × Fermilab)
-- Collaborating with NVIDIA and Fermilab on explainable AI methods for quantum device design workflows, enabling physics-driven interpretability to uncover design principles and accelerate optimization of superconducting circuits.
+## ML for Quantum Chip Design (LFL × NVIDIA × Northeastern × Fermilab)
+- Leading the development of generalizable foundation ML models for quantum device simulation and design, in collaboration with NVIDIA, Northeastern University, and Fermilab.
+- Explainable AI methods for quantum device design workflows, enabling physics-driven interpretability to uncover design principles and accelerate optimization of superconducting circuits.
+
+## Agent Harness for End-to-End Device Design (LFL × Lawrence Berkeley National Laboratory)
+- Co-leading development of an agent harness that carries a device from design through simulation to tape-out readiness end to end.
+
+## Lab Design Automation Infrastructure (Levenson-Falk Lab)
+- Led the creation of a fully automated design-to-simulation-to-GDS pipeline for the lab, with the Ansys and Palace simulation stack running on USC's HPC cluster.
 
 ## Palace × Quantum-Metal Integration
 - Leading open-source integration of AWS Quantum's EM solver Palace with Quantum-Metal, enabling scalable cloud-based simulation pipelines for the quantum hardware community.
 
 ## AI-Driven Quantum Experimentation (Quantum Elements Inc.)
-- **Summer 2025**: Engineered a production-ready agentic AI framework with multi-agent coordination, evaluation, and tracing pipelines for autonomous calibration and diagnostics of superconducting quantum experiments. Architected and deployed the full-stack backend (custom APIs, scalable databases, containerized microservices on AWS) integrating Quantum Elements' ML models, simulators, and databases with the AI agent ecosystem via MCP servers.
+- **Summer 2025**: Built a production agentic AI framework that runs superconducting quantum experiments end to end, coordinating multiple specialized agents so they can calibrate, measure, diagnose, and analyze results without a physicist in the loop. Architected the full-stack backend (custom APIs, scalable databases, containerized microservices on AWS) uniting the company's ML models, simulators, and instrument control into one system agents could act on through MCP servers, plus the evaluation and tracing layer that made agent behavior measurable. Contributed modular calibration nodes and DAG-based calibration graphs to QUAlibrate, Quantum Machines' open-source framework for large-scale QPUs.
 
 ## R&D for Quantum Processors (Google Quantum AI)
-- **August 2025 - Present**: Research Intern at Google Quantum AI working on R&D for Quantum Processors.
+- **August 2025 - August 2026**: Research Intern at Google Quantum AI working on R&D for Quantum Processors.
 
 ## Muon Telescopes (Advanced Particle Detector Lab)
 - **Feb 2018 - July 2021**: Developed portable, modular muon telescopes for 3D imaging of dense structures using muon tomography. This involved designing optics (custom Winston cones, 20% → 78% signal efficiency), building and calibrating SiPM/PMT detectors, developing DAQ systems (Arduino, CAMAC, custom PCBs; 300x deadtime reduction), running Geant4 simulations, and implementing machine learning (RNN/LSTM, TDC-based depth inference) for 3D tomographic reconstruction.
@@ -57,7 +75,7 @@ An open-source database and design-automation platform for superconducting quant
 # Selected Publications
 
 - **Universal Hamiltonian Control in a Planar Trimon Circuit** (Maurya, Kowsari, Saurav, *Shanto*, Vijay, Lidar, Levenson-Falk) — Under Review at PRX Quantum, 2026
-- **Component-Level Inverse Design of Transmon Qubits Using Neural Networks** (Seidel, Abouzahr, Chakraborty, *Shanto*, et al.) — In Preparation, 2026
+- **Component-Level Inverse Design of Transmon Qubits Using Neural Networks** (Seidel, Abouzahr, Chakraborty, *Shanto*, et al.) — [arXiv:2607.20795](https://arxiv.org/abs/2607.20795), 2026
 - **AgentQ: An LLM-Agentic Framework for Time-Domain Superconducting Quantum Chip Simulation** (Tang, *Shanto*, Wang, Pancotti, Nonaka, Levenson-Falk, Yao) — In Preparation, 2026
 - **A Review of Design Concerns in Superconducting Quantum Circuits** (Levenson-Falk, *Shanto*) — Materials for Quantum Technology, 2025
 - **SQuADDS: A validated design database and simulation workflow for superconducting qubit design** (*Shanto*, Kuo, Miyamoto, Zhang, Maurya, et al.) — Quantum, 2024
@@ -83,21 +101,28 @@ A complete publication list (with DOIs, authors, and PDFs) is available in [resu
 
 # Recent Honors
 
-- **Peer Recognition Award**, Google Quantum AI (2025, 2026)
+- **Peer Recognition Award** ×3, Google Quantum AI, Mountain View (2025–2026)
+- **Peer Recognition Award** ×2, Google Quantum AI, Santa Barbara (2026)
 - **Best Presenter Award**, Dornsife Industry Days (2025)
 - **USC Dornsife College Graduate Fellowship** (2021–2026)
+- **MA in Physics**, USC (May 2026)
 - **GSG Professional Development Fund Award** (2022–2025)
 
 # Core Technologies
 
-- **Quantum Design & Control**: Qiskit, Qiskit Metal, Quantum-Metal, QUA, scqubits, Cirq, PennyLane, Labber, AlazarTech, OPX+, Zurich Instruments
-- **Layout & Verification**: gdsfactory, KLayout, kfactory, KQCircuits, phidl, Siemens nmDRC, SQDMetal
-- **Simulation**: Ansys HFSS / Q3D, Palace, COMSOL, Elmer, meep, tidy3d, Keysight ADS, AWR Office
-- **ML & AI**: PyTorch, TensorFlow, JAX, Ray, HuggingFace, scikit-learn, HMMLearn, pyKAN, interpret, TFX
-- **Fabrication & Cleanroom**: EBL, photolithography, SEM, FIB, STM, ALD, sputtering, RIE/ICP, CMP, dicing, lift-off
-- **Cryogenics**: Bluefors, Oxford Instruments, RF chain setup, leak detection
-- **Programming**: Python, C++, Rust, Julia, MATLAB, Bash
-- **HPC & Cloud**: AWS, GCP, Azure, Docker, Kubernetes, OpenMPI, SLURM
+- **Layout & Verification**: KLayout, gdsfactory, gdswell, Quantum-Metal, KQCircuits, Calibre nmDRC
+- **PDKs**: John O’Brien Nanofabrication Lab @ USC, Lincoln Lab SQUILL Foundry PDK, SkyWater Foundry PDKs, GlobalFoundry PDKs, Google Quantum AI Foundry PDKs
+- **Quantum Measurements**: QUA, OPX+, Labber, Zurich Instruments, AlazarTech PCIe Digitizer, PyVISA
+- **RF & Microwave Simulation**: Ansys HFSS Suite, Ansys Lumerical, AWS Palace, scikit-rf, COMSOL, Elmer, AWR Office, Keysight ADS, tidy3d, femwell
+- **Fabrication & Cleanroom**: EBL, photolithography, lift-off, RIE, ICP, ALD, sputtering, CMP, FIB, dicing, SEM, metrology
+- **Microwave & Packaging**: Altium Designer, Ansys SIwave, RF board layout, PCB & package design, wirebonding, electroplating
+- **Cryogenics**: BlueFors, Oxford Instruments, RF chain setup, cryo filtering, vacuum pumps, leak detection
+- **Programming Languages**: Python, C++, Bash, Rust, Julia
+- **HPC & Cloud**: SLURM, OpenMPI, Docker, Kubernetes, AWS, GCP
+- **Backend & Databases**: FastAPI, REST, PostgreSQL, MongoDB, Apache Spark, Vercel
+- **Version Control & DevOps**: Git, Gerrit, GitHub, GitHub Actions, Argo, Bazel
+- **ML**: PyTorch, JAX, HuggingFace, Ray, scikit-learn, pyKAN, HMMLearn, InterpretML, TensorFlow
+- **LLMs**: LangChain, multi-agent orchestration (LangGraph), RAG, fine-tuning (LoRA/PEFT), evals & tracing (LangSmith), tool calling (SKILLS.md, MCP)
 
 # Class Projects
 
@@ -109,6 +134,10 @@ A complete publication list (with DOIs, authors, and PDFs) is available in [resu
 - **Bang!: The Dice Game** (Spring 2020)
 - **Transmittance of Light through Air-Water Boundaries at Different Optical Depths** (Fall 2018)
 - **Physics Lab** (Intermediate Physics Lab Course @ TTU)
+
+# Topics & Keywords
+
+superconducting qubits, transmon qubits, quantum computing hardware, quantum device design, quantum design automation, EDA for quantum, SQuADDS, Qiskit Metal, Quantum-Metal, quasiparticle dynamics, Andreev bound states, nanobridge SQUID, Josephson junction, Josephson parametric amplifier, JPA, dilution refrigerator, cryogenic measurement, microwave engineering, RF board layout, PCB design, nanofabrication, electron beam lithography, cleanroom processing, PDK, foundry, tape-out, electromagnetic simulation, finite element method, Ansys HFSS, Palace solver, machine learning for physics, AI for science, inverse design, surrogate modeling, foundation models, Kolmogorov-Arnold Networks, explainable AI, agentic AI, LLM agents, MCP, multi-agent systems, RAG, HPC, scientific software, open source, USC, Levenson-Falk Lab, Google Quantum AI, NVIDIA, Fermilab, Lawrence Berkeley National Laboratory, Northeastern University
 
 # Personal Interests
 

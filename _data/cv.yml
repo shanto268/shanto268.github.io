@@ -13,12 +13,15 @@
   contents:
     - title: PhD in Physics
       institution: University of Southern California, Los Angeles, CA
-      year: 2021 - 2026
+      year: 2021 - 2027
       description:
-        - "Expected Graduation: December 2026"
+        - "Expected Graduation: January 2027"
         - "Research focus: superconducting quantum devices, qubit coherence, quasiparticle dynamics, and ML-driven quantum chip design."
         - "Thesis Advisor: Eli Levenson-Falk, PhD"
         - "Committee Members: Daniel Lidar, PhD; Stephan Haas, PhD; Michelle Povinelli, PhD; Susumu Takahashi, PhD"
+    - title: Master of Arts (MA) in Physics
+      institution: University of Southern California, Los Angeles, CA
+      year: May 2026
     - title: Bachelor of Science in Applied Physics
       institution: Texas Tech University, Lubbock, TX
       year: 2017 - 2021
@@ -31,29 +34,31 @@
   contents:
     - title: Research Intern
       institution: Google, Mountain View, CA
-      year: August 2025 - Present
+      year: August 2025 - August 2026
       description:
         - R&D for Quantum Processors @ Google Quantum AI
     - title: Summer Research Intern
       institution: Quantum Elements Inc., Thousand Oaks, CA
       year: May 2025 - August 2025
       description:
-        - "Engineered a production-ready agentic AI framework with multi-agent coordination, evaluation, and tracing pipelines for autonomous calibration and diagnostics of superconducting quantum experiments."
-        - "Architected and deployed full-stack backend infrastructure—custom APIs, scalable databases, and containerized microservices on AWS—integrating Quantum Elements' ML models, simulators, and databases with the AI agent ecosystem."
-        - "Built the infrastructure enabling autonomous execution of superconducting quantum experiments, allowing AI agents to calibrate, measure, diagnose, and analyze results through integrated MCP servers and ML-driven control workflows."
+        - "Built a production agentic AI framework that runs superconducting quantum experiments end to end, coordinating multiple specialized agents so they can calibrate, measure, diagnose, and analyze results without a physicist in the loop."
+        - "Architected the full-stack backend underneath it, with custom APIs, scalable databases, and containerized microservices on AWS, uniting the company's ML models, simulators, and instrument control into one system agents could act on through MCP servers."
+        - "Designed the evaluation and tracing layer that made agent behavior measurable, turning open-ended autonomous runs into tracked metrics and reproducible traces engineers could debug."
+        - "Contributed modular calibration nodes and DAG-based calibration graphs to QUAlibrate, Quantum Machines' open-source framework for large-scale QPUs, cutting processor tune-up from hours to minutes."
     - title: Graduate Research Assistant
       institution: Levenson-Falk Lab (LFL), University of Southern California
       year: 2022 - Present
       description:
-        - "Lead developer of SQuADDS, an open-source platform accelerating quantum device design from weeks to minutes; widely adopted across research and industry labs."
-        - "Developed and validated high-yield nanofabrication processes for nanobridge-SQUID resonators with 15 nm features, scaling functional device yield from <2% to >90%."
-        - "Designed and fabricated superconducting circuits including nanobridge-based resonators, offset-charge-sensitive transmons, and custom Josephson parametric amplifiers."
-        - "Engineered full-stack experimental infrastructure—from cryogenic systems (Oxford Instruments, BlueFors) and microwave chains to automated measurement platforms using QUA, Labber, and AlazarTech hardware."
-        - "Created an HMM-based inference pipeline to extract real-time quasiparticle occupation states from I/Q trajectory data."
-        - "Leading experiments on Andreev bound state spectroscopy and nanoSQUID-based QP traps to mitigate quasiparticle-induced decoherence in superconducting qubits."
-        - "Extended SQuADDS to support interpretable ML workflows using Kolmogorov-Arnold Networks (KANs) for inverse design."
-        - "Collaborating with NVIDIA and Fermilab on explainable AI methods for quantum device design workflows."
-        - "Leading open-source integration of AWS Quantum's EM solver Palace with Quantum-Metal for scalable cloud-based simulation pipelines."
+        - "Creator and lead developer of SQuADDS, an open-source platform that takes superconducting device design from weeks to minutes; published in Quantum (2024) and adopted by academic and industrial groups worldwide."
+        - "Leading the development of generalizable foundation ML models for quantum device simulation and design, in collaboration with NVIDIA, Northeastern University, and Fermilab."
+        - "Co-leading development of an agent harness with Lawrence Berkeley National Laboratory that carries a device from design through simulation to tape-out readiness end to end."
+        - "Developed and validated a high-yield nanofabrication process for nanobridge-SQUID resonators with 15 nm features, scaling functional device yield from under 2% to over 90%."
+        - "Designed, fabricated, and measured nanobridge resonators, offset-charge-sensitive transmons, trimon devices, dissipator devices and custom Josephson parametric amplifiers, along with the PCBs, packages, and cryogenic microwave chain that house and measure them."
+        - "Built a Hidden Markov Model inference pipeline that extracts real-time quasiparticle occupation from I/Q trajectory data."
+        - "Leading Andreev bound state spectroscopy and nanoSQUID quasiparticle trap experiments to characterize and mitigate quasiparticle-induced decoherence in superconducting qubits."
+        - "Led the creation of a fully automated design-to-simulation-to-GDS pipeline for the lab, with the Ansys and Palace simulation stack on USC's HPC cluster."
+        - "Leading the open-source integration of AWS Quantum's EM solver Palace with Quantum-Metal, giving the hardware community scalable cloud-based simulation pipelines."
+        - "Mentored five graduate and six undergraduate researchers through device design, fabrication, and measurement projects."
     - title: Teaching Assistant
       institution: University of Southern California
       year: 2021 - 2022
@@ -150,7 +155,7 @@
       items:
         - title: "Component-Level Inverse Design of Transmon Qubits Using Neural Networks"
           authors: "O. Seidel, F. Abouzahr, A. Chakraborty, S.A. Shanto, et al."
-          journal: "In Preparation"
+          journal: "arXiv:2607.20795"
         - title: "AgentQ: An LLM-Agentic Framework for Time-Domain Superconducting Quantum Chip Simulation"
           authors: "Y. Tang, S.A. Shanto, K. Wang, N. Pancotti, A. Nonaka, E.M. Levenson-Falk, Z. Yao"
           journal: "In Preparation"
@@ -194,10 +199,12 @@
   contents:
     - year: 2026
       items:
-        - Peer Recognition Award, Google Quantum AI
+        - Peer Recognition Award (x2), Google Quantum AI
+    - year: 2025 - 2026
+      items:
+        - Peer Recognition Award (x3), Google Quantum AI
     - year: 2025
       items:
-        - Peer Recognition Award, Google Quantum AI
         - Best Presenter Award, Dornsife Industry Days
     - year: 2022 - 2025
       items:
@@ -271,95 +278,118 @@
 - title: Skills
   type: nested_list
   contents:
-    - title: Quantum Design & Control
-      items:
-        - AlazarTech PCIe Digitizer
-        - Cirq
-        - Labber
-        - OPX+ (Quantum Machines)
-        - PennyLane
-        - Qiskit / Qiskit Metal / Quantum-Metal
-        - QUA
-        - scqubits
-        - Zurich Instruments
     - title: Layout & Verification
       items:
-        - gdsfactory / gdspy / gplugins
-        - KLayout / kfactory
-        - KQCircuits
-        - phidl
-        - Siemens nmDRC
-        - SiEPIC-Tools
-        - SQDMetal
-    - title: Simulation & Modeling
+        - "KLayout"
+        - "gdsfactory"
+        - "gdswell"
+        - "Quantum-Metal"
+        - "KQCircuits"
+        - "Calibre nmDRC"
+    - title: PDKs
       items:
-        - Ansys HFSS / Q3D
-        - AWR Office
-        - COMSOL
-        - Elmer
-        - Keysight ADS
-        - meep
-        - Palace
-        - tidy3d
+        - "John O’Brien Nanofabrication Lab @ USC"
+        - "Lincoln Lab SQUILL Foundry PDK"
+        - "SkyWater Foundry PDKs"
+        - "GlobalFoundry PDKs"
+        - "Google Quantum AI Foundry PDKs"
+    - title: Quantum Measurements
+      items:
+        - "QUA"
+        - "OPX+"
+        - "Labber"
+        - "Zurich Instruments"
+        - "AlazarTech PCIe Digitizer"
+        - "PyVISA"
+    - title: RF & Microwave Simulation
+      items:
+        - "Ansys HFSS Suite"
+        - "Ansys Lumerical"
+        - "AWS Palace"
+        - "scikit-rf"
+        - "COMSOL"
+        - "Elmer"
+        - "AWR Office"
+        - "Keysight ADS"
+        - "tidy3d"
+        - "femwell"
     - title: Fabrication & Cleanroom
       items:
-        - EBL, Photolithography, Laser Lithography
-        - SEM, FIB, STM, Profilometry, Metrology
-        - ALD, Sputtering, E-Beam / Thermal Evaporation
-        - RIE, ICP, Wet/Dry Etching, CMP
-        - Dicing, Lift-off, Process Optimization
+        - "EBL"
+        - "Photolithography"
+        - "Lift-off"
+        - "RIE"
+        - "ICP"
+        - "ALD"
+        - "Sputtering"
+        - "CMP"
+        - "FIB"
+        - "Dicing"
+        - "SEM"
+        - "Metrology"
     - title: Microwave & Packaging
       items:
-        - Cavity Design
-        - CPW and RF Board Layout
-        - Electroplating
-        - JPA Design
-        - Soldering, Wirebonding
-    - title: Cryogenics & Instrumentation
+        - "Altium Designer"
+        - "Ansys SIwave"
+        - "RF Board Layout"
+        - "PCB & Package Design"
+        - "Wirebonding"
+        - "Electroplating"
+    - title: Cryogenics
       items:
-        - Bluefors, Oxford Instruments
-        - Cryo Filtering, RF Chain Setup
-        - Helium Compressors
-        - Leak Detection, Vacuum Pumps
-    - title: Machine Learning & AI
+        - "BlueFors"
+        - "Oxford Instruments"
+        - "RF Chain Setup"
+        - "Cryo Filtering"
+        - "Vacuum Pumps"
+        - "Leak Detection"
+    - title: Programming Languages
       items:
-        - PyTorch, TensorFlow, JAX, Keras
-        - Scikit-learn, XGBoost, LightGBM
-        - HuggingFace / Transformers
-        - Ray, AutoML, Hyperopt
-        - HMMLearn, pyKAN, interpret, TFX
-    - title: Programming & Data Pipelines
-      items:
-        - Python, C++, Rust, Julia, MATLAB
-        - Bash, Lua, ROOT, SQL
-        - NumPy, Pandas, SymPy
-        - Matplotlib, Plotly, Seaborn, Dash
+        - "Python"
+        - "C++"
+        - "Bash"
+        - "Rust"
+        - "Julia"
     - title: HPC & Cloud
       items:
-        - AWS, GCP, Azure
-        - Docker, Kubernetes
-        - OpenMPI, SLURM
-    - title: Digital & Embedded Systems
+        - "SLURM"
+        - "OpenMPI"
+        - "Docker"
+        - "Kubernetes"
+        - "AWS"
+        - "GCP"
+    - title: Backend & Databases
       items:
-        - Arduino, Raspberry Pi
-        - FPGA Design, Verilog, Vivado
-        - KiCad, LTspice
-    - title: Web Tools & APIs
-      items:
-        - Django, FastAPI, Flask
-        - GraphQL, REST, WebSockets
-        - HTML/CSS, JavaScript, Node.js
-    - title: Databases & Big Data
-      items:
-        - PostgreSQL, MongoDB, AWS RDS
-        - Apache Spark, Hadoop
+        - "FastAPI"
+        - "REST"
+        - "PostgreSQL"
+        - "MongoDB"
+        - "Apache Spark"
+        - "Vercel"
     - title: Version Control & DevOps
       items:
-        - Git, GitHub, GitLab, Gerrit
-        - CI/CD Pipelines
-    - title: Languages
+        - "Git"
+        - "Gerrit"
+        - "GitHub"
+        - "GitHub Actions"
+        - "Argo"
+        - "Bazel"
+    - title: ML
       items:
-        - Bengali (Native)
-        - English (Native)
-        - Hindi (Intermediate)
-        - Urdu (Intermediate)
+        - "PyTorch"
+        - "JAX"
+        - "HuggingFace"
+        - "Ray"
+        - "Scikit-learn"
+        - "pyKAN"
+        - "HMMLearn"
+        - "InterpretML"
+        - "TensorFlow"
+    - title: LLMs
+      items:
+        - "LangChain"
+        - "Multi-Agent Orchestration (LangGraph)"
+        - "RAG"
+        - "Fine-tuning (LoRA/PEFT)"
+        - "Evals & Tracing (LangSmith)"
+        - "Tool calling (SKILLS.md, MCP)"
