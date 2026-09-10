@@ -26,10 +26,10 @@ Welcome to my website 👋🏽
 
 I am Shanto, a PhD candidate in Physics (focusing on quantum hardware) at the University of Southern California ✌️
 
+Since 2022, I have been having the time of my life deep in the quantum trenches at the [Levenson-Falk Lab](https://dornsife.usc.edu/lfl/) as a Graduate Research Assistant.
+
+From August 2025 to August 2026, I was a Research Intern at [Google Quantum AI](https://quantumai.google/), working on design, simulations and infrastructure needed for taping out quantum processors.
+
+From May to August 2025, I was a Summer Research Intern at [Quantum Elements Inc.](https://quantumelements.ai/), where I built and deployed API endpoints and also an agentic AI interface to automate measurement and calibration (built on top of [Quantum Machine](https://quantum-machines.co/)'s ecosystem) workflows for the [Rigetti Novera Quantum Processor](https://www.rigetti.com/novera).
+
 In 2021, I received my BSc in Applied Physics with minors in Math and Computer Science from Texas Tech University 🔴⚫️
-
-Since 2022, I have been having the time of my life deep in the quantum trenches at the [Levenson-Falk Lab](https://dornsife.usc.edu/lfl/) as a Graduate Research Assistant. 
-
-From August 2025 to August 2026, I was a Research Intern at [Google Quantum AI](https://quantumai.google/), working on design, simulations and infrastructure needed for tapeing out quantum processors.
-
-From May to August 2025, I was a Summer Research Intern at [Quantum Elements Inc.](https://https://quantumelements.ai/), where I built and deployed API endpoints and also an agentic AI interface to automate measurement and calibration (built on top of [Quantum Machine](https://quantum-machines.co/)'s ecosystem) workflows for the [Rigetti Novera Quantum Processor](https://www.rigetti.com/novera).
