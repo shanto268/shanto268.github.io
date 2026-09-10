@@ -36,7 +36,7 @@ Name variants used for author matching: Sadman Ahmed Shanto; Sadman Shanto; S. A
    - Developed a 15 nm nanobridge-SQUID process that increased functional-device yield from under 2% to over 90%.
    - Built hidden-Markov-model inference for quasiparticle occupation and works on Andreev-bound-state spectroscopy and quasiparticle mitigation.
    - Research profile: https://sadmanahmedshanto.com/projects/1_project/
-   - Publications: https://arxiv.org/abs/2603.04566, https://doi.org/10.1103/PRXQuantum.4.030339, and https://doi.org/10.1103/PhysRevB.107.L140506
+   - Publications: https://sadmanahmedshanto.com/publications/ (complete, current publication list)
 
 2. Quantum processor research and development
    - Former Google Quantum AI Research Intern working on R&D for quantum processors from August 2025 through August 2026.
