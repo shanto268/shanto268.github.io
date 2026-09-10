@@ -393,31 +393,126 @@
     },
     {
       "@type": "ScholarlyArticle",
-      "@id": "https://doi.org/10.22331/q-2024-09-09-1465",
-      "name": "SQuADDS: A validated design database and simulation workflow for superconducting qubit design",
-      "headline": "SQuADDS: A validated design database and simulation workflow for superconducting qubit design",
-      "datePublished": "2024-09-09",
-      "url": "https://doi.org/10.22331/q-2024-09-09-1465",
-      "sameAs": "https://quantum-journal.org/papers/q-2024-09-09-1465/",
-      "identifier": "https://doi.org/10.22331/q-2024-09-09-1465",
-      "isPartOf": {
-        "@type": "Periodical",
-        "name": "Quantum"
-      },
-      "author": {
-        "@id": "https://sadmanahmedshanto.com/#person"
-      },
+      "@id": "https://arxiv.org/abs/2607.20795",
+      "name": "Component-Level Inverse Design of Transmon Qubits Using Neural Networks",
+      "datePublished": "2026-07-22",
+      "url": "https://arxiv.org/abs/2607.20795",
+      "identifier": [
+        "https://arxiv.org/abs/2607.20795"
+      ],
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Olivia Seidel"
+        },
+        {
+          "@type": "Person",
+          "name": "Firas Abouzahr"
+        },
+        {
+          "@type": "Person",
+          "name": "Abhishek Chakraborty"
+        },
+        {
+          "@id": "https://sadmanahmedshanto.com/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Saikat Das"
+        },
+        {
+          "@type": "Person",
+          "name": "Daniel Baxter"
+        },
+        {
+          "@type": "Person",
+          "name": "Jonathan Asaadi"
+        },
+        {
+          "@type": "Person",
+          "name": "Nicola Pancotti"
+        },
+        {
+          "@type": "Person",
+          "name": "Haoyu Yang"
+        },
+        {
+          "@type": "Person",
+          "name": "Brucek Khailany"
+        },
+        {
+          "@type": "Person",
+          "name": "Sara Sussman"
+        },
+        {
+          "@type": "Person",
+          "name": "Enectali Figueroa-Feliciano"
+        },
+        {
+          "@type": "Person",
+          "name": "Eli M Levenson-Falk"
+        },
+        {
+          "@type": "Person",
+          "name": "Taylor L. Patti"
+        }
+      ],
       "about": [
-        "Superconducting quantum-device design",
-        "Electromagnetic simulation",
-        "Quantum design automation"
+        "Transmon qubits",
+        "Neural-network inverse design",
+        "AI for science"
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://arxiv.org/abs/2603.04566",
+      "name": "Universal Hamiltonian control in a planar trimon circuit",
+      "datePublished": "2026-03-04",
+      "url": "https://arxiv.org/abs/2603.04566",
+      "identifier": [
+        "https://arxiv.org/abs/2603.04566"
+      ],
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Vivek Maurya"
+        },
+        {
+          "@type": "Person",
+          "name": "Daria Kowsari"
+        },
+        {
+          "@type": "Person",
+          "name": "Kumar Saurav"
+        },
+        {
+          "@id": "https://sadmanahmedshanto.com/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "R. Vijay"
+        },
+        {
+          "@type": "Person",
+          "name": "Daniel A. Lidar"
+        },
+        {
+          "@type": "Person",
+          "name": "Eli M. Levenson-Falk"
+        }
+      ],
+      "about": [
+        "Planar trimon circuits",
+        "Universal Hamiltonian control",
+        "Multimode superconducting circuits",
+        "Quantum processor architectures"
       ]
     },
     {
       "@type": "ScholarlyArticle",
       "@id": "https://doi.org/10.1088/2633-4356/ade10d",
       "name": "A Review of Design Concerns in Superconducting Quantum Circuits",
-      "datePublished": "2025",
+      "datePublished": "2025-06-30",
       "url": "https://doi.org/10.1088/2633-4356/ade10d",
       "identifier": [
         "https://doi.org/10.1088/2633-4356/ade10d",
@@ -440,51 +535,126 @@
     },
     {
       "@type": "ScholarlyArticle",
-      "@id": "https://arxiv.org/abs/2607.20795",
-      "name": "Component-Level Inverse Design of Transmon Qubits Using Neural Networks",
-      "datePublished": "2026",
-      "url": "https://arxiv.org/abs/2607.20795",
-      "identifier": "arXiv:2607.20795",
-      "author": {
-        "@id": "https://sadmanahmedshanto.com/#person"
+      "@id": "https://doi.org/10.22331/q-2024-09-09-1465",
+      "name": "SQuADDS: A validated design database and simulation workflow for superconducting qubit design",
+      "headline": "SQuADDS: A validated design database and simulation workflow for superconducting qubit design",
+      "datePublished": "2024-09-09",
+      "url": "https://doi.org/10.22331/q-2024-09-09-1465",
+      "sameAs": "https://quantum-journal.org/papers/q-2024-09-09-1465/",
+      "identifier": [
+        "https://doi.org/10.22331/q-2024-09-09-1465",
+        "https://arxiv.org/abs/2312.13483"
+      ],
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Quantum"
       },
+      "author": [
+        {
+          "@id": "https://sadmanahmedshanto.com/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Andre Kuo"
+        },
+        {
+          "@type": "Person",
+          "name": "Clark Miyamoto"
+        },
+        {
+          "@type": "Person",
+          "name": "Haimeng Zhang"
+        },
+        {
+          "@type": "Person",
+          "name": "Vivek Maurya"
+        },
+        {
+          "@type": "Person",
+          "name": "Evangelos Vlachos"
+        },
+        {
+          "@type": "Person",
+          "name": "Malida Hecht"
+        },
+        {
+          "@type": "Person",
+          "name": "Chung Wa Shum"
+        },
+        {
+          "@type": "Person",
+          "name": "Eli Levenson-Falk"
+        }
+      ],
       "about": [
-        "Transmon qubits",
-        "Neural-network inverse design",
-        "AI for science"
-      ]
-    },
-    {
-      "@type": "ScholarlyArticle",
-      "@id": "https://arxiv.org/abs/2603.04566",
-      "name": "Universal Hamiltonian control in a planar trimon circuit",
-      "datePublished": "2026-03-04",
-      "url": "https://arxiv.org/abs/2603.04566",
-      "identifier": "arXiv:2603.04566",
-      "author": {
-        "@id": "https://sadmanahmedshanto.com/#person"
-      },
-      "about": [
-        "Planar trimon circuits",
-        "Universal Hamiltonian control",
-        "Multimode superconducting circuits",
-        "Quantum processor architectures"
+        "Superconducting quantum-device design",
+        "Electromagnetic simulation",
+        "Quantum design automation"
       ]
     },
     {
       "@type": "ScholarlyArticle",
       "@id": "https://doi.org/10.1103/PRXQuantum.5.020321",
       "name": "On-demand driven dissipation for cavity reset and cooling",
-      "datePublished": "2024-04-01",
+      "datePublished": "2024-04-25",
       "url": "https://doi.org/10.1103/PRXQuantum.5.020321",
-      "identifier": "https://doi.org/10.1103/PRXQuantum.5.020321",
+      "identifier": [
+        "https://doi.org/10.1103/PRXQuantum.5.020321",
+        "https://arxiv.org/abs/2310.16785"
+      ],
       "isPartOf": {
         "@type": "Periodical",
         "name": "PRX Quantum"
       },
-      "author": {
-        "@id": "https://sadmanahmedshanto.com/#person"
-      },
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Vivek Maurya"
+        },
+        {
+          "@type": "Person",
+          "name": "Haimeng Zhang"
+        },
+        {
+          "@type": "Person",
+          "name": "Daria Kowsari"
+        },
+        {
+          "@type": "Person",
+          "name": "Andre Kuo"
+        },
+        {
+          "@type": "Person",
+          "name": "Darian M. Hartsell"
+        },
+        {
+          "@type": "Person",
+          "name": "Clark Miyamoto"
+        },
+        {
+          "@type": "Person",
+          "name": "Jocelyn Liu"
+        },
+        {
+          "@id": "https://sadmanahmedshanto.com/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Evangelos Vlachos"
+        },
+        {
+          "@type": "Person",
+          "name": "Azarin Zarassi"
+        },
+        {
+          "@type": "Person",
+          "name": "Kater W. Murch"
+        },
+        {
+          "@type": "Person",
+          "name": "Eli M. Levenson-Falk"
+        }
+      ],
       "about": [
         "Cavity reset",
         "Driven dissipation",
@@ -495,16 +665,57 @@
       "@type": "ScholarlyArticle",
       "@id": "https://doi.org/10.1103/PRXQuantum.4.030339",
       "name": "Quasiparticle Dynamics in Epitaxial Al-In-As Planar Josephson Junctions",
-      "datePublished": "2023-09-01",
+      "datePublished": "2023-09-22",
       "url": "https://doi.org/10.1103/PRXQuantum.4.030339",
-      "identifier": "https://doi.org/10.1103/PRXQuantum.4.030339",
+      "identifier": [
+        "https://doi.org/10.1103/PRXQuantum.4.030339",
+        "https://arxiv.org/abs/2303.04784"
+      ],
       "isPartOf": {
         "@type": "Periodical",
         "name": "PRX Quantum"
       },
-      "author": {
-        "@id": "https://sadmanahmedshanto.com/#person"
-      },
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Bassel Heiba Elfeky"
+        },
+        {
+          "@type": "Person",
+          "name": "William M. Strickland"
+        },
+        {
+          "@type": "Person",
+          "name": "Jaewoo Lee"
+        },
+        {
+          "@type": "Person",
+          "name": "James T. Farmer"
+        },
+        {
+          "@id": "https://sadmanahmedshanto.com/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Azarin Zarassi"
+        },
+        {
+          "@type": "Person",
+          "name": "Dylan Langone"
+        },
+        {
+          "@type": "Person",
+          "name": "Maxim G. Vavilov"
+        },
+        {
+          "@type": "Person",
+          "name": "Eli M. Levenson-Falk"
+        },
+        {
+          "@type": "Person",
+          "name": "Javad Shabani"
+        }
+      ],
       "about": [
         "Quasiparticle dynamics",
         "Josephson junctions"
@@ -514,16 +725,37 @@
       "@type": "ScholarlyArticle",
       "@id": "https://doi.org/10.1103/PhysRevB.107.L140506",
       "name": "Electron-phonon interactions in the Andreev bound states of aluminum nanobridge Josephson junctions",
-      "datePublished": "2023-04-01",
+      "datePublished": "2023-04-27",
       "url": "https://doi.org/10.1103/PhysRevB.107.L140506",
-      "identifier": "https://doi.org/10.1103/PhysRevB.107.L140506",
+      "identifier": [
+        "https://doi.org/10.1103/PhysRevB.107.L140506",
+        "https://arxiv.org/abs/2211.16765"
+      ],
       "isPartOf": {
         "@type": "Periodical",
-        "name": "Physical Review B"
+        "name": "Phys. Rev. B"
       },
-      "author": {
-        "@id": "https://sadmanahmedshanto.com/#person"
-      },
+      "author": [
+        {
+          "@type": "Person",
+          "name": "James T. Farmer"
+        },
+        {
+          "@type": "Person",
+          "name": "Azarin Zarassi"
+        },
+        {
+          "@id": "https://sadmanahmedshanto.com/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Darian Hartsell"
+        },
+        {
+          "@type": "Person",
+          "name": "Eli M. Levenson-Falk"
+        }
+      ],
       "about": [
         "Andreev bound states",
         "Electron-phonon interactions",

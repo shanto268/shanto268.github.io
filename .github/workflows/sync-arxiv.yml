@@ -1,0 +1,95 @@
+name: Sync publication records
+
+on:
+  schedule:
+    - cron: "17 9 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: publication-record-sync
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    name: Find, validate, and propose publication updates
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the website
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - name: Test the publication synchronizer
+        run: python -m unittest tests/test_sync_arxiv_publications.py
+
+      - name: Discover arXiv papers and journal versions
+        run: python bin/sync-arxiv-publications
+
+      - name: Detect synchronized publication changes
+        id: changes
+        shell: bash
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No publication updates found." >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "Publication updates were found and will be validated before a PR is opened." >> "$GITHUB_STEP_SUMMARY"
+            git diff --stat >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Set up Ruby
+        if: steps.changes.outputs.changed == 'true'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+
+      - name: Install notebook build dependencies
+        if: steps.changes.outputs.changed == 'true'
+        run: python -m pip install --upgrade nbconvert
+
+      - name: Build and validate the updated website
+        if: steps.changes.outputs.changed == 'true'
+        run: bash bin/check-seo
+
+      - name: Create or update the review PR
+        if: steps.changes.outputs.changed == 'true'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ github.token }}
+          branch: automation/arxiv-publications
+          delete-branch: true
+          base: main
+          add-paths: |
+            _bibliography/papers.bib
+            _data/publications.json
+            assets/json/profile.json
+            assets/json/resume.json
+            llms-full.txt
+            llms.txt
+          commit-message: "chore(publications): synchronize publication records"
+          title: "Synchronize arXiv and journal publication records"
+          body: |
+            This automated PR synchronizes publication records using the public arXiv
+            and Crossref APIs. It may add newly discovered preprints or replace preprint
+            metadata with DOI and journal metadata after publication.
+
+            Before opening this PR, CI:
+            - matched an accepted Sadman Ahmed Shanto author-name variant;
+            - deduplicated entries by arXiv ID and normalized title;
+            - propagated metadata to the bibliography, JSON Resume, profile JSON-LD,
+              publication-page JSON-LD data, and LLM discovery text;
+            - ran the synchronizer regression test; and
+            - built and validated the updated website.
+
+            Please review title and author matching, journal status, DOI, and venue
+            metadata before merging. This workflow never auto-merges.

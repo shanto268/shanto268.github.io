@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 seo_title: Quantum Hardware, AI for Science, and Experimental Physics Publications
-seo_description: Publications by Sadman Ahmed Shanto on superconducting quantum-device design, planar trimon control, inverse design, SQuADDS, quasiparticle dynamics, Andreev bound states, cavity reset, muography, and traffic modeling.
+seo_description: Current publications by Sadman Ahmed Shanto across quantum hardware, AI for science, experimental physics, scientific machine learning, instrumentation, and computational modeling.
 title: /publications
 description: publications by categories in reversed chronological order
 nav: true

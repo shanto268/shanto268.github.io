@@ -26,6 +26,16 @@ jq -e '
   and any(.subjectOf[]; .["@type"] == "ScholarlyArticle")
 ' assets/json/profile.json >/dev/null
 
+echo "Checking publication records across discovery surfaces..."
+while IFS= read -r publication_id; do
+  for publication_surface in _bibliography/papers.bib assets/json/profile.json assets/json/resume.json llms-full.txt; do
+    if ! grep -Fq "${publication_id}" "${publication_surface}"; then
+      echo "Missing arXiv ${publication_id} from ${publication_surface}" >&2
+      exit 1
+    fi
+  done
+done < <(jq -r '.[] | (.doi // .arxiv)' _data/publications.json)
+
 echo "Building the site..."
 bundle exec jekyll build \
   --disable-disk-cache \

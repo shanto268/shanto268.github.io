@@ -156,90 +156,36 @@
       "@id": {{ canonical_url | append: '#publication-list' | jsonify }},
       "name": "Selected publications by Sadman Ahmed Shanto",
       "itemListElement": [
+        {% for publication in site.data.publications %}
         {
           "@type": "ListItem",
-          "position": 1,
+          "position": {{ forloop.index }},
           "item": {
             "@type": "ScholarlyArticle",
-            "@id": "https://arxiv.org/abs/2607.20795",
-            "name": "Component-Level Inverse Design of Transmon Qubits Using Neural Networks",
-            "datePublished": "2026",
-            "url": "https://arxiv.org/abs/2607.20795",
-            "author": { "@id": {{ profile_url | append: '#person' | jsonify }} }
+            "@id": {{ publication.id | jsonify }},
+            "name": {{ publication.name | jsonify }},
+            "datePublished": {{ publication.datePublished | jsonify }},
+            "url": {{ publication.url | jsonify }},
+            "identifier": [
+              {% if publication.doi %}{{ publication.doi | prepend: 'https://doi.org/' | jsonify }},{% endif %}
+              {{ publication.arxiv | prepend: 'https://arxiv.org/abs/' | jsonify }}
+            ]{% if publication.journal %},
+            "isPartOf": {
+              "@type": "Periodical",
+              "name": {{ publication.journal | jsonify }}
+            }{% endif %},
+            "author": [
+              {% for publication_author in publication.authors %}
+              {% if publication_author == 'Sadman Ahmed Shanto' or publication_author == 'Sadman Shanto' or publication_author == 'S. A. Shanto' %}
+              { "@id": {{ profile_url | append: '#person' | jsonify }} }
+              {% else %}
+              { "@type": "Person", "name": {{ publication_author | jsonify }} }
+              {% endif %}{% unless forloop.last %},{% endunless %}
+              {% endfor %}
+            ]
           }
-        },
-        {
-          "@type": "ListItem",
-          "position": 2,
-          "item": {
-            "@type": "ScholarlyArticle",
-            "@id": "https://arxiv.org/abs/2603.04566",
-            "name": "Universal Hamiltonian control in a planar trimon circuit",
-            "datePublished": "2026-03-04",
-            "url": "https://arxiv.org/abs/2603.04566",
-            "author": { "@id": {{ profile_url | append: '#person' | jsonify }} }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 3,
-          "item": {
-            "@type": "ScholarlyArticle",
-            "@id": "https://doi.org/10.1088/2633-4356/ade10d",
-            "name": "A Review of Design Concerns in Superconducting Quantum Circuits",
-            "datePublished": "2025",
-            "url": "https://doi.org/10.1088/2633-4356/ade10d",
-            "author": { "@id": {{ profile_url | append: '#person' | jsonify }} }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 4,
-          "item": {
-            "@type": "ScholarlyArticle",
-            "@id": "https://doi.org/10.22331/q-2024-09-09-1465",
-            "name": "SQuADDS: A validated design database and simulation workflow for superconducting qubit design",
-            "datePublished": "2024-09-09",
-            "url": "https://doi.org/10.22331/q-2024-09-09-1465",
-            "author": { "@id": {{ profile_url | append: '#person' | jsonify }} }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 5,
-          "item": {
-            "@type": "ScholarlyArticle",
-            "@id": "https://doi.org/10.1103/PRXQuantum.5.020321",
-            "name": "On-demand driven dissipation for cavity reset and cooling",
-            "datePublished": "2024-04-01",
-            "url": "https://doi.org/10.1103/PRXQuantum.5.020321",
-            "author": { "@id": {{ profile_url | append: '#person' | jsonify }} }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 6,
-          "item": {
-            "@type": "ScholarlyArticle",
-            "@id": "https://doi.org/10.1103/PRXQuantum.4.030339",
-            "name": "Quasiparticle Dynamics in Epitaxial Al-In-As Planar Josephson Junctions",
-            "datePublished": "2023-09-01",
-            "url": "https://doi.org/10.1103/PRXQuantum.4.030339",
-            "author": { "@id": {{ profile_url | append: '#person' | jsonify }} }
-          }
-        },
-        {
-          "@type": "ListItem",
-          "position": 7,
-          "item": {
-            "@type": "ScholarlyArticle",
-            "@id": "https://doi.org/10.1103/PhysRevB.107.L140506",
-            "name": "Electron-phonon interactions in the Andreev bound states of aluminum nanobridge Josephson junctions",
-            "datePublished": "2023-04-01",
-            "url": "https://doi.org/10.1103/PhysRevB.107.L140506",
-            "author": { "@id": {{ profile_url | append: '#person' | jsonify }} }
-          }
-        }
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
       ]
     }{% endif %}
   ]

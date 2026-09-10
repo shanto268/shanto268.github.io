@@ -952,7 +952,7 @@
     {
       "name": "Component-Level Inverse Design of Transmon Qubits Using Neural Networks",
       "publisher": "arXiv:2607.20795",
-      "releaseDate": "2026",
+      "releaseDate": "2026-07-22",
       "authors": [
         "Olivia Seidel",
         "Firas Abouzahr",
@@ -992,7 +992,7 @@
     {
       "name": "Universal Hamiltonian Control in a Planar Trimon Circuit",
       "publisher": "arXiv:2603.04566; Under Review at PRX Quantum",
-      "releaseDate": "2026",
+      "releaseDate": "2026-03-04",
       "authors": [
         "Vivek Maurya",
         "Daria Kowsari",
@@ -1010,9 +1010,9 @@
     {
       "name": "A Review of Design Concerns in Superconducting Quantum Circuits",
       "publisher": "Materials for Quantum Technology",
-      "releaseDate": "2025",
+      "releaseDate": "2025-06-30",
       "doi": "10.1088/2633-4356/ade10d",
-      "url": "https://iopscience.iop.org/article/10.1088/2633-4356/ade10d",
+      "url": "https://doi.org/10.1088/2633-4356/ade10d",
       "authors": [
         "Eli M. Levenson-Falk",
         "Sadman Ahmed Shanto"
@@ -1039,12 +1039,13 @@
         "Eli Levenson-Falk"
       ],
       "summary": "A validated design database and simulation workflow for superconducting qubit design, published in Quantum.",
-      "pdf": "https://quantum-journal.org/papers/q-2024-09-09-1465/pdf/"
+      "pdf": "https://quantum-journal.org/papers/q-2024-09-09-1465/pdf/",
+      "arxiv": "2312.13483"
     },
     {
       "name": "On-demand driven dissipation for cavity reset and cooling",
       "publisher": "PRX Quantum",
-      "releaseDate": "2024-04-01",
+      "releaseDate": "2024-04-25",
       "doi": "10.1103/PRXQuantum.5.020321",
       "url": "https://doi.org/10.1103/PRXQuantum.5.020321",
       "authors": [
@@ -1062,12 +1063,13 @@
         "Eli Levenson-Falk"
       ],
       "summary": "Research on cavity reset and cooling through on-demand driven dissipation, published in PRX Quantum.",
-      "pdf": "https://journals.aps.org/prxquantum/pdf/10.1103/PRXQuantum.5.020321"
+      "pdf": "https://journals.aps.org/prxquantum/pdf/10.1103/PRXQuantum.5.020321",
+      "arxiv": "2310.16785"
     },
     {
       "name": "Quasiparticle Dynamics in Epitaxial Al-In-As Planar Josephson Junctions",
       "publisher": "PRX Quantum",
-      "releaseDate": "2023-09-01",
+      "releaseDate": "2023-09-22",
       "doi": "10.1103/PRXQuantum.4.030339",
       "url": "https://doi.org/10.1103/PRXQuantum.4.030339",
       "authors": [
@@ -1083,12 +1085,13 @@
         "Javad Shabani"
       ],
       "summary": "A study of quasiparticle dynamics in Josephson junctions, published in PRX Quantum.",
-      "pdf": "https://journals.aps.org/prxquantum/pdf/10.1103/PRXQuantum.4.030339"
+      "pdf": "https://journals.aps.org/prxquantum/pdf/10.1103/PRXQuantum.4.030339",
+      "arxiv": "2303.04784"
     },
     {
       "name": "Electron-phonon interactions in the Andreev bound states of aluminum nanobridge Josephson junctions",
       "publisher": "Phys. Rev. B",
-      "releaseDate": "2023-04-01",
+      "releaseDate": "2023-04-27",
       "doi": "10.1103/PhysRevB.107.L140506",
       "url": "https://doi.org/10.1103/PhysRevB.107.L140506",
       "authors": [
@@ -1099,7 +1102,8 @@
         "Eli M. Levenson-Falk"
       ],
       "summary": "Investigation of electron-phonon interactions in Andreev bound states of Josephson junctions, published in Physical Review B.",
-      "pdf": "https://journals.aps.org/prb/pdf/10.1103/PhysRevB.107.L140506"
+      "pdf": "https://journals.aps.org/prb/pdf/10.1103/PhysRevB.107.L140506",
+      "arxiv": "2211.16765"
     },
     {
       "name": "Challenges of Microsimulation Calibration with Traffic Waves using Aggregate Measurements",

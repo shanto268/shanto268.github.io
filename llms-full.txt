@@ -89,11 +89,11 @@ Created and leads an open-source database and design-automation platform for sup
 - **Universal Hamiltonian Control in a Planar Trimon Circuit** (Maurya, Kowsari, Saurav, *Shanto*, Vijay, Lidar, Levenson-Falk) — [arXiv:2603.04566](https://arxiv.org/abs/2603.04566); under review at PRX Quantum, 2026
 - **Component-Level Inverse Design of Transmon Qubits Using Neural Networks** (Seidel, Abouzahr, Chakraborty, *Shanto*, et al.) — [arXiv:2607.20795](https://arxiv.org/abs/2607.20795), 2026
 - **AgentQ: An LLM-Agentic Framework for Time-Domain Superconducting Quantum Chip Simulation** (Tang, *Shanto*, Wang, Pancotti, Nonaka, Levenson-Falk, Yao) — In Preparation, 2026
-- **A Review of Design Concerns in Superconducting Quantum Circuits** (Levenson-Falk, *Shanto*) — Materials for Quantum Technology, 2025
-- **SQuADDS: A validated design database and simulation workflow for superconducting qubit design** (*Shanto*, Kuo, Miyamoto, Zhang, Maurya, et al.) — Quantum, 2024
-- **On-Demand Driven Dissipation for Cavity Reset and Cooling** (Maurya, Zhang, Kowsari, Kuo, Hartsell, Miyamoto, Liu, *Shanto*, et al.) — PRX Quantum, 2024
-- **Quasiparticle Dynamics in Epitaxial Al-In-As Planar Josephson Junctions** (Elfeky, Strickland, Lee, Farmer, *Shanto*, et al.) — PRX Quantum, 2023
-- **Electron-Phonon Interactions in the Andreev Bound States of Aluminum Nanobridge Josephson Junctions** (Farmer, Zarassi, *Shanto*, Hartsell, Levenson-Falk) — Physical Review B, 2023
+- **A Review of Design Concerns in Superconducting Quantum Circuits** (Levenson-Falk, *Shanto*) — [Materials for Quantum Technology](https://doi.org/10.1088/2633-4356/ade10d), 2025
+- **SQuADDS: A validated design database and simulation workflow for superconducting qubit design** (*Shanto*, Kuo, Miyamoto, Zhang, et al.) — [Quantum](https://doi.org/10.22331/q-2024-09-09-1465), 2024
+- **On-demand driven dissipation for cavity reset and cooling** (Maurya, Zhang, Kowsari, Kuo, *Shanto*, et al.) — [PRX Quantum](https://doi.org/10.1103/PRXQuantum.5.020321), 2024
+- **Quasiparticle Dynamics in Epitaxial Al-In-As Planar Josephson Junctions** (Elfeky, Strickland, Lee, Farmer, *Shanto*, et al.) — [PRX Quantum](https://doi.org/10.1103/PRXQuantum.4.030339), 2023
+- **Electron-phonon interactions in the Andreev bound states of aluminum nanobridge Josephson junctions** (Farmer, Zarassi, *Shanto*, Hartsell, Levenson-Falk) — [Phys. Rev. B](https://doi.org/10.1103/PhysRevB.107.L140506), 2023
 
 A complete publication list (with DOIs, authors, and PDFs) is available in [resume.json](https://sadmanahmedshanto.com/assets/json/resume.json).
 

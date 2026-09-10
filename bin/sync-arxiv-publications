@@ -1,0 +1,781 @@
+#!/usr/bin/env python3
+"""Synchronize arXiv papers and their derived website publication records."""
+
+from __future__ import annotations
+
+import argparse
+import copy
+import datetime as dt
+import difflib
+import json
+import re
+import sys
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
+from dataclasses import dataclass, replace
+from pathlib import Path
+from typing import Any
+
+
+ARXIV_API = "https://export.arxiv.org/api/query"
+CROSSREF_API = "https://api.crossref.org/works"
+DEFAULT_QUERY = 'au:"Sadman Shanto"'
+PERSON_ID = "https://sadmanahmedshanto.com/#person"
+ACCEPTED_AUTHOR_NAMES = {
+    "sadmanahmedshanto",
+    "sadmanshanto",
+    "sashanto",
+}
+ATOM = "http://www.w3.org/2005/Atom"
+ARXIV = "http://arxiv.org/schemas/atom"
+NAMESPACES = {"atom": ATOM, "arxiv": ARXIV}
+USER_AGENT = (
+    "sadmanahmedshanto.com publication sync "
+    "(mailto:shanto@usc.edu; https://sadmanahmedshanto.com/)"
+)
+
+
+@dataclass(frozen=True)
+class Paper:
+    arxiv_id: str
+    title: str
+    authors: tuple[str, ...]
+    published: str
+    primary_class: str
+    summary: str = ""
+    doi: str = ""
+    journal_ref: str = ""
+    journal: str = ""
+    publisher: str = ""
+    volume: str = ""
+    issue: str = ""
+    pages: str = ""
+    publication_date: str = ""
+
+    @property
+    def year(self) -> str:
+        return (self.publication_date or self.published)[:4]
+
+    @property
+    def accepted(self) -> bool:
+        return bool(self.doi or self.journal_ref or self.journal)
+
+    @property
+    def canonical_url(self) -> str:
+        if self.doi:
+            return f"https://doi.org/{self.doi}"
+        return f"https://arxiv.org/abs/{self.arxiv_id}"
+
+
+@dataclass(frozen=True)
+class BibBlock:
+    start: int
+    end: int
+    text: str
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--root",
+        type=Path,
+        default=Path("."),
+        help="Website root containing _bibliography and assets (default: current directory)",
+    )
+    parser.add_argument(
+        "--feed-file",
+        type=Path,
+        help="Use a saved Atom feed instead of querying arXiv",
+    )
+    parser.add_argument(
+        "--crossref-file",
+        type=Path,
+        help="Use saved Crossref records keyed by DOI or arXiv ID",
+    )
+    parser.add_argument(
+        "--skip-crossref",
+        action="store_true",
+        help="Do not query Crossref for journal publications",
+    )
+    parser.add_argument("--author-query", default=DEFAULT_QUERY)
+    return parser.parse_args()
+
+
+def compact(value: str) -> str:
+    return " ".join(value.split())
+
+
+def normalize(value: str) -> str:
+    value = re.sub(r"<[^>]+>", "", value)
+    return "".join(character for character in value.lower() if character.isalnum())
+
+
+def atom_text(parent: ET.Element, path: str) -> str:
+    element = parent.find(path, NAMESPACES)
+    return compact(element.text or "") if element is not None else ""
+
+
+def request_bytes(url: str, attempts: int = 3) -> bytes:
+    request = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+    for attempt in range(attempts):
+        try:
+            with urllib.request.urlopen(request, timeout=30) as response:
+                return response.read()
+        except (urllib.error.URLError, TimeoutError) as error:
+            if attempt + 1 == attempts:
+                raise RuntimeError(f"request failed after {attempts} attempts: {url}: {error}") from error
+            time.sleep(2**attempt)
+    raise RuntimeError(f"request failed: {url}")
+
+
+def fetch_arxiv_feed(query: str) -> bytes:
+    parameters = urllib.parse.urlencode(
+        {
+            "search_query": query,
+            "start": 0,
+            "max_results": 100,
+            "sortBy": "submittedDate",
+            "sortOrder": "descending",
+        }
+    )
+    return request_bytes(f"{ARXIV_API}?{parameters}")
+
+
+def parse_arxiv_feed(feed: bytes) -> list[Paper]:
+    root = ET.fromstring(feed)
+    papers: list[Paper] = []
+    for entry in root.findall("atom:entry", NAMESPACES):
+        identifier = atom_text(entry, "atom:id")
+        match = re.search(r"/abs/(\d{4}\.\d{4,5})(?:v\d+)?$", identifier)
+        if not match:
+            continue
+
+        authors = tuple(
+            atom_text(author, "atom:name")
+            for author in entry.findall("atom:author", NAMESPACES)
+        )
+        if not any(normalize(author) in ACCEPTED_AUTHOR_NAMES for author in authors):
+            continue
+
+        published = atom_text(entry, "atom:published")[:10]
+        title = atom_text(entry, "atom:title")
+        if not title or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", published):
+            continue
+
+        primary = entry.find("arxiv:primary_category", NAMESPACES)
+        primary_class = primary.attrib.get("term", "") if primary is not None else ""
+        if not primary_class:
+            category = entry.find("atom:category", NAMESPACES)
+            primary_class = category.attrib.get("term", "") if category is not None else ""
+
+        papers.append(
+            Paper(
+                arxiv_id=match.group(1),
+                title=title,
+                authors=authors,
+                published=published,
+                primary_class=primary_class or "quant-ph",
+                summary=atom_text(entry, "atom:summary"),
+                doi=atom_text(entry, "arxiv:doi").removeprefix("https://doi.org/"),
+                journal_ref=atom_text(entry, "arxiv:journal_ref"),
+            )
+        )
+    return sorted(papers, key=lambda paper: paper.published, reverse=True)
+
+
+def crossref_date(record: dict[str, Any]) -> str:
+    for field in ("published-print", "published-online", "published"):
+        parts = record.get(field, {}).get("date-parts", [])
+        if not parts or not parts[0]:
+            continue
+        values = list(parts[0]) + [1, 1]
+        try:
+            return dt.date(int(values[0]), int(values[1]), int(values[2])).isoformat()
+        except (TypeError, ValueError):
+            continue
+    return ""
+
+
+def crossref_authors_match(record: dict[str, Any]) -> bool:
+    for author in record.get("author", []):
+        name = compact(f"{author.get('given', '')} {author.get('family', '')}")
+        normalized = normalize(name)
+        if normalized in ACCEPTED_AUTHOR_NAMES:
+            return True
+        if normalize(author.get("family", "")) == "shanto" and normalized.startswith(("sadman", "sa")):
+            return True
+    return False
+
+
+def title_matches(left: str, right: str) -> bool:
+    left_normalized = normalize(left)
+    right_normalized = normalize(right)
+    if left_normalized == right_normalized:
+        return True
+    return difflib.SequenceMatcher(None, left_normalized, right_normalized).ratio() >= 0.96
+
+
+def choose_crossref_record(paper: Paper, records: list[dict[str, Any]]) -> dict[str, Any] | None:
+    candidates: list[tuple[float, dict[str, Any]]] = []
+    for record in records:
+        titles = record.get("title") or []
+        if record.get("type") not in (None, "journal-article") or not titles:
+            continue
+        if not crossref_authors_match(record) or not title_matches(paper.title, titles[0]):
+            continue
+        score = difflib.SequenceMatcher(None, normalize(paper.title), normalize(titles[0])).ratio()
+        candidates.append((score, record))
+    return max(candidates, key=lambda candidate: candidate[0])[1] if candidates else None
+
+
+def load_crossref_fixture(path: Path | None) -> dict[str, dict[str, Any]] | None:
+    if path is None:
+        return None
+    loaded = json.loads(path.read_text(encoding="utf-8"))
+    if not isinstance(loaded, dict):
+        raise ValueError("Crossref fixture must be an object keyed by DOI or arXiv ID")
+    return loaded
+
+
+def crossref_record(
+    paper: Paper,
+    fixture: dict[str, dict[str, Any]] | None,
+) -> dict[str, Any] | None:
+    if fixture is not None:
+        if paper.doi and paper.doi in fixture:
+            return fixture[paper.doi]
+        if paper.arxiv_id in fixture:
+            return fixture[paper.arxiv_id]
+        return choose_crossref_record(paper, list(fixture.values()))
+
+    try:
+        if paper.doi:
+            doi = urllib.parse.quote(paper.doi, safe="")
+            response = json.loads(request_bytes(f"{CROSSREF_API}/{doi}").decode("utf-8"))
+            return response.get("message")
+
+        parameters = urllib.parse.urlencode(
+            {
+                "query.title": paper.title,
+                "query.author": "Shanto",
+                "filter": "type:journal-article",
+                "rows": 5,
+                "mailto": "shanto@usc.edu",
+            }
+        )
+        response = json.loads(request_bytes(f"{CROSSREF_API}?{parameters}").decode("utf-8"))
+        records = response.get("message", {}).get("items", [])
+        return choose_crossref_record(paper, records)
+    except (RuntimeError, ValueError, json.JSONDecodeError) as error:
+        print(f"Warning: Crossref lookup failed for {paper.arxiv_id}: {error}", file=sys.stderr)
+        return None
+
+
+def enrich_from_crossref(paper: Paper, record: dict[str, Any] | None) -> Paper:
+    if not record:
+        return paper
+    titles = record.get("title") or []
+    if titles and not title_matches(paper.title, titles[0]):
+        return paper
+    doi = compact(record.get("DOI", "")) or paper.doi
+    journals = record.get("container-title") or []
+    return replace(
+        paper,
+        doi=doi,
+        journal=compact(journals[0]) if journals else paper.journal,
+        publisher=compact(record.get("publisher", "")),
+        volume=compact(record.get("volume", "")),
+        issue=compact(record.get("issue", "")),
+        pages=compact(record.get("page", "") or record.get("article-number", "")),
+        publication_date=crossref_date(record),
+    )
+
+
+def bib_blocks(bibliography: str) -> list[BibBlock]:
+    blocks: list[BibBlock] = []
+    for match in re.finditer(r"@\w+\s*\{", bibliography):
+        opening = match.end() - 1
+        depth = 0
+        for position in range(opening, len(bibliography)):
+            character = bibliography[position]
+            if character == "{":
+                depth += 1
+            elif character == "}":
+                depth -= 1
+                if depth == 0:
+                    blocks.append(BibBlock(match.start(), position + 1, bibliography[match.start() : position + 1]))
+                    break
+    return blocks
+
+
+def bib_field(block: str, name: str) -> str:
+    match = re.search(rf"(?mi)^\s*{re.escape(name)}\s*=\s*(.+?)\s*,?\s*$", block)
+    if not match:
+        return ""
+    value = match.group(1).strip().rstrip(",").strip()
+    while len(value) >= 2 and (
+        (value[0] == "{" and value[-1] == "}") or (value[0] == '"' and value[-1] == '"')
+    ):
+        value = value[1:-1].strip()
+    return compact(value.replace("\\&", "&").replace("\\%", "%"))
+
+
+def matching_bib_block(bibliography: str, paper: Paper) -> BibBlock | None:
+    for block in bib_blocks(bibliography):
+        if bib_field(block.text, "eprint") == paper.arxiv_id:
+            return block
+        urls = " ".join(bib_field(block.text, field) for field in ("url", "html", "pdf"))
+        if paper.arxiv_id in urls:
+            return block
+        if title_matches(bib_field(block.text, "title"), paper.title):
+            return block
+    return None
+
+
+def bibtex_escape(value: str) -> str:
+    value = re.sub(r"(?<!\\)&", r"\\&", value)
+    return re.sub(r"(?<!\\)%", r"\\%", value)
+
+
+def render_bib_entry(paper: Paper) -> str:
+    key = f"arxiv{paper.arxiv_id.replace('.', '')}"
+    lines = [
+        f"@Article{{{key},",
+        "  bibtex_show = {true},",
+        "  abbr = {{arXiv}},",
+        f"  title = {{{bibtex_escape(paper.title)}}},",
+        f"  author = {{{' and '.join(bibtex_escape(author) for author in paper.authors)}}},",
+        f"  year = {{{paper.published[:4]}}},",
+        f"  eprint = {{{paper.arxiv_id}}},",
+        "  archivePrefix = {arXiv},",
+        f"  primaryClass = {{{paper.primary_class}}},",
+        f"  url = {{https://arxiv.org/abs/{paper.arxiv_id}}},",
+        f"  html = {{https://arxiv.org/abs/{paper.arxiv_id}}},",
+        f"  pdf = {{https://arxiv.org/pdf/{paper.arxiv_id}}},",
+        "  selected = {true},",
+        "}",
+    ]
+    return "\n".join(lines)
+
+
+def insert_bib_entries(bibliography: str, entries: list[str]) -> str:
+    if not entries:
+        return bibliography
+    string_block = next(
+        (block for block in bib_blocks(bibliography) if block.text.lower().startswith("@string")),
+        None,
+    )
+    insertion = string_block.end if string_block else 0
+    prefix = bibliography[:insertion].rstrip()
+    suffix = bibliography[insertion:].lstrip()
+    rendered_entries = "\n\n".join(entries)
+    return f"{prefix}\n\n{rendered_entries}\n\n{suffix}".rstrip() + "\n"
+
+
+def set_bib_field(block: str, name: str, value: str, nested: bool = False) -> str:
+    rendered_value = f"{{{{{bibtex_escape(value)}}}}}" if nested else f"{{{bibtex_escape(value)}}}"
+    replacement = f"  {name} = {rendered_value},"
+    pattern = rf"(?mi)^\s*{re.escape(name)}\s*=.*$"
+    if re.search(pattern, block):
+        return re.sub(pattern, replacement, block, count=1)
+    selected = re.search(r"(?mi)^\s*selected\s*=", block)
+    insertion = selected.start() if selected else block.rfind("}")
+    return block[:insertion] + replacement + "\n" + block[insertion:]
+
+
+def enrich_bibliography_entry(bibliography: str, paper: Paper) -> str:
+    block = matching_bib_block(bibliography, paper)
+    if not block:
+        return bibliography
+
+    updated = block.text
+    arxiv_url = f"https://arxiv.org/abs/{paper.arxiv_id}"
+    if not bib_field(updated, "eprint"):
+        updated = set_bib_field(updated, "eprint", paper.arxiv_id)
+    if not bib_field(updated, "archivePrefix"):
+        updated = set_bib_field(updated, "archivePrefix", "arXiv")
+    if not bib_field(updated, "primaryClass"):
+        updated = set_bib_field(updated, "primaryClass", paper.primary_class)
+    if not bib_field(updated, "url"):
+        updated = set_bib_field(updated, "url", arxiv_url)
+    if not bib_field(updated, "html"):
+        updated = set_bib_field(updated, "html", arxiv_url)
+    if not bib_field(updated, "pdf"):
+        updated = set_bib_field(updated, "pdf", f"https://arxiv.org/pdf/{paper.arxiv_id}")
+
+    if not paper.accepted:
+        if updated == block.text:
+            return bibliography
+        return bibliography[: block.start] + updated + bibliography[block.end :]
+
+    journal_label = paper.journal or paper.journal_ref
+    if paper.doi and bib_field(updated, "doi").lower() != paper.doi.lower():
+        updated = set_bib_field(updated, "doi", paper.doi)
+    if paper.journal and not bib_field(updated, "journal"):
+        updated = set_bib_field(updated, "journal", paper.journal)
+    if paper.publisher and not bib_field(updated, "publisher"):
+        updated = set_bib_field(updated, "publisher", paper.publisher)
+    for field, value in (("volume", paper.volume), ("issue", paper.issue), ("pages", paper.pages)):
+        if value and not bib_field(updated, field):
+            updated = set_bib_field(updated, field, value)
+    if paper.publication_date and bib_field(updated, "year") != paper.year:
+        updated = set_bib_field(updated, "year", paper.year)
+    if paper.journal_ref and not paper.journal and not bib_field(updated, "note"):
+        updated = set_bib_field(updated, "note", f"Published as: {paper.journal_ref}")
+    if journal_label and normalize(bib_field(updated, "abbr")) == "arxiv":
+        updated = set_bib_field(updated, "abbr", journal_label, nested=True)
+    if paper.doi:
+        for field in ("url", "html"):
+            current = bib_field(updated, field)
+            if not current or "arxiv.org" in current:
+                updated = set_bib_field(updated, field, paper.canonical_url)
+    if updated == block.text:
+        return bibliography
+    return bibliography[: block.start] + updated + bibliography[block.end :]
+
+
+def author_display_name(name: str) -> str:
+    if normalize(name) in ACCEPTED_AUTHOR_NAMES:
+        return "Sadman Ahmed Shanto"
+    if "," not in name:
+        return compact(name)
+    family, given = (part.strip() for part in name.split(",", 1))
+    return compact(f"{given} {family}")
+
+
+def publication_label(paper: Paper, existing: dict[str, Any] | None = None) -> str:
+    if paper.journal:
+        return paper.journal
+    if paper.journal_ref:
+        return paper.journal_ref
+    if paper.doi:
+        return "Published article"
+    prior = compact((existing or {}).get("publisher", ""))
+    if "under review" in prior.lower():
+        review = re.sub(r"^arXiv:\S+\s*;\s*", "", prior, flags=re.IGNORECASE)
+        return f"arXiv:{paper.arxiv_id}; {review}"
+    return f"arXiv:{paper.arxiv_id}"
+
+
+def record_matches_paper(record: dict[str, Any], paper: Paper) -> bool:
+    if record.get("arxiv") == paper.arxiv_id:
+        return True
+    identifiers = record.get("identifier", [])
+    if isinstance(identifiers, str):
+        identifiers = [identifiers]
+    if any(paper.arxiv_id in str(identifier) for identifier in identifiers):
+        return True
+    return title_matches(str(record.get("name", "")), paper.title)
+
+
+def update_resume(root: Path, papers: list[Paper]) -> bool:
+    path = root / "assets/json/resume.json"
+    data = json.loads(path.read_text(encoding="utf-8"))
+    original = copy.deepcopy(data)
+    records = data.setdefault("publications", [])
+
+    for paper in papers:
+        record = next((item for item in records if record_matches_paper(item, paper)), None)
+        if record is None:
+            record = {"summary": paper.summary or f"Preprint on arXiv ({paper.year})."}
+            records.insert(0, record)
+        record["name"] = record.get("name") or paper.title
+        record["publisher"] = publication_label(paper, record)
+        record["releaseDate"] = paper.publication_date or paper.published
+        if not record.get("authors"):
+            record["authors"] = [author_display_name(author) for author in paper.authors]
+        record["url"] = paper.canonical_url
+        record["pdf"] = record.get("pdf") or f"https://arxiv.org/pdf/{paper.arxiv_id}"
+        record["arxiv"] = paper.arxiv_id
+        if paper.doi:
+            record["doi"] = paper.doi
+        if paper.accepted and "under review" in str(record.get("summary", "")).lower():
+            record["summary"] = re.sub(
+                r"(?:preprint on arXiv and )?under review at [^.;]+",
+                f"published in {publication_label(paper)}",
+                record["summary"],
+                flags=re.IGNORECASE,
+            )
+
+    if data == original:
+        return False
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return True
+
+
+def profile_article(paper: Paper, previous: dict[str, Any] | None) -> dict[str, Any]:
+    article = copy.deepcopy(previous) if previous else {}
+    article.update(
+        {
+            "@type": "ScholarlyArticle",
+            "@id": paper.canonical_url,
+            "name": article.get("name") or paper.title,
+            "datePublished": paper.publication_date or paper.published,
+            "url": paper.canonical_url,
+            "identifier": [
+                *([f"https://doi.org/{paper.doi}"] if paper.doi else []),
+                f"https://arxiv.org/abs/{paper.arxiv_id}",
+            ],
+            "author": [
+                {"@id": PERSON_ID}
+                if normalize(author) in ACCEPTED_AUTHOR_NAMES
+                else {"@type": "Person", "name": author_display_name(author)}
+                for author in paper.authors
+            ],
+        }
+    )
+    if paper.journal or paper.journal_ref:
+        article["isPartOf"] = {
+            "@type": "Periodical",
+            "name": paper.journal or paper.journal_ref,
+        }
+    return article
+
+
+def update_profile(root: Path, papers: list[Paper]) -> bool:
+    path = root / "assets/json/profile.json"
+    data = json.loads(path.read_text(encoding="utf-8"))
+    original = copy.deepcopy(data)
+    subject_of = data.setdefault("subjectOf", [])
+    articles = [item for item in subject_of if item.get("@type") == "ScholarlyArticle"]
+
+    for paper in papers:
+        prior = next((item for item in articles if record_matches_paper(item, paper)), None)
+        replacement = profile_article(paper, prior)
+        if prior is None:
+            articles.append(replacement)
+        else:
+            articles[articles.index(prior)] = replacement
+
+    articles.sort(key=lambda item: str(item.get("datePublished", "")), reverse=True)
+    first_article = next(
+        (index for index, item in enumerate(subject_of) if item.get("@type") == "ScholarlyArticle"),
+        len(subject_of),
+    )
+    non_articles = [item for item in subject_of if item.get("@type") != "ScholarlyArticle"]
+    prefix_count = sum(1 for item in subject_of[:first_article] if item.get("@type") != "ScholarlyArticle")
+    data["subjectOf"] = non_articles[:prefix_count] + articles + non_articles[prefix_count:]
+
+    if data == original:
+        return False
+    if isinstance(data.get("mainEntityOfPage"), dict):
+        data["mainEntityOfPage"]["dateModified"] = dt.date.today().isoformat()
+    path.write_text(json.dumps(data, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return True
+
+
+def machine_publication(paper: Paper, previous: dict[str, Any] | None) -> dict[str, Any]:
+    item = copy.deepcopy(previous) if previous else {}
+    item.update(
+        {
+            "id": paper.canonical_url,
+            "name": item.get("name") or paper.title,
+            "datePublished": paper.publication_date or paper.published,
+            "url": paper.canonical_url,
+            "arxiv": paper.arxiv_id,
+            "authors": item.get("authors")
+            or [author_display_name(author) for author in paper.authors],
+        }
+    )
+    if paper.doi:
+        item["doi"] = paper.doi
+    if paper.journal or paper.journal_ref:
+        item["journal"] = paper.journal or paper.journal_ref
+    return item
+
+
+def update_publication_data(root: Path, papers: list[Paper]) -> bool:
+    path = root / "_data/publications.json"
+    records = json.loads(path.read_text(encoding="utf-8")) if path.exists() else []
+    original = copy.deepcopy(records)
+    for paper in papers:
+        prior = next((item for item in records if record_matches_paper(item, paper)), None)
+        replacement = machine_publication(paper, prior)
+        if prior is None:
+            records.append(replacement)
+        else:
+            records[records.index(prior)] = replacement
+    records.sort(key=lambda item: str(item.get("datePublished", "")), reverse=True)
+    if records == original:
+        return False
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(records, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    return True
+
+
+def family_name(name: str) -> str:
+    if normalize(name) in ACCEPTED_AUTHOR_NAMES:
+        return "*Shanto*"
+    if "," in name:
+        return name.split(",", 1)[0].strip()
+    return name.split()[-1]
+
+
+def llms_publication_line(paper: Paper, resume_record: dict[str, Any] | None) -> str:
+    families = [family_name(author) for author in paper.authors]
+    if len(families) > 8:
+        shortened = families[:4]
+        if "*Shanto*" not in shortened:
+            shortened.append("*Shanto*")
+        families = shortened + ["et al."]
+    author_text = ", ".join(families)
+    if paper.accepted:
+        venue = f"[{publication_label(paper)}]({paper.canonical_url})"
+    else:
+        venue = f"[arXiv:{paper.arxiv_id}](https://arxiv.org/abs/{paper.arxiv_id})"
+        prior = publication_label(paper, resume_record)
+        if "under review" in prior.lower():
+            review = prior.split(";", 1)[-1].strip()
+            review = re.sub(r"^under review", "under review", review, flags=re.IGNORECASE)
+            venue += "; " + review
+    title = str((resume_record or {}).get("name") or paper.title)
+    return f"- **{title}** ({author_text}) — {venue}, {paper.year}"
+
+
+def update_llms_full(root: Path, papers: list[Paper]) -> bool:
+    path = root / "llms-full.txt"
+    text = path.read_text(encoding="utf-8")
+    original = text
+    resume = json.loads((root / "assets/json/resume.json").read_text(encoding="utf-8"))
+    resume_records = resume.get("publications", [])
+    section_start = text.find("# Selected Publications")
+    section_end = text.find("\n#", section_start + 1)
+    if section_start < 0:
+        raise ValueError("llms-full.txt is missing the Selected Publications section")
+    if section_end < 0:
+        section_end = len(text)
+    section = text[section_start:section_end]
+
+    for paper in papers:
+        resume_record = next(
+            (record for record in resume_records if record_matches_paper(record, paper)),
+            None,
+        )
+        line = llms_publication_line(paper, resume_record)
+        lines = section.splitlines()
+        matching_index = next(
+            (
+                index
+                for index, candidate in enumerate(lines)
+                if candidate.startswith("- **")
+                and (title_match := re.search(r"\*\*(.+?)\*\*", candidate))
+                and title_matches(title_match.group(1), paper.title)
+            ),
+            None,
+        )
+        if matching_index is None:
+            insertion = next((index for index, candidate in enumerate(lines) if candidate.startswith("- **")), len(lines))
+            lines.insert(insertion, line)
+        else:
+            lines[matching_index] = line
+        section = "\n".join(lines)
+
+    text = text[:section_start] + section.rstrip() + "\n\n" + text[section_end:].lstrip("\n")
+    if text == original:
+        return False
+    path.write_text(text, encoding="utf-8")
+    return True
+
+
+def update_llms_index(root: Path) -> bool:
+    path = root / "llms.txt"
+    text = path.read_text(encoding="utf-8")
+    updated = re.sub(
+        r"(?m)^(\s+- Publications:).*$",
+        r"\1 https://sadmanahmedshanto.com/publications/ (complete, current publication list)",
+        text,
+    )
+    if updated == text:
+        return False
+    path.write_text(updated, encoding="utf-8")
+    return True
+
+
+def update_bibliography(root: Path, papers: list[Paper]) -> tuple[bool, list[Paper]]:
+    path = root / "_bibliography/papers.bib"
+    bibliography = path.read_text(encoding="utf-8")
+    original = bibliography
+    additions = [paper for paper in papers if matching_bib_block(bibliography, paper) is None]
+    bibliography = insert_bib_entries(bibliography, [render_bib_entry(paper) for paper in additions])
+    for paper in papers:
+        bibliography = enrich_bibliography_entry(bibliography, paper)
+    if bibliography != original:
+        path.write_text(bibliography, encoding="utf-8")
+    return bibliography != original, additions
+
+
+def preserve_bibliography_metadata(root: Path, papers: list[Paper]) -> list[Paper]:
+    bibliography = (root / "_bibliography/papers.bib").read_text(encoding="utf-8")
+    preserved: list[Paper] = []
+    for paper in papers:
+        block = matching_bib_block(bibliography, paper)
+        if block is None:
+            preserved.append(paper)
+            continue
+        preserved.append(
+            replace(
+                paper,
+                doi=bib_field(block.text, "doi") or paper.doi,
+                journal=bib_field(block.text, "journal") or paper.journal,
+            )
+        )
+    return preserved
+
+
+def main() -> int:
+    args = parse_args()
+    root = args.root.resolve()
+    feed = args.feed_file.read_bytes() if args.feed_file else fetch_arxiv_feed(args.author_query)
+    papers = parse_arxiv_feed(feed)
+    if not papers:
+        raise RuntimeError("arXiv returned no records matching an accepted author-name variant")
+
+    fixture = load_crossref_fixture(args.crossref_file)
+    if not args.skip_crossref:
+        papers = [enrich_from_crossref(paper, crossref_record(paper, fixture)) for paper in papers]
+    papers = preserve_bibliography_metadata(root, papers)
+
+    changed: list[str] = []
+    bibliography_changed, additions = update_bibliography(root, papers)
+    if bibliography_changed:
+        changed.append("_bibliography/papers.bib")
+    if update_resume(root, papers):
+        changed.append("assets/json/resume.json")
+    if update_profile(root, papers):
+        changed.append("assets/json/profile.json")
+    if update_publication_data(root, papers):
+        changed.append("_data/publications.json")
+    if update_llms_full(root, papers):
+        changed.append("llms-full.txt")
+    if update_llms_index(root):
+        changed.append("llms.txt")
+
+    if not changed:
+        print(f"No publication changes found among {len(papers)} verified arXiv records.")
+        return 0
+
+    print(f"Synchronized {len(papers)} verified arXiv records across {len(changed)} file(s).")
+    if additions:
+        print("New publications:")
+        for paper in additions:
+            print(f"- {paper.arxiv_id}: {paper.title}")
+    accepted = [paper for paper in papers if paper.accepted]
+    if accepted:
+        print("Journal-linked records checked:")
+        for paper in accepted:
+            print(f"- {paper.arxiv_id}: {publication_label(paper)}")
+    print("Changed files:")
+    for path in changed:
+        print(f"- {path}")
+    return 0
+
+
+if __name__ == "__main__":
+    try:
+        raise SystemExit(main())
+    except (OSError, RuntimeError, ValueError, ET.ParseError, json.JSONDecodeError) as error:
+        print(f"Publication sync failed: {error}", file=sys.stderr)
+        raise SystemExit(1) from error

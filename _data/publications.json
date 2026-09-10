@@ -1,0 +1,134 @@
+[
+  {
+    "id": "https://arxiv.org/abs/2607.20795",
+    "name": "Component-Level Inverse Design of Transmon Qubits Using Neural Networks",
+    "datePublished": "2026-07-22",
+    "url": "https://arxiv.org/abs/2607.20795",
+    "arxiv": "2607.20795",
+    "authors": [
+      "Olivia Seidel",
+      "Firas Abouzahr",
+      "Abhishek Chakraborty",
+      "Sadman Ahmed Shanto",
+      "Saikat Das",
+      "Daniel Baxter",
+      "Jonathan Asaadi",
+      "Nicola Pancotti",
+      "Haoyu Yang",
+      "Brucek Khailany",
+      "Sara Sussman",
+      "Enectali Figueroa-Feliciano",
+      "Eli M. Levenson-Falk",
+      "Taylor L. Patti"
+    ]
+  },
+  {
+    "id": "https://arxiv.org/abs/2603.04566",
+    "name": "Universal Hamiltonian control in a planar trimon circuit",
+    "datePublished": "2026-03-04",
+    "url": "https://arxiv.org/abs/2603.04566",
+    "arxiv": "2603.04566",
+    "authors": [
+      "Vivek Maurya",
+      "Daria Kowsari",
+      "Kumar Saurav",
+      "S. A. Shanto",
+      "R. Vijay",
+      "Daniel A. Lidar",
+      "Eli M. Levenson-Falk"
+    ]
+  },
+  {
+    "id": "https://doi.org/10.1088/2633-4356/ade10d",
+    "name": "A Review of Design Concerns in Superconducting Quantum Circuits",
+    "datePublished": "2025-06-30",
+    "url": "https://doi.org/10.1088/2633-4356/ade10d",
+    "arxiv": "2411.16967",
+    "doi": "10.1088/2633-4356/ade10d",
+    "journal": "Materials for Quantum Technology",
+    "authors": [
+      "Eli M. Levenson-Falk",
+      "Sadman Ahmed Shanto"
+    ]
+  },
+  {
+    "id": "https://doi.org/10.22331/q-2024-09-09-1465",
+    "name": "SQuADDS: A validated design database and simulation workflow for superconducting qubit design",
+    "datePublished": "2024-09-09",
+    "url": "https://doi.org/10.22331/q-2024-09-09-1465",
+    "arxiv": "2312.13483",
+    "doi": "10.22331/q-2024-09-09-1465",
+    "journal": "Quantum",
+    "authors": [
+      "Sadman Ahmed Shanto",
+      "Andre Kuo",
+      "Clark Miyamoto",
+      "Haimeng Zhang",
+      "Vivek Maurya",
+      "Evangelos Vlachos",
+      "Malida Hecht",
+      "Chung Wa Shum",
+      "Eli M. Levenson-Falk"
+    ]
+  },
+  {
+    "id": "https://doi.org/10.1103/PRXQuantum.5.020321",
+    "name": "On-demand driven dissipation for cavity reset and cooling",
+    "datePublished": "2024-04-25",
+    "url": "https://doi.org/10.1103/PRXQuantum.5.020321",
+    "arxiv": "2310.16785",
+    "doi": "10.1103/PRXQuantum.5.020321",
+    "journal": "PRX Quantum",
+    "authors": [
+      "Vivek Maurya",
+      "Haimeng Zhang",
+      "Daria Kowsari",
+      "Andre Kuo",
+      "Darian M. Hartsell",
+      "Clark Miyamoto",
+      "Jocelyn Liu",
+      "Sadman Ahmed Shanto",
+      "Evangelos Vlachos",
+      "Azarin Zarassi",
+      "Kater Murch",
+      "Eli M. Levenson-Falk"
+    ]
+  },
+  {
+    "id": "https://doi.org/10.1103/PRXQuantum.4.030339",
+    "name": "Quasiparticle Dynamics in Epitaxial Al-In-As Planar Josephson Junctions",
+    "datePublished": "2023-09-22",
+    "url": "https://doi.org/10.1103/PRXQuantum.4.030339",
+    "arxiv": "2303.04784",
+    "doi": "10.1103/PRXQuantum.4.030339",
+    "journal": "PRX Quantum",
+    "authors": [
+      "Bassel Heiba Elfeky",
+      "William M. Strickland",
+      "Jaewoo Lee",
+      "James T. Farmer",
+      "Sadman Ahmed Shanto",
+      "Azarin Zarassi",
+      "Dylan Langone",
+      "Maxim G. Vavilov",
+      "Eli M. Levenson-Falk",
+      "Javad Shabani"
+    ]
+  },
+  {
+    "id": "https://doi.org/10.1103/PhysRevB.107.L140506",
+    "name": "Electron-phonon interactions in the Andreev bound states of aluminum nanobridge Josephson junctions",
+    "datePublished": "2023-04-27",
+    "url": "https://doi.org/10.1103/PhysRevB.107.L140506",
+    "arxiv": "2211.16765",
+    "doi": "10.1103/PhysRevB.107.L140506",
+    "journal": "Phys. Rev. B",
+    "authors": [
+      "James T. Farmer",
+      "Azarin Zarassi",
+      "Sadman Ahmed Shanto",
+      "Darian Hartsell",
+      "Eli M. Levenson-Falk"
+    ]
+  }
+]
