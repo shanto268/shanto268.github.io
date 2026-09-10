@@ -86,7 +86,7 @@ Created and leads an open-source database and design-automation platform for sup
 
 # Selected Publications
 
-- **Universal Hamiltonian Control in a Planar Trimon Circuit** (Maurya, Kowsari, Saurav, *Shanto*, Vijay, Lidar, Levenson-Falk) — Under Review at PRX Quantum, 2026
+- **Universal Hamiltonian Control in a Planar Trimon Circuit** (Maurya, Kowsari, Saurav, *Shanto*, Vijay, Lidar, Levenson-Falk) — [arXiv:2603.04566](https://arxiv.org/abs/2603.04566); under review at PRX Quantum, 2026
 - **Component-Level Inverse Design of Transmon Qubits Using Neural Networks** (Seidel, Abouzahr, Chakraborty, *Shanto*, et al.) — [arXiv:2607.20795](https://arxiv.org/abs/2607.20795), 2026
 - **AgentQ: An LLM-Agentic Framework for Time-Domain Superconducting Quantum Chip Simulation** (Tang, *Shanto*, Wang, Pancotti, Nonaka, Levenson-Falk, Yao) — In Preparation, 2026
 - **A Review of Design Concerns in Superconducting Quantum Circuits** (Levenson-Falk, *Shanto*) — Materials for Quantum Technology, 2025
