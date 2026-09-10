@@ -30,6 +30,6 @@ Since 2022, I have been having the time of my life deep in the quantum trenches 
 
 From August 2025 to August 2026, I was a Research Intern at [Google Quantum AI](https://quantumai.google/), working on design, simulations and infrastructure needed for taping out quantum processors.
 
-From May to August 2025, I was a Summer Research Intern at [Quantum Elements Inc.](https://quantumelements.ai/), where I built and deployed API endpoints and also an agentic AI interface to automate measurement and calibration (built on top of [Quantum Machine](https://quantum-machines.co/)'s ecosystem) workflows for the [Rigetti Novera Quantum Processor](https://www.rigetti.com/novera).
+From May to August 2025, I was a Summer Research Intern at [Quantum Elements Inc.](https://quantumelements.ai/), where I helped build the calibration capabilities of the Constellation product and owned the development of the agentic AI system for automating measurement and calibration workflows for the [Rigetti Novera Quantum Processor](https://www.rigetti.com/novera), built on the [Quantum Machines](https://quantum-machines.co/) ecosystem.
 
 In 2021, I received my BSc in Applied Physics with minors in Math and Computer Science from Texas Tech University 🔴⚫️
