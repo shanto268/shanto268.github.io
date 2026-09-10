@@ -61,11 +61,23 @@
         {% assign author_is_self = false %}
         {%- assign author_last_name = author.last | regex_replace: '[*∗†‡§¶‖&^]', '' -%}
         {%- assign author_last_html = author.last | regex_replace: '([*∗†‡§¶‖&^]+)', '<sup>\1</sup>' -%}
-        {% if site.scholar.last_name contains author_last_name %}
-          {% if site.scholar.first_name contains author.first %}
-            {% assign author_is_self = true %}
-          {% endif %}
-        {%- endif -%}
+        {%- assign normalized_author_last = author_last_name | downcase | remove_accents | remove: '.' | remove: ' ' | remove: '-' -%}
+        {%- assign normalized_author_first = author.first | downcase | remove_accents | remove: '.' | remove: ' ' | remove: '-' -%}
+        {%- for self_last_name in site.scholar.last_name -%}
+          {%- assign normalized_self_last = self_last_name | downcase | remove_accents | remove: '.' | remove: ' ' | remove: '-' -%}
+          {%- if normalized_author_last == normalized_self_last -%}
+            {%- for self_first_name in site.scholar.first_name -%}
+              {%- assign normalized_self_first = self_first_name | downcase | remove_accents | remove: '.' | remove: ' ' | remove: '-' -%}
+              {%- if normalized_author_first == normalized_self_first -%}
+                {% assign author_is_self = true %}
+                {% break %}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+          {%- if author_is_self -%}
+            {% break %}
+          {%- endif -%}
+        {%- endfor -%}
         {% assign coauthor_url = null %}
         {%- assign clean_last_name = author_last_name | downcase | remove_accents -%}
         {% if site.data.coauthors[clean_last_name] %}

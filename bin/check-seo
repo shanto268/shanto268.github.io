@@ -58,6 +58,17 @@ ruby -rjson -e '
   puts "Validated #{blocks} JSON-LD blocks"
 ' "${seo_site_dir}"
 
+echo "Checking publication author-name highlighting..."
+ruby -e '
+  html = File.read(File.join(ARGV.fetch(0), "publications", "index.html"))
+  highlighted = html.scan(%r{<em>\s*(.*?)\s*</em>}mi).flatten.map do |name|
+    name.gsub(%r{<[^>]+>}, "").gsub("&nbsp;", " ").gsub(/\s+/, " ").strip
+  end
+  ["Sadman Ahmed Shanto", "S. A. Shanto"].each do |variant|
+    abort("Publication author variant is not highlighted: #{variant}") unless highlighted.include?(variant)
+  end
+' "${seo_site_dir}"
+
 echo "Checking canonical discovery outputs..."
 test -f "${seo_site_dir}/assets/json/profile.json"
 test -f "${seo_site_dir}/llms.txt"
