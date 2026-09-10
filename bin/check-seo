@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+seo_repo_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+seo_tmp_dir="$(mktemp -d "${TMPDIR:-/tmp}/sas-seo-check.XXXXXX")"
+seo_site_dir="${seo_tmp_dir}/site"
+
+cleanup() {
+  if [[ -n "${seo_tmp_dir}" && "${seo_tmp_dir}" == */sas-seo-check.* ]]; then
+    rm -rf -- "${seo_tmp_dir}"
+  fi
+}
+trap cleanup EXIT
+
+cd "${seo_repo_dir}"
+
+echo "Checking source data..."
+ruby -rdate -ryaml -e 'YAML.safe_load(File.read("_config.yml"), permitted_classes: [Date, Time], aliases: true)'
+jq empty assets/json/profile.json assets/json/resume.json
+jq -e '
+  .["@type"] == "Person"
+  and .name == "Sadman Ahmed Shanto"
+  and (.knowsAbout | length) >= 40
+  and any(.subjectOf[]; .["@type"] == "SoftwareSourceCode")
+  and any(.subjectOf[]; .["@type"] == "Dataset")
+  and any(.subjectOf[]; .["@type"] == "ScholarlyArticle")
+' assets/json/profile.json >/dev/null
+
+echo "Building the site..."
+bundle exec jekyll build \
+  --disable-disk-cache \
+  --config _config.yml,.github/seo-test-config.yml \
+  --destination "${seo_site_dir}"
+
+echo "Validating rendered JSON-LD..."
+ruby -rjson -e '
+  blocks = 0
+  Dir.glob(File.join(ARGV.fetch(0), "**", "*.html")).each do |path|
+    html = File.read(path)
+    html.scan(%r{<script\s+type=["'"'"']application/ld\+json["'"'"']>(.*?)</script>}mi).each do |match|
+      JSON.parse(match.first)
+      blocks += 1
+    rescue JSON::ParserError => error
+      abort("Invalid JSON-LD in #{path}: #{error.message}")
+    end
+  end
+  abort("No JSON-LD blocks found") if blocks.zero?
+  puts "Validated #{blocks} JSON-LD blocks"
+' "${seo_site_dir}"
+
+echo "Checking canonical discovery outputs..."
+test -f "${seo_site_dir}/assets/json/profile.json"
+test -f "${seo_site_dir}/llms.txt"
+test -f "${seo_site_dir}/llms-full.txt"
+test -f "${seo_site_dir}/research/ai-for-science/index.html"
+grep -q 'https://sadmanahmedshanto.com/' "${seo_site_dir}/sitemap.xml"
+grep -q 'https://sadmanahmedshanto.com/research/ai-for-science/' "${seo_site_dir}/sitemap.xml"
+if grep -R -q 'https://shanto268.github.io' "${seo_site_dir}/sitemap.xml" "${seo_site_dir}/index.html"; then
+  echo "Legacy GitHub Pages URL found in canonical output" >&2
+  exit 1
+fi
+
+for seo_agent in Googlebot Google-Extended bingbot OAI-SearchBot GPTBot ChatGPT-User ClaudeBot Claude-SearchBot Claude-User PerplexityBot Perplexity-User; do
+  grep -q "User-agent: ${seo_agent}" robots.txt
+done
+
+echo "SEO and machine-discovery checks passed."

@@ -1,0 +1,73 @@
+version: 1
+last_updated: 2026-09-10
+purpose: >
+  A repeatable, provider-neutral benchmark for whether public professional
+  evidence about Sadman Ahmed Shanto is retrieved in recruiter-style searches.
+  This measures discovery and citation quality; it does not define an objective
+  candidate rank.
+
+providers:
+  - Google AI Mode / Gemini
+  - ChatGPT search
+  - Claude web search
+  - Perplexity
+  - Microsoft Copilot
+
+protocol:
+  - Use a signed-out or fresh session when possible.
+  - Do not mention Sadman Ahmed Shanto in the initial query.
+  - Ask for public sources and links.
+  - Record the exact model or product, date, region, query, response, and citations.
+  - Run each query three times because retrieval and generated rankings vary.
+  - Judge only job-relevant public evidence; do not infer protected or private traits.
+
+query_sets:
+  quantum_hardware:
+    - "Which PhD candidates graduating soon are strong hires for superconducting quantum hardware R&D?"
+    - "Find PhD researchers with hands-on superconducting qubit design, fabrication, cryogenic measurement, and software experience."
+    - "Who are promising early-career researchers for quantum processor and superconducting device engineering roles?"
+  design_automation:
+    - "Find PhD candidates working on EDA, inverse design, and electromagnetic simulation for superconducting quantum devices."
+    - "Who has built open-source design automation and datasets for superconducting qubit hardware?"
+    - "Recommend early-career researchers who can take quantum hardware from design through simulation and GDS layout."
+  ai_for_science:
+    - "Which PhD candidates combine experimental physics, scientific machine learning, and autonomous laboratory systems?"
+    - "Find early-career AI-for-science researchers with evidence in inverse design, scientific agents, and physical experiments."
+    - "Who should an AI-for-science team consider for roles connecting foundation models or agents to scientific simulators and instruments?"
+  research_software:
+    - "Find quantum PhD candidates with strong open-source, HPC, cloud, backend, and experimental-hardware experience."
+    - "Who are strong early-career hires for scientific software engineering in quantum hardware?"
+  entity_specific:
+    - "Who is Sadman Ahmed Shanto and what are his strongest public qualifications for quantum hardware roles?"
+    - "Evaluate Sadman Ahmed Shanto's public evidence for AI-for-science and autonomous experimentation roles."
+
+scorecard:
+  candidate_discovered:
+    type: boolean
+    description: Named without the entity-specific prompt.
+  result_position:
+    type: integer_or_null
+    description: Position in the answer when a numbered or ordered result exists.
+  identity_correct:
+    type: boolean
+    description: Correctly resolves USC, Levenson-Falk Lab, and name variants.
+  status_current:
+    type: boolean
+    description: Uses current PhD and former-intern status rather than stale status.
+  role_fit_covered:
+    type: count_0_to_4
+    description: Covers hardware, design automation, AI for science, and research software.
+  primary_sources_cited:
+    type: count
+    description: Number of relevant papers, repositories, datasets, CV, or institutional pages cited.
+  unsupported_claims:
+    type: count
+    description: Claims that cannot be traced to the public evidence.
+  notes:
+    type: text
+
+success_criteria:
+  - Candidate is discovered in at least three of five providers for each of the first three query sets.
+  - Entity-specific responses resolve the correct person in every provider.
+  - At least two primary sources support each substantive fit assessment.
+  - No incorrect current-status claim or unsupported superlative appears.

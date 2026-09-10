@@ -2,6 +2,9 @@
 layout: page
 title: Muon Telescopes
 description: Advanced Particle Detector Lab
+seo_title: Muon Tomography, Particle Detectors, DAQ, and ML Reconstruction
+seo_description: Sadman Ahmed Shanto's work building portable muon telescopes, detector optics, SiPM and PMT instrumentation, FPGA and CAMAC data acquisition, Geant4 simulation, and ML reconstruction.
+keywords: muon tomography, muography, particle detector, SiPM, PMT, data acquisition, FPGA, CAMAC, Geant4, scientific machine learning, instrumentation
 img: assets/img/research/apd/thumbnail.png
 importance: 2
 category: undergrad-research

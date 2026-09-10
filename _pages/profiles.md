@@ -5,6 +5,8 @@ title: people
 description: members of the lab or group
 nav: false
 nav_order: 7
+sitemap: false
+robots: noindex,follow
 
 profiles:
   # if you want to include more than one profile, just replicate the following block

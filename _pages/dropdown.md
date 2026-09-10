@@ -3,6 +3,8 @@ layout: page
 title: submenus
 nav: false
 nav_order: 8
+sitemap: false
+robots: noindex,follow
 dropdown: true
 children:
   - title: publications

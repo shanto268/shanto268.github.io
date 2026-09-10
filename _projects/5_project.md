@@ -2,6 +2,9 @@
 layout: page
 title: Experimentally Verified Design and Simulation of Fluxonium Systems
 description: Quantum Device Course @ USC
+seo_title: Experimentally Verified Fluxonium Design and Simulation
+seo_description: A superconducting-circuit project connecting fluxonium design, circuit simulation, and experimental verification.
+keywords: fluxonium, superconducting circuits, quantum device design, circuit simulation, experimental physics
 img: assets/img/research/academic/device_thumbnail.png
 importance: 5
 category: classes

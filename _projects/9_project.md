@@ -2,6 +2,9 @@
 layout: page
 title: Quantum Random Walks and VQE
 description: Quantum Computing Project @ TTU
+seo_title: High-Performance Quantum Walks and Variational Quantum Eigensolvers
+seo_description: Contributions to the HiperWalk open-source quantum-walk simulator, including Python migration and HPC support, plus a variational quantum eigensolver project.
+keywords: quantum walks, HiperWalk, VQE, quantum algorithms, high-performance computing, Python, C++, open source
 img: assets/img/research/academic/vqe_thumbnail.png
 importance: 7
 category: classes

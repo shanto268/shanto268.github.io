@@ -2,6 +2,9 @@
 layout: page
 title: Microsimulation Traffic Calibration
 description: Institute For Software Integrated Systems
+seo_title: Traffic Microsimulation Calibration and Parallel Optimization
+seo_description: Research on inferring individual driver behavior from aggregate traffic measurements, calibrating stochastic traffic models, and accelerating simulation sweeps with Ray.
+keywords: traffic microsimulation, model calibration, parameter inference, parallel optimization, Ray, autonomous vehicles, scientific computing
 img: assets/img/research/work-lab/thumbnail.png
 importance: 3
 category: undergrad-research

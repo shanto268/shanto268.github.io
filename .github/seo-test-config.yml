@@ -1,0 +1,3 @@
+# Test-only override: structured-data checks do not need to regenerate image variants.
+imagemagick:
+  enabled: false

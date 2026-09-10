@@ -2,6 +2,9 @@
 layout: page
 title: Designing Superconducting Quantum Devices
 description: Levenson-Falk Lab
+seo_title: SQuADDS — Superconducting Quantum Device Design Automation
+seo_description: SQuADDS is Sadman Ahmed Shanto's open-source validated database and simulation workflow for superconducting qubit design, electromagnetic simulation, inverse design, and programmatic layout generation.
+keywords: SQuADDS, superconducting qubit design, quantum hardware, design automation, electromagnetic simulation, inverse design, transmon, quantum EDA, GDS, AI for science
 img: assets/img/research/lfl/squadds.png
 importance: 1
 category: grad-research
@@ -15,6 +18,13 @@ toc:
 
 The SQuADDS (Superconducting Qubit And Device Design and Simulation) Database Project {% cite Shanto2024squaddsvalidated %} is an open-source resource aimed at advancing research in superconducting quantum device designs. It provides a robust workflow for generating and simulating superconducting quantum device designs, facilitating the accurate prediction of Hamiltonian parameters across a wide range of design geometries.
 
+Present focus of my work is twofolds:
+
+- More modular and accurate simulation primitives and models to speed up complex simulations
+- Developing foundation ML models and AI agent harnesses to aid with quantum-device design workflows. 
+
+More on these to come soon :)
+
 ## Resources
 
 **Paper Link:** [SQuADDS: A Database for Superconducting Quantum Device Design and Simulation](https://quantum-journal.org/papers/q-2024-09-09-1465/)
@@ -26,7 +36,7 @@ The SQuADDS (Superconducting Qubit And Device Design and Simulation) Database Pr
 **Hugging Face Link:** [https://huggingface.co/datasets/SQuADDS/SQuADDS_DB](https://huggingface.co/datasets/SQuADDS/SQuADDS_DB)
 
 
-## Project Presenations
+## Project presentations
 
 ### Quantum Device Workshop 2025
 

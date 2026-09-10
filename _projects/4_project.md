@@ -2,6 +2,9 @@
 layout: distill
 title: Self-Driving Car Behavior Modelling
 description: Center for Multidisciplinary Research in Traffic
+seo_title: Autonomous-Vehicle Behavior Modeling and Traffic Simulation
+seo_description: Open-source cellular-automaton research on mixed autonomous and human traffic, reinforcement-learning control, platoon formation, and emergent traffic behavior.
+keywords: autonomous vehicles, traffic simulation, cellular automata, reinforcement learning, platoon formation, Nagel-Schreckenberg, scientific computing
 img: assets/img/research/academic/techmrt_thumbnail.png
 importance: 4
 category: undergrad-research

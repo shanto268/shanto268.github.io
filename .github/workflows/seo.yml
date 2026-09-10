@@ -1,0 +1,57 @@
+name: Validate SEO and machine-readable discovery
+
+on:
+  pull_request:
+    branches:
+      - master
+      - main
+    paths:
+      - "_config.yml"
+      - "_includes/**"
+      - "_pages/**"
+      - "_projects/**"
+      - "assets/json/**"
+      - "robots.txt"
+      - "llms.txt"
+      - "llms-full.txt"
+      - "Gemfile"
+      - "Gemfile.lock"
+      - "bin/check-seo"
+      - ".github/seo-test-config.yml"
+      - ".github/workflows/seo.yml"
+  push:
+    branches:
+      - master
+      - main
+    paths:
+      - "_config.yml"
+      - "_includes/**"
+      - "_pages/**"
+      - "_projects/**"
+      - "assets/json/**"
+      - "robots.txt"
+      - "llms.txt"
+      - "llms-full.txt"
+      - "Gemfile"
+      - "Gemfile.lock"
+      - "bin/check-seo"
+      - ".github/seo-test-config.yml"
+      - ".github/workflows/seo.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  seo:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3.5"
+          bundler-cache: true
+      - name: Validate build, JSON-LD, sitemap, and crawler policy
+        run: bash bin/check-seo

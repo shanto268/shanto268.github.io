@@ -5,6 +5,8 @@ title: github
 description: 
 nav: false
 nav_order: 4
+sitemap: false
+robots: noindex,follow
 ---
 
 {% if site.data.repositories.github_users %}

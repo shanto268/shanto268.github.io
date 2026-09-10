@@ -1,5 +1,7 @@
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
+{% include seo-jsonld.liquid %}
+<link rel="alternate" type="application/ld+json" href="{{ '/assets/json/profile.json' | absolute_url }}" title="Sadman Ahmed Shanto profile data">
 
 <!-- Bootstrap & MDB -->
 <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url | bust_file_cache }}">

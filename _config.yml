@@ -8,9 +8,12 @@ middle_name:
 last_name: Shanto
 email: shanto@usc.edu
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-Sadman Ahmed Shanto is an experimental physicist at USC building superconducting quantum hardware, design automation tools and foundational ML models for quantum devices. Creator of SQuADDS; formerly Google Quantum AI and Quantum Elements Inc.
+  Sadman Ahmed Shanto is an experimental physicist and research engineer at USC working across
+  superconducting quantum hardware, fabrication, cryogenic measurement, processor R&D, scientific
+  machine learning, autonomous experimentation, design automation, and research software. Formerly
+  at Google Quantum AI and Quantum Elements Inc.; creator of SQuADDS.
 footer_text: >
-keywords: Sadman Ahmed Shanto, superconducting qubits, quantum computing, quantum hardware, quantum device design, quantum design automation, SQuADDS, transmon, Josephson junction, nanofabrication, electromagnetic simulation, machine learning for physics, AI for science, agentic AI, USC physics, Levenson-Falk Lab, physics PhD, PhD intern, quantum hardware research scientist, quantum hardware engineer, quantum device modelling
+keywords: Sadman Ahmed Shanto, experimental physicist, research engineer, superconducting qubits, quantum computing, quantum hardware, quantum processor R&D, quantum device design, quantum design automation, transmon, Josephson junction, quasiparticle physics, nanofabrication, cryogenic measurement, microwave engineering, electromagnetic simulation, quantum control, scientific machine learning, AI for science, autonomous experimentation, agentic AI, research software, HPC, cloud infrastructure, particle detectors, data acquisition, muon tomography, traffic simulation, SQuADDS, USC physics, Levenson-Falk Lab, physics PhD
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: logow.png # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
@@ -60,9 +63,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+og_image: https://sadmanahmedshanto.com/assets/img/profile_pic.jpg # the site-wide Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Social integration
@@ -380,7 +383,7 @@ enable_publication_thumbnails: true
 # These are the defaults
 external_links:
   enabled: true
-  rel: external nofollow noopener
+  rel: external noopener
   target: _blank
   exclude:
 

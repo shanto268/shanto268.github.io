@@ -1,0 +1,235 @@
+{% capture canonical_url %}{{ page.url | replace: 'index.html', '' | absolute_url }}{% endcapture %}
+{% capture profile_url %}{{ '/' | absolute_url }}{% endcapture %}
+{% capture profile_image_url %}{{ '/assets/img/profile_pic.jpg' | absolute_url }}{% endcapture %}
+{% assign schema_page_title = page.seo_title | default: page.title %}
+{% assign schema_page_description = page.seo_description | default: page.description | default: site.description %}
+{% capture page_name %}{% if page.url == '/' %}Sadman Ahmed Shanto{% else %}{{ schema_page_title }} | Sadman Ahmed Shanto{% endif %}{% endcapture %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "{% if page.url == '/' %}ProfilePage{% elsif page.url == '/publications/' %}CollectionPage{% else %}WebPage{% endif %}",
+      "@id": {{ canonical_url | append: '#webpage' | jsonify }},
+      "url": {{ canonical_url | jsonify }},
+      "name": {{ page_name | strip | jsonify }},
+      "description": {{ schema_page_description | strip_newlines | strip | jsonify }},
+      "isPartOf": {
+        "@type": "WebSite",
+        "@id": {{ profile_url | append: '#website' | jsonify }},
+        "url": {{ profile_url | jsonify }},
+        "name": "Sadman Ahmed Shanto"
+      },
+      {% if page.url == '/' or page.url == '/research/ai-for-science/' %}
+      "mainEntity": { "@id": {{ profile_url | append: '#person' | jsonify }} },
+      {% elsif page.url == '/projects/1a_project/' %}
+      "mainEntity": { "@id": "https://github.com/LFL-Lab/SQuADDS#software" },
+      {% elsif page.url == '/publications/' %}
+      "mainEntity": { "@id": {{ canonical_url | append: '#publication-list' | jsonify }} },
+      {% endif %}
+      "about": { "@id": {{ profile_url | append: '#person' | jsonify }} },
+      "author": { "@id": {{ profile_url | append: '#person' | jsonify }} }
+    },
+    {
+      "@type": "Person",
+      "@id": {{ profile_url | append: '#person' | jsonify }},
+      "name": "Sadman Ahmed Shanto",
+      "url": {{ profile_url | jsonify }}{% if page.url == '/' or page.url == '/research/ai-for-science/' %},
+      "alternateName": ["Sadman Shanto", "S. A. Shanto", "Shanto, S.A."],
+      "image": {{ profile_image_url | jsonify }},
+      "jobTitle": [
+        "Physics PhD Candidate",
+        "Experimental Physicist",
+        "Quantum Hardware Researcher",
+        "AI for Science Researcher",
+        "Research Engineer"
+      ],
+      "description": "USC Physics PhD candidate, experimental physicist, and research engineer whose work spans quantum processor R&D, superconducting-device design and fabrication, cryogenic measurement, quasiparticle physics, scientific machine learning, autonomous experimentation, and research software. Formerly a Research Intern at Google Quantum AI and Quantum Elements Inc.; creator of SQuADDS.",
+      "affiliation": [
+        {
+          "@type": "CollegeOrUniversity",
+          "@id": "https://www.usc.edu/#organization",
+          "name": "University of Southern California",
+          "sameAs": "https://www.usc.edu/"
+        },
+        {
+          "@type": "ResearchOrganization",
+          "@id": "https://dornsife.usc.edu/lfl/#organization",
+          "name": "Levenson-Falk Lab",
+          "sameAs": "https://dornsife.usc.edu/lfl/"
+        }
+      ],
+      "alumniOf": [
+        { "@id": "https://www.usc.edu/#organization" },
+        {
+          "@type": "CollegeOrUniversity",
+          "name": "Texas Tech University",
+          "sameAs": "https://www.ttu.edu/"
+        }
+      ],
+      "knowsAbout": [
+        "Superconducting quantum hardware",
+        "Quantum device design automation",
+        "Electromagnetic simulation",
+        "Nanofabrication",
+        "Cryogenic microwave measurement",
+        "Quantum control and calibration",
+        "Scientific machine learning",
+        "Quantum-device inverse design",
+        "AI for science",
+        "Autonomous scientific experimentation",
+        "Agentic AI",
+        "Research software engineering"
+      ],
+      "sameAs": [
+        "https://orcid.org/0000-0002-6325-4601",
+        "https://scholar.google.com/citations?user=c9UcuUYAAAAJ",
+        "https://github.com/shanto268",
+        "https://www.linkedin.com/in/sshanto",
+        "https://www.researchgate.net/profile/Sadman-Ahmed-Shanto",
+        "https://dornsife.usc.edu/physics/profile/sadman-ahmed-shanto/"
+      ],
+      "subjectOf": [
+        {
+          "@type": "WebPage",
+          "name": "Superconducting quasiparticle experiments and mitigation",
+          "url": {{ '/projects/1_project/' | absolute_url | jsonify }}
+        },
+        {
+          "@type": "WebPage",
+          "name": "AI for Science research profile",
+          "url": {{ '/research/ai-for-science/' | absolute_url | jsonify }}
+        },
+        {
+          "@type": "CreativeWork",
+          "name": "Curriculum vitae",
+          "url": {{ '/cv/' | absolute_url | jsonify }}
+        },
+        {
+          "@type": "SoftwareSourceCode",
+          "@id": "https://github.com/LFL-Lab/SQuADDS#software",
+          "name": "SQuADDS",
+          "url": "https://github.com/LFL-Lab/SQuADDS"
+        }
+      ]
+      {% endif %}
+    }{% if page.url == '/projects/1a_project/' %},
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://github.com/LFL-Lab/SQuADDS#software",
+      "name": "SQuADDS",
+      "alternateName": "Superconducting Qubit And Device Design and Simulation",
+      "description": "Open-source validated database and simulation workflow for superconducting quantum-device design, optimization, and programmatic layout generation.",
+      "url": "https://lfl-lab.github.io/SQuADDS/",
+      "codeRepository": "https://github.com/LFL-Lab/SQuADDS",
+      "programmingLanguage": "Python",
+      "runtimePlatform": "Python",
+      "license": "https://github.com/LFL-Lab/SQuADDS/blob/main/LICENSE",
+      "isAccessibleForFree": true,
+      "creator": { "@id": {{ profile_url | append: '#person' | jsonify }} },
+      "citation": { "@id": "https://doi.org/10.22331/q-2024-09-09-1465" },
+      "keywords": "superconducting qubits, quantum-device design, electromagnetic simulation, design automation, inverse design, GDS layout"
+    },
+    {
+      "@type": "Dataset",
+      "@id": "https://huggingface.co/datasets/SQuADDS/SQuADDS_DB#dataset",
+      "name": "SQuADDS Database",
+      "description": "Reusable superconducting quantum-device geometry and simulation data for design, validation, and machine-learning research.",
+      "url": "https://huggingface.co/datasets/SQuADDS/SQuADDS_DB",
+      "isAccessibleForFree": true,
+      "creator": { "@id": {{ profile_url | append: '#person' | jsonify }} },
+      "isBasedOn": { "@id": "https://doi.org/10.22331/q-2024-09-09-1465" }
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.22331/q-2024-09-09-1465",
+      "name": "SQuADDS: A validated design database and simulation workflow for superconducting qubit design",
+      "datePublished": "2024-09-09",
+      "url": "https://doi.org/10.22331/q-2024-09-09-1465",
+      "identifier": "https://doi.org/10.22331/q-2024-09-09-1465",
+      "isPartOf": { "@type": "Periodical", "name": "Quantum" },
+      "author": { "@id": {{ profile_url | append: '#person' | jsonify }} }
+    }{% elsif page.url == '/publications/' %},
+    {
+      "@type": "ItemList",
+      "@id": {{ canonical_url | append: '#publication-list' | jsonify }},
+      "name": "Selected publications by Sadman Ahmed Shanto",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://arxiv.org/abs/2607.20795",
+            "name": "Component-Level Inverse Design of Transmon Qubits Using Neural Networks",
+            "datePublished": "2026",
+            "url": "https://arxiv.org/abs/2607.20795",
+            "author": { "@id": {{ profile_url | append: '#person' | jsonify }} }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://doi.org/10.1088/2633-4356/ade10d",
+            "name": "A Review of Design Concerns in Superconducting Quantum Circuits",
+            "datePublished": "2025",
+            "url": "https://doi.org/10.1088/2633-4356/ade10d",
+            "author": { "@id": {{ profile_url | append: '#person' | jsonify }} }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://doi.org/10.22331/q-2024-09-09-1465",
+            "name": "SQuADDS: A validated design database and simulation workflow for superconducting qubit design",
+            "datePublished": "2024-09-09",
+            "url": "https://doi.org/10.22331/q-2024-09-09-1465",
+            "author": { "@id": {{ profile_url | append: '#person' | jsonify }} }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://doi.org/10.1103/PRXQuantum.5.020321",
+            "name": "On-demand driven dissipation for cavity reset and cooling",
+            "datePublished": "2024-04-01",
+            "url": "https://doi.org/10.1103/PRXQuantum.5.020321",
+            "author": { "@id": {{ profile_url | append: '#person' | jsonify }} }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://doi.org/10.1103/PRXQuantum.4.030339",
+            "name": "Quasiparticle Dynamics in Epitaxial Al-In-As Planar Josephson Junctions",
+            "datePublished": "2023-09-01",
+            "url": "https://doi.org/10.1103/PRXQuantum.4.030339",
+            "author": { "@id": {{ profile_url | append: '#person' | jsonify }} }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "item": {
+            "@type": "ScholarlyArticle",
+            "@id": "https://doi.org/10.1103/PhysRevB.107.L140506",
+            "name": "Electron-phonon interactions in the Andreev bound states of aluminum nanobridge Josephson junctions",
+            "datePublished": "2023-04-01",
+            "url": "https://doi.org/10.1103/PhysRevB.107.L140506",
+            "author": { "@id": {{ profile_url | append: '#person' | jsonify }} }
+          }
+        }
+      ]
+    }{% endif %}
+  ]
+}
+</script>

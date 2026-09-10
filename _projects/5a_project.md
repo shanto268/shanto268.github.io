@@ -2,6 +2,9 @@
 layout: page
 title: Charge Noise Modeling in a Trimon System
 description: Open Quantum Systems Course @ USC
+seo_title: Charge-Noise Modeling in a Planar Trimon Circuit
+seo_description: Open-quantum-systems analysis of charge noise and decoherence in a planar trimon superconducting circuit.
+keywords: trimon, charge noise, superconducting circuits, open quantum systems, decoherence, quantum hardware
 img: assets/img/research/academic/oqs_thumbnail.png
 importance: 5
 category: classes

@@ -2,6 +2,9 @@
 layout: page
 title: Koopman Operator Theory for Dynamical Systems
 description: Mechanics Course @ USC
+seo_title: Koopman Operator Methods for Nonlinear Dynamical Systems
+seo_description: A computational mechanics project applying Koopman operator theory to nonlinear dynamical systems.
+keywords: Koopman operator, dynamical systems, nonlinear dynamics, computational physics, scientific computing
 img: assets/img/research/academic/mechanics_thumbnail.png
 importance: 5
 category: classes
