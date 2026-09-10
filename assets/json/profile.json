@@ -456,6 +456,23 @@
     },
     {
       "@type": "ScholarlyArticle",
+      "@id": "https://arxiv.org/abs/2603.04566",
+      "name": "Universal Hamiltonian control in a planar trimon circuit",
+      "datePublished": "2026-03-04",
+      "url": "https://arxiv.org/abs/2603.04566",
+      "identifier": "arXiv:2603.04566",
+      "author": {
+        "@id": "https://sadmanahmedshanto.com/#person"
+      },
+      "about": [
+        "Planar trimon circuits",
+        "Universal Hamiltonian control",
+        "Multimode superconducting circuits",
+        "Quantum processor architectures"
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
       "@id": "https://doi.org/10.1103/PRXQuantum.5.020321",
       "name": "On-demand driven dissipation for cavity reset and cooling",
       "datePublished": "2024-04-01",

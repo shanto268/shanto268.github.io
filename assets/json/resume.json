@@ -970,7 +970,9 @@
         "Taylor L. Patti"
       ],
       "summary": "Neural-network component-level inverse design framework for transmon qubits; preprint on arXiv (2026).",
-      "url": "https://arxiv.org/abs/2607.20795"
+      "url": "https://arxiv.org/abs/2607.20795",
+      "pdf": "https://arxiv.org/pdf/2607.20795",
+      "arxiv": "2607.20795"
     },
     {
       "name": "AgentQ: An LLM-Agentic Framework for Time-Domain Superconducting Quantum Chip Simulation",
@@ -989,7 +991,7 @@
     },
     {
       "name": "Universal Hamiltonian Control in a Planar Trimon Circuit",
-      "publisher": "Under Review at PRX Quantum",
+      "publisher": "arXiv:2603.04566; Under Review at PRX Quantum",
       "releaseDate": "2026",
       "authors": [
         "Vivek Maurya",
@@ -1000,7 +1002,10 @@
         "Daniel A. Lidar",
         "Eli M. Levenson-Falk"
       ],
-      "summary": "Demonstration of universal Hamiltonian control in a planar trimon circuit, under review at PRX Quantum (2026)."
+      "summary": "Demonstration of universal Hamiltonian control in a planar trimon circuit; preprint on arXiv and under review at PRX Quantum (2026).",
+      "url": "https://arxiv.org/abs/2603.04566",
+      "pdf": "https://arxiv.org/pdf/2603.04566",
+      "arxiv": "2603.04566"
     },
     {
       "name": "A Review of Design Concerns in Superconducting Quantum Circuits",
