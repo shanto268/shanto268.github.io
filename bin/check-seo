@@ -22,7 +22,7 @@ jq -e '
   and .name == "Sadman Ahmed Shanto"
   and (.knowsAbout | length) >= 40
   and any(.subjectOf[]; .["@type"] == "SoftwareSourceCode")
-  and any(.subjectOf[]; .["@type"] == "Dataset")
+  and any(.subjectOf[]; .["@type"] == "Dataset" and .license == "https://opensource.org/license/mit")
   and any(.subjectOf[]; .["@type"] == "ScholarlyArticle")
 ' assets/json/profile.json >/dev/null
 
@@ -45,17 +45,26 @@ bundle exec jekyll build \
 echo "Validating rendered JSON-LD..."
 ruby -rjson -e '
   blocks = 0
+  datasets = 0
   Dir.glob(File.join(ARGV.fetch(0), "**", "*.html")).each do |path|
     html = File.read(path)
     html.scan(%r{<script\s+type=["'"'"']application/ld\+json["'"'"']>(.*?)</script>}mi).each do |match|
-      JSON.parse(match.first)
+      document = JSON.parse(match.first)
+      nodes = document["@graph"] || [document]
+      nodes.each do |node|
+        next unless Array(node["@type"]).include?("Dataset")
+
+        abort("Dataset is missing a license in #{path}") if node["license"].to_s.empty?
+        datasets += 1
+      end
       blocks += 1
     rescue JSON::ParserError => error
       abort("Invalid JSON-LD in #{path}: #{error.message}")
     end
   end
   abort("No JSON-LD blocks found") if blocks.zero?
-  puts "Validated #{blocks} JSON-LD blocks"
+  abort("No Dataset JSON-LD found") if datasets.zero?
+  puts "Validated #{blocks} JSON-LD blocks, including #{datasets} licensed Dataset record(s)"
 ' "${seo_site_dir}"
 
 echo "Checking publication author-name highlighting..."
