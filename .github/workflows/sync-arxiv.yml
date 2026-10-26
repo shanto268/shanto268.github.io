@@ -50,7 +50,7 @@ jobs:
         if: steps.changes.outputs.changed == 'true'
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3.5"
+          ruby-version: "3.3"
           bundler-cache: true
 
       - name: Install notebook build dependencies
