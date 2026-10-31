@@ -7,7 +7,7 @@
     "@id": "https://sadmanahmedshanto.com/#profile",
     "url": "https://sadmanahmedshanto.com/",
     "name": "Sadman Ahmed Shanto — experimental physicist and research engineer",
-    "dateModified": "2026-09-10"
+    "dateModified": "2026-10-31"
   },
   "name": "Sadman Ahmed Shanto",
   "givenName": "Sadman",
@@ -394,6 +394,56 @@
     },
     {
       "@type": "ScholarlyArticle",
+      "@id": "https://doi.org/10.1103/hxdq-dnz8",
+      "name": "Universal Hamiltonian control in a planar trimon circuit",
+      "datePublished": "2026-10-13",
+      "url": "https://doi.org/10.1103/hxdq-dnz8",
+      "identifier": [
+        "https://doi.org/10.1103/hxdq-dnz8",
+        "https://arxiv.org/abs/2603.04566"
+      ],
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Vivek Maurya"
+        },
+        {
+          "@type": "Person",
+          "name": "Daria Kowsari"
+        },
+        {
+          "@type": "Person",
+          "name": "Kumar Saurav"
+        },
+        {
+          "@id": "https://sadmanahmedshanto.com/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "R. Vijay"
+        },
+        {
+          "@type": "Person",
+          "name": "Daniel A. Lidar"
+        },
+        {
+          "@type": "Person",
+          "name": "Eli M. Levenson-Falk"
+        }
+      ],
+      "about": [
+        "Planar trimon circuits",
+        "Universal Hamiltonian control",
+        "Multimode superconducting circuits",
+        "Quantum processor architectures"
+      ],
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "Physical Review Applied"
+      }
+    },
+    {
+      "@type": "ScholarlyArticle",
       "@id": "https://arxiv.org/abs/2607.20795",
       "name": "Component-Level Inverse Design of Transmon Qubits Using Neural Networks",
       "datePublished": "2026-07-22",
@@ -462,51 +512,6 @@
         "Transmon qubits",
         "Neural-network inverse design",
         "AI for science"
-      ]
-    },
-    {
-      "@type": "ScholarlyArticle",
-      "@id": "https://arxiv.org/abs/2603.04566",
-      "name": "Universal Hamiltonian control in a planar trimon circuit",
-      "datePublished": "2026-03-04",
-      "url": "https://arxiv.org/abs/2603.04566",
-      "identifier": [
-        "https://arxiv.org/abs/2603.04566"
-      ],
-      "author": [
-        {
-          "@type": "Person",
-          "name": "Vivek Maurya"
-        },
-        {
-          "@type": "Person",
-          "name": "Daria Kowsari"
-        },
-        {
-          "@type": "Person",
-          "name": "Kumar Saurav"
-        },
-        {
-          "@id": "https://sadmanahmedshanto.com/#person"
-        },
-        {
-          "@type": "Person",
-          "name": "R. Vijay"
-        },
-        {
-          "@type": "Person",
-          "name": "Daniel A. Lidar"
-        },
-        {
-          "@type": "Person",
-          "name": "Eli M. Levenson-Falk"
-        }
-      ],
-      "about": [
-        "Planar trimon circuits",
-        "Universal Hamiltonian control",
-        "Multimode superconducting circuits",
-        "Quantum processor architectures"
       ]
     },
     {
