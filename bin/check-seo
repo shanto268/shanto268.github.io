@@ -85,6 +85,21 @@ test -f "${seo_site_dir}/llms-full.txt"
 test -f "${seo_site_dir}/research/ai-for-science/index.html"
 grep -q 'https://sadmanahmedshanto.com/' "${seo_site_dir}/sitemap.xml"
 grep -q 'https://sadmanahmedshanto.com/research/ai-for-science/' "${seo_site_dir}/sitemap.xml"
+
+echo "Checking that the blog is not published..."
+test ! -e "${seo_site_dir}/blog"
+test ! -e "${seo_site_dir}/feed.xml"
+ruby -e '
+  root = ARGV.fetch(0)
+  paths = Dir.glob(File.join(root, "**", "*.html")) + [File.join(root, "sitemap.xml")]
+  paths.each do |path|
+    content = File.read(path)
+    abort("Blog URL remains in #{path}") if content.match?(%r{["\x27>](?:https://sadmanahmedshanto\.com)?/blog/})
+    abort("Blog search entry remains in #{path}") if content.include?(%q{section: "Posts"})
+    abort("RSS link remains in #{path}") if content.include?(%q{/feed.xml})
+  end
+' "${seo_site_dir}"
+
 if grep -R -q 'https://shanto268.github.io' "${seo_site_dir}/sitemap.xml" "${seo_site_dir}/index.html"; then
   echo "Legacy GitHub Pages URL found in canonical output" >&2
   exit 1
