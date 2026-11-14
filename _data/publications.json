@@ -1,5 +1,23 @@
 [
   {
+    "id": "https://doi.org/10.1103/hxdq-dnz8",
+    "name": "Universal Hamiltonian control in a planar trimon circuit",
+    "datePublished": "2026-10-13",
+    "url": "https://doi.org/10.1103/hxdq-dnz8",
+    "arxiv": "2603.04566",
+    "authors": [
+      "Vivek Maurya",
+      "Daria Kowsari",
+      "Kumar Saurav",
+      "S. A. Shanto",
+      "R. Vijay",
+      "Daniel A. Lidar",
+      "Eli M. Levenson-Falk"
+    ],
+    "doi": "10.1103/hxdq-dnz8",
+    "journal": "Physical Review Applied"
+  },
+  {
     "id": "https://arxiv.org/abs/2607.20795",
     "name": "Component-Level Inverse Design of Transmon Qubits Using Neural Networks",
     "datePublished": "2026-07-22",
@@ -20,22 +38,6 @@
       "Enectali Figueroa-Feliciano",
       "Eli M. Levenson-Falk",
       "Taylor L. Patti"
-    ]
-  },
-  {
-    "id": "https://arxiv.org/abs/2603.04566",
-    "name": "Universal Hamiltonian control in a planar trimon circuit",
-    "datePublished": "2026-03-04",
-    "url": "https://arxiv.org/abs/2603.04566",
-    "arxiv": "2603.04566",
-    "authors": [
-      "Vivek Maurya",
-      "Daria Kowsari",
-      "Kumar Saurav",
-      "S. A. Shanto",
-      "R. Vijay",
-      "Daniel A. Lidar",
-      "Eli M. Levenson-Falk"
     ]
   },
   {
