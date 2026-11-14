@@ -991,8 +991,8 @@
     },
     {
       "name": "Universal Hamiltonian Control in a Planar Trimon Circuit",
-      "publisher": "arXiv:2603.04566; Under Review at PRX Quantum",
-      "releaseDate": "2026-03-04",
+      "publisher": "Physical Review Applied",
+      "releaseDate": "2026-10-13",
       "authors": [
         "Vivek Maurya",
         "Daria Kowsari",
@@ -1002,10 +1002,11 @@
         "Daniel A. Lidar",
         "Eli M. Levenson-Falk"
       ],
-      "summary": "Demonstration of universal Hamiltonian control in a planar trimon circuit; preprint on arXiv and under review at PRX Quantum (2026).",
-      "url": "https://arxiv.org/abs/2603.04566",
+      "summary": "Demonstration of universal Hamiltonian control in a planar trimon circuit; published in Physical Review Applied.",
+      "url": "https://doi.org/10.1103/hxdq-dnz8",
       "pdf": "https://arxiv.org/pdf/2603.04566",
-      "arxiv": "2603.04566"
+      "arxiv": "2603.04566",
+      "doi": "10.1103/hxdq-dnz8"
     },
     {
       "name": "A Review of Design Concerns in Superconducting Quantum Circuits",
