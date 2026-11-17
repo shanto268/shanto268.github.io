@@ -1,6 +1,8 @@
 ---
 layout: page
 title: /projects
+seo_title: Research Projects | Superconducting Qubits, SQuADDS, QCap, Scientific ML
+seo_description: Research projects by Sadman Ahmed Shanto, covering quasiparticle dynamics in superconducting devices, SQuADDS design automation, the QCap capacitance model, muon telescopes, and traffic simulation.
 permalink: /projects/
 nav: true
 nav_order: 1

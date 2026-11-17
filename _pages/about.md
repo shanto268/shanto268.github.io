@@ -1,6 +1,7 @@
 ---
 layout: about
 title: cd ~
+seo_title: Sadman Ahmed Shanto | Quantum Hardware, Design Automation & ML for Physics
 permalink: /
 subtitle: Professional thinker, habitual programmer, and full-time Hilbert Space/Cleanroom resident
 

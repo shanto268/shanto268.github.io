@@ -30,6 +30,8 @@
   {% endif %}
   {% if page.url == '/blog/index.html' %}
     {{ page.title }} | {{ title }}
+  {% elsif page.url == '/' and page.seo_title %}
+    {{ page.seo_title }}
   {% elsif meta_page_title != 'blank' and page.url != '/' %}
     {% if meta_page_title == null or meta_page_title == '' %}
       {{ page.date | date: '%Y' }} | {{ title }}
@@ -60,7 +62,7 @@
   <!-- OpenGraph -->
   <meta property="og:site_name" content="{{ title }}">
   <meta property="og:type" content="{% if is_blog_post %}article{% else %}website{% endif %}">
-  <meta property="og:title" content="{% if meta_page_title %}{{ meta_page_title }} | {{ title }}{% else %}{{ title }}{% endif %}">
+  <meta property="og:title" content="{% if page.url == '/' %}{{ page.seo_title | default: title }}{% elsif meta_page_title %}{{ meta_page_title }} | {{ title }}{% else %}{{ title }}{% endif %}">
   <meta property="og:url" content="{{ page.url | prepend: site.baseurl | prepend: site.url | remove_first: 'index.html' }}">
   <meta property="og:description" content="{{ meta_description }}">
   {% if page.og_image or site.og_image %}
@@ -70,7 +72,7 @@
 
   <!-- Twitter card -->
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="{% if meta_page_title %}{{ meta_page_title }}{% else %}{{ title }}{% endif %}">
+  <meta name="twitter:title" content="{% if page.url == '/' %}{{ page.seo_title | default: title }}{% elsif meta_page_title %}{{ meta_page_title }}{% else %}{{ title }}{% endif %}">
   <meta name="twitter:description" content="{{ meta_description }}">
   {% if page.og_image or site.og_image %}
     <meta name="twitter:image" content="{% if page.og_image %}{{ page.og_image }}{% else %}{{ site.og_image }}{% endif %}">

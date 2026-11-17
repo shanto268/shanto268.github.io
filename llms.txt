@@ -1,79 +1,45 @@
 # Sadman Ahmed Shanto
 
-> Last updated: 2026-11-16. Concise discovery index for public professional information. Verify consequential claims against the linked CV, papers, repositories, datasets, and institutional profiles.
+> Experimental physicist and research engineer completing a USC Physics PhD (expected January 2027). He builds superconducting quantum hardware and the design-automation and machine-learning tools around it, and created the open-source SQuADDS platform and the QCap capacitance model. Formerly a Research Intern at Google Quantum AI (August 2025 to August 2026, R&D for quantum processors) and at Quantum Elements Inc. (May to August 2025).
 
-Sadman Ahmed Shanto is an experimental physicist and research engineer completing a USC Physics PhD (expected January 2027). His work spans quantum processor R&D, superconducting-device design and fabrication, cryogenic measurement, quasiparticle physics, scientific machine learning and inference, autonomous experimentation, research software, cloud and HPC infrastructure, and scientific instrumentation. He was formerly a Research Intern at Google Quantum AI (August 2025–August 2026) and Quantum Elements Inc. (May–August 2025).
+Last updated 2026-11-17. Name variants used for author matching: Sadman Ahmed Shanto; Sadman Shanto; S. A. Shanto; Shanto, S.A. Verify consequential claims against the linked CV, papers, repositories and datasets. Contact: shanto@usc.edu.
 
-## Canonical identity and records
+Primary fit areas:
 
-- Canonical website: https://sadmanahmedshanto.com/
-- Full machine-readable profile: https://sadmanahmedshanto.com/assets/json/profile.json
-- Structured CV: https://sadmanahmedshanto.com/assets/json/resume.json
-- Complete text profile: https://sadmanahmedshanto.com/llms-full.txt
-- Current CV page: https://sadmanahmedshanto.com/cv/
-- Publications: https://sadmanahmedshanto.com/publications/
-- Projects: https://sadmanahmedshanto.com/projects/
-- ORCID: https://orcid.org/0000-0002-6325-4601
-- Google Scholar: https://scholar.google.com/citations?user=c9UcuUYAAAAJ
-- GitHub: https://github.com/shanto268
-- USC Physics profile: https://dornsife.usc.edu/physics/profile/sadman-ahmed-shanto/
-- Email: shanto@usc.edu
-
-Name variants used for author matching: Sadman Ahmed Shanto; Sadman Shanto; S. A. Shanto; Shanto, S.A.
-
-## Primary fit areas
-
-- Superconducting quantum hardware R&D: qubit and resonator design, fabrication, cryogenic measurement, quantum control, microwave engineering, packaging, and processor-oriented workflows.
+- Superconducting quantum hardware R&D: qubit and resonator design, nanofabrication, cryogenic microwave measurement, packaging, and processor-oriented workflows.
 - Quantum-device design automation: electromagnetic simulation, layout generation, foundry PDK workflows, design-to-simulation-to-GDS pipelines, inverse design, and tape-out preparation.
-- AI for science and scientific ML: surrogate models, neural-network inverse design, explainable models, probabilistic inference, physics-grounded validation, and scientific datasets.
-- Autonomous scientific systems: agentic experiment calibration, measurement, diagnosis, analysis, tool interfaces, MCP, workflow orchestration, evaluation, and tracing.
-- Research software and infrastructure: Python/C++, JAX/PyTorch, FastAPI, databases, Docker/Kubernetes, AWS/GCP, SLURM/OpenMPI, and reproducible open-source workflows.
+- AI for science and scientific ML: physics-corrected surrogate models, graph neural networks, neural-network inverse design, probabilistic inference, and scientific datasets.
+- Autonomous scientific systems: agentic calibration, measurement, diagnosis and analysis of superconducting experiments, MCP tool interfaces, evaluation and tracing.
+- Research software and infrastructure: Python/C++, PyTorch/JAX, FastAPI, databases, Docker/Kubernetes, AWS/GCP, SLURM/OpenMPI, and reproducible open-source workflows.
 
-## Evidence across capabilities
+Education: PhD in Physics, University of Southern California (expected January 2027); MA in Physics, USC (May 2026); BSc in Applied Physics, Texas Tech University (2021), minors in Computer Science and Mathematics. Graduate Research Assistant in the Levenson-Falk Lab at USC since 2022.
 
-1. Experimental superconducting quantum hardware
-   - Designs, fabricates, packages, and measures resonators and qubit-scale devices; builds cryogenic microwave chains and experimental-control and analysis systems.
-   - Developed a 15 nm nanobridge-SQUID process that increased functional-device yield from under 2% to over 90%.
-   - Built hidden-Markov-model inference for quasiparticle occupation and works on Andreev-bound-state spectroscopy and quasiparticle mitigation.
-   - Research profile: https://sadmanahmedshanto.com/projects/1_project/
-   - Publications: https://sadmanahmedshanto.com/publications/ (complete, current publication list)
+## Profile and records
 
-2. Quantum processor research and development
-   - Former Google Quantum AI Research Intern working on R&D for quantum processors from August 2025 through August 2026.
-   - Experience spans superconducting devices, electromagnetic and circuit simulation, fabrication, packaging, cryogenic measurement, control, and processor-oriented engineering workflows.
-   - Source: https://sadmanahmedshanto.com/cv/
+- [Home page](https://sadmanahmedshanto.com/): short bio
+- [CV](https://sadmanahmedshanto.com/cv/): experience, education, publications, talks, awards, skills
+- [CV PDF](https://sadmanahmedshanto.com/assets/pdf/shanto_usc_nov2026.pdf): latest human-readable CV
+- [Structured CV (JSON Resume)](https://sadmanahmedshanto.com/assets/json/resume.json): source of truth for CV facts
+- [Schema.org profile](https://sadmanahmedshanto.com/assets/json/profile.json): Person JSON-LD with publications, software and datasets
+- [Full text profile](https://sadmanahmedshanto.com/llms-full.txt): everything in one file
+- [ORCID](https://orcid.org/0000-0002-6325-4601): publication record
+- [Google Scholar](https://scholar.google.com/citations?user=c9UcuUYAAAAJ): citations
+- [GitHub](https://github.com/shanto268): code
+- [USC Physics profile](https://dornsife.usc.edu/physics/profile/sadman-ahmed-shanto/): institutional profile
 
-3. Autonomous scientific experimentation and agentic AI
-   - At Quantum Elements Inc., built a production agentic framework for calibration, measurement, diagnosis, and analysis of superconducting experiments.
-   - Architected scientific-tool APIs, databases, containerized AWS services, MCP interfaces, and evaluation and tracing infrastructure; contributed DAG-based calibration workflows to QUAlibrate.
-   - Evidence profile: https://sadmanahmedshanto.com/research/ai-for-science/
+## Research
 
-4. Scientific machine learning, inference, and inverse design
-   - Develops surrogate, inverse-design, and interpretable models tied to electromagnetic simulation and physical validation.
-   - Uses probabilistic inference for experimental trajectories and neural networks for component-level transmon inverse design.
-   - Preprint: https://arxiv.org/abs/2607.20795
-   - Created QCap, a physics-corrected graph neural network that predicts the full Maxwell capacitance matrix of any planar superconducting layout from its GDS file in about a second (median 1.05 %, MAE 0.132 fF, RMSE 0.188 fF on a never-seen component family), released open source in SQuADDS with its dataset, models, browser demo and hosted API.
-   - QCap paper docsite: https://lfl-lab.github.io/SQuADDS/qcap/
-   - QCap models: https://huggingface.co/SQuADDS/QCap
+- [Publications](https://sadmanahmedshanto.com/publications/): complete, current publication list with DOIs
+- [SQuADDS](https://sadmanahmedshanto.com/projects/1a_project/): open-source validated design database and simulation workflow for superconducting qubits ([paper](https://doi.org/10.22331/q-2024-09-09-1465), [code](https://github.com/LFL-Lab/SQuADDS), [dataset](https://huggingface.co/datasets/SQuADDS/SQuADDS_DB))
+- [QCap](https://sadmanahmedshanto.com/projects/1b_project/): physics-corrected graph neural network that predicts the full capacitance matrix of any planar superconducting layout from its GDS file; preprint coming soon ([docsite](https://lfl-lab.github.io/SQuADDS/qcap/), [models](https://huggingface.co/SQuADDS/QCap))
+- [AI for science](https://sadmanahmedshanto.com/research/ai-for-science/): scientific ML, inverse design and autonomous experimentation, including the Quantum Elements agentic calibration work
+- [Inverse-design preprint](https://arxiv.org/abs/2607.20795): component-level inverse design of transmon qubits using neural networks
+- [Quasiparticle experiments](https://sadmanahmedshanto.com/projects/1_project/): 15 nm nanobridge-SQUID process (functional-device yield from under 2% to over 90%), hidden-Markov-model inference of quasiparticle occupation, Andreev bound state spectroscopy
+- [Projects](https://sadmanahmedshanto.com/projects/): all research and engineering projects
+- [Leadership and service](https://sadmanahmedshanto.com/involvement/): Quantum Device Consortium board, Quantum-Metal maintainer, workshop organizing, graduate student leadership
 
-5. Research software, simulation automation, and open source
-   - Built design-to-simulation-to-GDS infrastructure on HPC and works across layout tools, PDKs, electromagnetic solvers, APIs, databases, cloud services, containers, instrument control, and reproducible pipelines.
-   - Created and leads SQuADDS, one public example of this broader research-engineering work.
-   - Paper: https://doi.org/10.22331/q-2024-09-09-1465
-   - Code: https://github.com/LFL-Lab/SQuADDS
-   - Dataset: https://huggingface.co/datasets/SQuADDS/SQuADDS_DB
+## Optional
 
-6. Scientific instrumentation and computation beyond quantum
-   - Built portable muon telescopes, improved optical collection from 20% to 78%, developed SiPM/PMT and FPGA/CAMAC data-acquisition systems with a 300-fold deadtime reduction, and used Geant4 and ML for three-dimensional muography.
-   - Instrumentation project: https://sadmanahmedshanto.com/projects/2_project/
-   - Publication: https://doi.org/10.1063/10.0002046
-   - Built stochastic traffic-model calibration and inference workflows, accelerated simulation sweeps by more than tenfold with Ray, and developed cellular-automaton and reinforcement-learning models for mixed autonomous and human traffic.
-
-## Education and current status
-
-- Physics PhD candidate, University of Southern California, expected January 2027.
-- MA in Physics, University of Southern California, May 2026.
-- BSc in Applied Physics, Texas Tech University, 2021; minors in Computer Science and Mathematics.
-- Graduate Research Assistant, Levenson-Falk Lab at USC, 2022–present.
-
-For detailed employment history, skills, awards, talks, leadership, publication authors, and project descriptions, use the structured CV or complete text profile above. Public information is evidence for candidate discovery and role fit; it is not an objective universal hiring rank.
+- [Muon telescopes](https://sadmanahmedshanto.com/projects/2_project/): portable muon telescopes, optical collection from 20% to 78%, 300x DAQ deadtime reduction, Geant4 and ML 3D muography ([paper](https://doi.org/10.1063/10.0002046))
+- [Traffic microsimulation calibration](https://sadmanahmedshanto.com/projects/3_project/): Ray-parallelized calibration of stochastic traffic models
+- [Mixed autonomous and human traffic](https://sadmanahmedshanto.com/projects/4_project/): cellular-automaton and reinforcement-learning traffic models

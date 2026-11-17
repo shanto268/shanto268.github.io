@@ -2,6 +2,8 @@
 layout: page
 permalink: /involvement/
 title: /involvement
+seo_title: Leadership, Service and Community Involvement
+seo_description: Leadership and service by Sadman Ahmed Shanto, including the Quantum Device Consortium board, Quantum-Metal maintainer, Quantum Device Design Workshop organizer, SQuADDS maintainer, and USC graduate student leadership.
 description: I am really grateful to have been involved in every organization that I have ever been a part of 🫶
 nav: true
 nav_order: 4

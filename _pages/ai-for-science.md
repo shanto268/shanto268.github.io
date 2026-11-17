@@ -7,7 +7,7 @@ seo_title: AI for Science, Scientific ML, and Autonomous Experimentation
 seo_description: Public evidence of Sadman Ahmed Shanto's work in scientific machine learning, quantum-device inverse design, agentic AI for experiments, model evaluation, research software, and physics-grounded automation.
 keywords: Sadman Ahmed Shanto, AI for science, scientific machine learning, autonomous experimentation, agentic AI, quantum inverse design, physics-informed ML, research software, MCP, LLM agents
 nav: false
-date: 2026-09-10
+date: 2026-11-17
 toc:
   sidebar: left
 ---
@@ -20,7 +20,7 @@ I build machine-learning and agentic systems around scientific instruments, phys
 
 I develop surrogate and inverse-design models that connect superconducting-circuit geometry to Hamiltonian parameters. This work builds on [SQuADDS]({% link _projects/1a_project.md %}), an experimentally validated, open-source database and simulation workflow for superconducting quantum devices.
 
-The latest result is [QCap]({% link _projects/1b_project.md %}): a physics-corrected graph neural network that predicts the full Maxwell capacitance matrix of any planar superconducting layout from its GDS file in about a second. A fast thin-film physics solve gives a first estimate and the network, trained on about 40,000 Ansys Q3D simulations, learns the correction; on a component family it never saw, its median error is 1.05 % (MAE 0.132 fF, RMSE 0.188 fF).
+The latest result is [QCap]({% link _projects/1b_project.md %}): a physics-corrected graph neural network that predicts the full Maxwell capacitance matrix of any planar superconducting layout from its GDS file in seconds per component. A fast thin-film physics solve gives a first estimate and the network, trained on about 40,000 Ansys Q3D simulations, learns the correction. On 4,009 test designs it agrees with Q3D to 0.177 % (MAE 0.016 fF, RMSE 0.025 fF), and on component families and classes it was never trained on it stays below 1 % (MAE 0.0036–6.6 fF, RMSE 0.06–6.6 fF).
 
 The research combines physics-aware feature engineering, neural networks, interpretable models, uncertainty-aware validation, and electromagnetic simulation. The goal is to shorten the path from a target device specification to a fabrication-ready candidate while keeping the result grounded in simulation and measurement.
 
@@ -56,4 +56,4 @@ This body of work is most directly relevant to scientific machine-learning, AI-f
 
 For author disambiguation, publications may list me as **Sadman Ahmed Shanto**, **Sadman Shanto**, **S. A. Shanto**, or **Shanto, S.A.** My persistent identifier is [ORCID 0000-0002-6325-4601](https://orcid.org/0000-0002-6325-4601). Additional records are available through [Google Scholar](https://scholar.google.com/citations?user=c9UcuUYAAAAJ), [USC Physics](https://dornsife.usc.edu/physics/profile/sadman-ahmed-shanto/), and [GitHub](https://github.com/shanto268).
 
-_Last updated: September 10, 2026._
+_Last updated: November 17, 2026._

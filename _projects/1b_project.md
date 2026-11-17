@@ -14,9 +14,9 @@ toc:
 
 # QCap
 
-QCap predicts the full Maxwell capacitance matrix of any planar superconducting circuit layout straight from its GDS file, in about a second on a laptop instead of minutes to hours of Ansys Q3D simulation. It reads every metal piece of the layout as a node of a graph, so it works for any layout made with any tool, and it never merges nets: an N-conductor layout gets its full N x N matrix.
+QCap predicts the full Maxwell capacitance matrix of any planar superconducting circuit layout straight from its GDS file, in seconds per component on a laptop instead of minutes to hours of Ansys Q3D simulation. It reads every metal piece of the layout as a node of a graph, so it works for any layout made with any tool, and it never merges nets: an N-conductor layout gets its full N x N matrix.
 
-The model is physics first. A fast thin-film method-of-moments solve gives a first estimate of how every pair of conductors couples, and a graph neural network, trained on about 40,000 Ansys Q3D simulations, learns the correction. On a family of layouts that no part of the model saw in training, QCap's median error is 1.05 % (MAE 0.132 fF, RMSE 0.188 fF).
+The model is physics first. A fast thin-film method-of-moments solve gives a first estimate of how every pair of conductors couples, and a graph neural network, trained on about 40,000 Ansys Q3D simulations, learns the correction. On 4,009 test designs it agrees with Q3D to 0.177 % (MAE 0.016 fF, RMSE 0.025 fF), and on component families and classes it was never trained on it stays below 1 % (MAE 0.0036–6.6 fF, RMSE 0.06–6.6 fF).
 
 QCap is open source in [SQuADDS](https://github.com/LFL-Lab/SQuADDS) (`pip install "squadds[ml]"`), with the dataset, the models, a browser demo and a hosted API. The preprint is coming very soon.
 

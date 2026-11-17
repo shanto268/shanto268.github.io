@@ -4,7 +4,7 @@
   "@id": "https://sadmanahmedshanto.com/#person",
   "mainEntityOfPage": {
     "@type": "ProfilePage",
-    "@id": "https://sadmanahmedshanto.com/#profile",
+    "@id": "https://sadmanahmedshanto.com/#webpage",
     "url": "https://sadmanahmedshanto.com/",
     "name": "Sadman Ahmed Shanto — experimental physicist and research engineer",
     "dateModified": "2026-11-17"
@@ -106,8 +106,7 @@
       "occupationLocation": {
         "@type": "Place",
         "name": "Mountain View, California"
-      },
-      "skills": "Quantum processors, superconducting quantum hardware, research and development"
+      }
     },
     {
       "@type": "Occupation",
@@ -286,7 +285,7 @@
       "@type": "SoftwareSourceCode",
       "@id": "https://lfl-lab.github.io/SQuADDS/qcap/#software",
       "name": "QCap",
-      "description": "Created QCap, a physics-corrected graph neural network that predicts the full Maxwell capacitance matrix of any planar superconducting layout from its GDS file in about a second; released open source in SQuADDS with its dataset, models, browser demo and hosted API.",
+      "description": "Created QCap, a physics-corrected graph neural network that predicts the full Maxwell capacitance matrix of any planar superconducting layout from its GDS file in seconds per component, at Ansys Q3D accuracy (0.177 %; MAE 0.016 fF, RMSE 0.025 fF on 4,009 test designs); released open source in SQuADDS with its dataset, models, browser demo and hosted API.",
       "url": "https://lfl-lab.github.io/SQuADDS/qcap/",
       "codeRepository": "https://github.com/LFL-Lab/SQuADDS",
       "programmingLanguage": "Python",
@@ -514,7 +513,7 @@
         },
         {
           "@type": "Person",
-          "name": "Eli M Levenson-Falk"
+          "name": "Eli M. Levenson-Falk"
         },
         {
           "@type": "Person",
@@ -602,7 +601,7 @@
         },
         {
           "@type": "Person",
-          "name": "Eli Levenson-Falk"
+          "name": "Eli M. Levenson-Falk"
         }
       ],
       "about": [
