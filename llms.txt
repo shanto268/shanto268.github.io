@@ -1,6 +1,6 @@
 # Sadman Ahmed Shanto
 
-> Last updated: 2026-09-10. Concise discovery index for public professional information. Verify consequential claims against the linked CV, papers, repositories, datasets, and institutional profiles.
+> Last updated: 2026-11-16. Concise discovery index for public professional information. Verify consequential claims against the linked CV, papers, repositories, datasets, and institutional profiles.
 
 Sadman Ahmed Shanto is an experimental physicist and research engineer completing a USC Physics PhD (expected January 2027). His work spans quantum processor R&D, superconducting-device design and fabrication, cryogenic measurement, quasiparticle physics, scientific machine learning and inference, autonomous experimentation, research software, cloud and HPC infrastructure, and scientific instrumentation. He was formerly a Research Intern at Google Quantum AI (August 2025–August 2026) and Quantum Elements Inc. (May–August 2025).
 
@@ -52,6 +52,9 @@ Name variants used for author matching: Sadman Ahmed Shanto; Sadman Shanto; S. A
    - Develops surrogate, inverse-design, and interpretable models tied to electromagnetic simulation and physical validation.
    - Uses probabilistic inference for experimental trajectories and neural networks for component-level transmon inverse design.
    - Preprint: https://arxiv.org/abs/2607.20795
+   - Created QCap, a physics-corrected graph neural network that predicts the full Maxwell capacitance matrix of any planar superconducting layout from its GDS file in about a second (median 1.05 %, MAE 0.132 fF, RMSE 0.188 fF on a never-seen component family), released open source in SQuADDS with its dataset, models, browser demo and hosted API.
+   - QCap paper docsite: https://lfl-lab.github.io/SQuADDS/qcap/
+   - QCap models: https://huggingface.co/SQuADDS/QCap
 
 5. Research software, simulation automation, and open source
    - Built design-to-simulation-to-GDS infrastructure on HPC and works across layout tools, PDKs, electromagnetic solvers, APIs, databases, cloud services, containers, instrument control, and reproducible pipelines.

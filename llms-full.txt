@@ -1,6 +1,6 @@
 # Sadman Ahmed Shanto
 
-> Last updated: 2026-09-10. This file is a discovery aid; verify consequential claims against the linked papers, repositories, institutional profiles, and current CV.
+> Last updated: 2026-11-16. This file is a discovery aid; verify consequential claims against the linked papers, repositories, institutional profiles, and current CV.
 
 > Experimental physicist and research engineer spanning superconducting quantum hardware, fabrication, cryogenic measurement, processor R&D, scientific machine learning, autonomous experimentation, design automation, and research software. Physics PhD candidate at the University of Southern California (Levenson-Falk Lab). Formerly Research Intern at Google Quantum AI (Aug 2025 - Aug 2026) and Quantum Elements Inc. (May 2025 - Aug 2025).
 
@@ -75,6 +75,14 @@ Created and leads an open-source database and design-automation platform for sup
 - **Docsite**: [https://lfl-lab.github.io/SQuADDS/](https://lfl-lab.github.io/SQuADDS/)
 - **Hugging Face**: [https://huggingface.co/datasets/SQuADDS/SQuADDS_DB](https://huggingface.co/datasets/SQuADDS/SQuADDS_DB)
 
+## QCap (Planar Capacitance Model)
+Created QCap, a physics-corrected graph neural network that predicts the full Maxwell capacitance matrix of any planar superconducting circuit layout from its GDS file in about a second, instead of minutes to hours of Ansys Q3D simulation. Each metal piece of the layout becomes a node of a graph, so it works for any layout from any tool and never merges nets. A fast thin-film method-of-moments solve gives the physics prior and a graph neural network trained on about 40,000 Q3D simulations learns the correction; on a component family no part of the model saw in training its median error is 1.05 % (MAE 0.132 fF, RMSE 0.188 fF). Released open source in SQuADDS (`pip install "squadds[ml]"`) with the dataset, models, a browser demo and a hosted API (2026); preprint coming soon.
+- **Paper docsite**: [https://lfl-lab.github.io/SQuADDS/qcap/](https://lfl-lab.github.io/SQuADDS/qcap/)
+- **Models**: [https://huggingface.co/SQuADDS/QCap](https://huggingface.co/SQuADDS/QCap)
+- **Dataset**: [https://huggingface.co/datasets/SQuADDS/SQuADDS_PlanarCapacitance](https://huggingface.co/datasets/SQuADDS/SQuADDS_PlanarCapacitance)
+- **Browser demo**: [https://huggingface.co/spaces/SQuADDS/planar-capacitance](https://huggingface.co/spaces/SQuADDS/planar-capacitance)
+- **Project page**: [https://sadmanahmedshanto.com/projects/1b_project/](https://sadmanahmedshanto.com/projects/1b_project/)
+
 ## Muon Telescopes (Advanced Particle Detector Lab)
 - **Feb 2018 - July 2021**: Developed portable, modular muon telescopes for 3D imaging of dense structures using muon tomography. This involved designing optics (custom Winston cones, 20% → 78% signal efficiency), building and calibrating SiPM/PMT detectors, developing DAQ systems (Arduino, CAMAC, custom PCBs; 300x deadtime reduction), running Geant4 simulations, and implementing machine learning (RNN/LSTM, TDC-based depth inference) for 3D tomographic reconstruction.
 
@@ -86,7 +94,8 @@ Created and leads an open-source database and design-automation platform for sup
 
 # Selected Publications
 
-- **Universal Hamiltonian Control in a Planar Trimon Circuit** (Maurya, Kowsari, Saurav, *Shanto*, Vijay, Lidar, Levenson-Falk) — [arXiv:2603.04566](https://arxiv.org/abs/2603.04566); under review at PRX Quantum, 2026
+- **QCap: a physics-corrected graph neural network for the capacitance matrix of any planar superconducting device layout** (*Shanto*, Das, Levenson-Falk) — preprint coming soon, 2026 ([paper docsite](https://lfl-lab.github.io/SQuADDS/qcap/))
+- **Universal Hamiltonian Control in a Planar Trimon Circuit** (Maurya, Kowsari, Saurav, *Shanto*, Vijay, Lidar, Levenson-Falk) — accepted in Physical Review Applied, 2026 ([arXiv:2603.04566](https://arxiv.org/abs/2603.04566))
 - **Component-Level Inverse Design of Transmon Qubits Using Neural Networks** (Seidel, Abouzahr, Chakraborty, *Shanto*, et al.) — [arXiv:2607.20795](https://arxiv.org/abs/2607.20795), 2026
 - **AgentQ: An LLM-Agentic Framework for Time-Domain Superconducting Quantum Chip Simulation** (Tang, *Shanto*, Wang, Pancotti, Nonaka, Levenson-Falk, Yao) — In Preparation, 2026
 - **A Review of Design Concerns in Superconducting Quantum Circuits** (Levenson-Falk, *Shanto*) — [Materials for Quantum Technology](https://doi.org/10.1088/2633-4356/ade10d), 2025
@@ -113,6 +122,7 @@ A complete publication list (with DOIs, authors, and PDFs) is available in [resu
 
 # Recent Honors
 
+- **Selected Member, USC Dornsife Impact and Advancement Leaders (DIAL)** (2026)
 - **Peer Recognition Award** ×3, Google Quantum AI, Mountain View (2025–2026)
 - **Peer Recognition Award** ×2, Google Quantum AI, Santa Barbara (2026)
 - **Best Presenter Award**, Dornsife Industry Days (2025)
@@ -149,7 +159,7 @@ A complete publication list (with DOIs, authors, and PDFs) is available in [resu
 
 # Topics & Keywords
 
-superconducting qubits, transmon qubits, quantum computing hardware, quantum device design, quantum design automation, EDA for quantum, SQuADDS, Qiskit Metal, Quantum-Metal, quasiparticle dynamics, Andreev bound states, nanobridge SQUID, Josephson junction, Josephson parametric amplifier, JPA, dilution refrigerator, cryogenic measurement, microwave engineering, RF board layout, PCB design, nanofabrication, electron beam lithography, cleanroom processing, PDK, foundry, tape-out, electromagnetic simulation, finite element method, Ansys HFSS, Palace solver, machine learning for physics, AI for science, inverse design, surrogate modeling, foundation models, Kolmogorov-Arnold Networks, explainable AI, agentic AI, LLM agents, MCP, multi-agent systems, RAG, HPC, scientific software, open source, USC, Levenson-Falk Lab, Google Quantum AI, NVIDIA, Fermilab, Lawrence Berkeley National Laboratory, Northeastern University
+superconducting qubits, transmon qubits, QCap, capacitance matrix, graph neural networks, physics-informed machine learning, method of moments, quantum computing hardware, quantum device design, quantum design automation, EDA for quantum, SQuADDS, Qiskit Metal, Quantum-Metal, quasiparticle dynamics, Andreev bound states, nanobridge SQUID, Josephson junction, Josephson parametric amplifier, JPA, dilution refrigerator, cryogenic measurement, microwave engineering, RF board layout, PCB design, nanofabrication, electron beam lithography, cleanroom processing, PDK, foundry, tape-out, electromagnetic simulation, finite element method, Ansys HFSS, Palace solver, machine learning for physics, AI for science, inverse design, surrogate modeling, foundation models, Kolmogorov-Arnold Networks, explainable AI, agentic AI, LLM agents, MCP, multi-agent systems, RAG, HPC, scientific software, open source, USC, Levenson-Falk Lab, Google Quantum AI, NVIDIA, Fermilab, Lawrence Berkeley National Laboratory, Northeastern University
 
 # Personal Interests
 
