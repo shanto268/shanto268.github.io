@@ -63,10 +63,10 @@
       "startDate": "2025-05-01",
       "endDate": "2025-08-22",
       "highlights": [
-        "Built a production agentic AI framework that runs superconducting quantum experiments end to end, coordinating multiple specialized agents so they can calibrate, measure, diagnose, and analyze results without a physicist in the loop.",
-        "Architected the full-stack backend underneath it, with custom APIs, scalable databases, and containerized microservices on AWS, uniting the company's ML models, simulators, and instrument control into one system agents could act on through MCP servers.",
-        "Designed the evaluation and tracing layer that made agent behavior measurable, turning open-ended autonomous runs into tracked metrics and reproducible traces engineers could debug.",
-        "Contributed modular calibration nodes and DAG-based calibration graphs to QUAlibrate, Quantum Machines' open-source framework for large-scale QPUs, cutting processor tune-up from hours to minutes."
+        "Built a production agentic AI framework that runs superconducting quantum experiments end to end: multiple specialized agents calibrate, measure, diagnose, and analyze results without a physicist in the loop.",
+        "Designed the full-stack backend underneath it (custom APIs, scalable databases, and containerized microservices on AWS), which unites the company's ML models, simulators, and instrument control into one system the agents act on through MCP servers.",
+        "Designed the evaluation and tracing layer that made agent behavior measurable: open-ended autonomous runs became tracked metrics and reproducible traces engineers could debug.",
+        "Contributed modular calibration nodes and DAG-based calibration graphs to QUAlibrate, Quantum Machines' open-source framework for large-scale QPUs; they cut processor tune-up from hours to minutes."
       ]
     },
     {
@@ -76,15 +76,16 @@
       "startDate": "2022-01-01",
       "endDate": "Present",
       "highlights": [
-        "Creator and lead developer of SQuADDS, an open-source platform that takes superconducting device design from weeks to minutes; published in Quantum (2024) and adopted by academic and industrial groups worldwide for simulation, optimization, and fabrication-ready layout generation.",
-        "Leading the development of generalizable foundation ML models for quantum device simulation and design, in collaboration with NVIDIA, Northeastern University, and Fermilab.",
-        "Co-leading development of an agent harness with Lawrence Berkeley National Laboratory that carries a device from design through simulation to tape-out readiness end to end.",
-        "Developed and validated a high-yield nanofabrication process for nanobridge-SQUID resonators with 15 nm features, scaling functional device yield from under 2% to over 90%.",
-        "Designed, fabricated, and measured nanobridge resonators, offset-charge-sensitive transmons, “trimon” devices, “dissipator” devices and custom Josephson parametric amplifiers to probe quasiparticle dynamics and improve qubit readout, along with the PCBs, packages, and cryogenic microwave chain that house and measure them.",
-        "Built a Hidden Markov Model inference pipeline that extracts real-time quasiparticle occupation from I/Q trajectory data, enabling direct dynamic modeling of quasiparticle trapping and release.",
-        "Leading Andreev bound state spectroscopy and nanoSQUID quasiparticle trap experiments to characterize and mitigate quasiparticle-induced decoherence in superconducting qubits.",
-        "Led the creation of a fully automated design-to-simulation-to-GDS pipeline for the lab, with the Ansys and Palace simulation stack on USC's HPC cluster.",
-        "Leading the open-source integration of AWS Quantum's EM solver Palace with Quantum-Metal, giving the hardware community scalable cloud-based simulation pipelines.",
+        "Creator and lead developer of SQuADDS, an open-source platform that takes superconducting device design from weeks to minutes. Published in Quantum (2024) and used by academic and industrial groups worldwide for simulation, optimization, and fabrication-ready layout generation.",
+        "Created QCap, a physics-corrected graph neural network that predicts the full capacitance matrix of any planar superconducting layout from its GDS at Ansys Q3D accuracy (0.177%; MAE 0.016 fF, RMSE 0.025 fF on 4,009 test designs). It reproduces a 9-qubit grid that took Q3D 19.9 h and 228 GB in ~12 s on a laptop, and predicts a 100-qubit, 781-conductor chip, beyond what Q3D could run on our university's compute, in 3.4 min. Released open source in SQuADDS with the models, dataset, browser demo, and hosted API on Hugging Face.",
+        "Leading the development of generalizable foundation ML models for quantum device simulation and design with NVIDIA, Northeastern University, and Fermilab.",
+        "Co-leading, with Lawrence Berkeley National Laboratory, the development of an agent harness that takes a device from design through simulation to tape-out readiness end to end.",
+        "Developed and validated a nanofabrication process for nanobridge-SQUID resonators with 15 nm features that raised functional device yield from under 2% to over 90%.",
+        "Designed, fabricated, and measured nanobridge resonators, offset-charge-sensitive transmons, “trimon” and “dissipator” devices, and custom Josephson parametric amplifiers, plus the PCBs, packages, and cryogenic microwave chain that house and measure them, to study quasiparticle dynamics and improve qubit readout.",
+        "Built a Hidden Markov Model inference pipeline that extracts real-time quasiparticle occupation from I/Q trajectory data, so quasiparticle trapping and release can be modeled directly as they happen.",
+        "Leading Andreev bound state spectroscopy and nanoSQUID quasiparticle-trap experiments to characterize and reduce quasiparticle-induced decoherence in superconducting qubits.",
+        "Led the build of the lab's fully automated design-to-simulation-to-GDS pipeline, running the Ansys and Palace simulation stack on USC's HPC cluster.",
+        "Leading the open-source integration of AWS Quantum's EM solver Palace with Quantum-Metal, which gives the hardware community scalable cloud-based simulation pipelines.",
         "Mentored five graduate and six undergraduate researchers through device design, fabrication, and measurement projects."
       ]
     },
@@ -1003,8 +1004,8 @@
     },
     {
       "name": "Universal Hamiltonian Control in a Planar Trimon Circuit",
-      "publisher": "Physical Review Applied (accepted); arXiv:2603.04566",
-      "releaseDate": "2026-03-04",
+      "publisher": "Physical Review Applied",
+      "releaseDate": "2026-10-13",
       "authors": [
         "Vivek Maurya",
         "Daria Kowsari",
@@ -1014,10 +1015,11 @@
         "Daniel A. Lidar",
         "Eli M. Levenson-Falk"
       ],
-      "summary": "Demonstration of universal Hamiltonian control in a planar trimon circuit; accepted for publication in Physical Review Applied (2026).",
-      "url": "https://arxiv.org/abs/2603.04566",
+      "summary": "Demonstration of universal Hamiltonian control in a planar trimon circuit; published in Physical Review Applied (2026).",
+      "url": "https://doi.org/10.1103/hxdq-dnz8",
       "pdf": "https://arxiv.org/pdf/2603.04566",
-      "arxiv": "2603.04566"
+      "arxiv": "2603.04566",
+      "doi": "10.1103/hxdq-dnz8"
     },
     {
       "name": "A Review of Design Concerns in Superconducting Quantum Circuits",
