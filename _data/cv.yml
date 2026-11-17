@@ -204,11 +204,9 @@
       items:
         - Selected Member, USC Dornsife Impact and Advancement Leaders (DIAL)
         - Peer Recognition Award (x2), Google Quantum AI
-    - year: 2025 - 2026
-      items:
-        - Peer Recognition Award (x3), Google Quantum AI
     - year: 2025
       items:
+        - Peer Recognition Award, Google Quantum AI
         - Best Presenter Award, Dornsife Industry Days
     - year: 2022 - 2025
       items:
@@ -245,7 +243,7 @@
           institution: "International"
         - title: "Maintainer, quantum-metal (formerly qiskit-metal)"
           institution: "Open Source"
-        - title: "Board Member, Quantum Computing Student Association (QCSA)"
+        - title: "Board Member, Quantum Computing Science Association (QCSA)"
           institution: "Los Angeles, CA"
         - title: "Lead Organizer, Summer of Quantum in LA"
           institution: "Los Angeles, CA"

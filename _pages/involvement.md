@@ -61,7 +61,7 @@ Interested in getting involved or supporting us? Find out more and sign up to vo
 
 ---
 
-### Quantum Computing Student Association (QCSA)
+### Quantum Computing Science Association (QCSA)
 **Board Member**  
 _Los Angeles, CA_  
 2025-Present  
