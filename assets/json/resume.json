@@ -3,7 +3,7 @@
     "name": "Sadman Ahmed Shanto",
     "email": "shanto@usc.edu",
     "url": "https://sadmanahmedshanto.com",
-    "summary": "Experimental physicist building superconducting quantum hardware and design automation tools. Physics PhD candidate at USC (Levenson-Falk Lab), creator of SQuADDS, and former Research Intern at Google Quantum AI and Quantum Elements Inc.",
+    "summary": "Experimental physicist building superconducting quantum hardware and design automation tools. Physics PhD candidate at USC (Levenson-Falk Lab), creator of SQuADDS and QCap, and former Research Intern at Google Quantum AI and Quantum Elements Inc.",
     "location": {
       "city": "Los Angeles",
       "countryCode": "US",
@@ -594,6 +594,12 @@
   ],
   "awards": [
     {
+      "title": "Selected Member, USC Dornsife Impact and Advancement Leaders (DIAL)",
+      "date": "2026",
+      "awarder": "USC Dornsife Office of Advancement",
+      "location": "Los Angeles, CA, USA"
+    },
+    {
       "title": "Peer Recognition Award (x3)",
       "date": "2025 - 2026",
       "awarder": "Google Quantum AI",
@@ -950,6 +956,18 @@
   ],
   "publications": [
     {
+      "name": "QCap: a physics-corrected graph neural network for the capacitance matrix of any planar superconducting device layout",
+      "publisher": "Preprint (2026)",
+      "releaseDate": "2026-11-16",
+      "authors": [
+        "Sadman Ahmed Shanto",
+        "Saikat Das",
+        "Eli M. Levenson-Falk"
+      ],
+      "summary": "QCap: a physics-corrected graph neural network that predicts the full Maxwell capacitance matrix of any planar superconducting layout from its GDS file; released open source in SQuADDS with its dataset, models, browser demo and hosted API. Preprint coming soon.",
+      "url": "https://lfl-lab.github.io/SQuADDS/qcap/"
+    },
+    {
       "name": "Component-Level Inverse Design of Transmon Qubits Using Neural Networks",
       "publisher": "arXiv:2607.20795",
       "releaseDate": "2026-07-22",
@@ -991,7 +1009,7 @@
     },
     {
       "name": "Universal Hamiltonian Control in a Planar Trimon Circuit",
-      "publisher": "arXiv:2603.04566; Under Review at PRX Quantum",
+      "publisher": "Physical Review Applied (accepted); arXiv:2603.04566",
       "releaseDate": "2026-03-04",
       "authors": [
         "Vivek Maurya",
@@ -1002,7 +1020,7 @@
         "Daniel A. Lidar",
         "Eli M. Levenson-Falk"
       ],
-      "summary": "Demonstration of universal Hamiltonian control in a planar trimon circuit; preprint on arXiv and under review at PRX Quantum (2026).",
+      "summary": "Demonstration of universal Hamiltonian control in a planar trimon circuit; accepted for publication in Physical Review Applied (2026).",
       "url": "https://arxiv.org/abs/2603.04566",
       "pdf": "https://arxiv.org/pdf/2603.04566",
       "arxiv": "2603.04566"

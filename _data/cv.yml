@@ -153,6 +153,9 @@
   contents:
     - year: 2026
       items:
+        - title: "QCap: a physics-corrected graph neural network for the capacitance matrix of any planar superconducting device layout"
+          authors: "S.A. Shanto, S. Das, E.M. Levenson-Falk"
+          journal: "Preprint (2026)"
         - title: "Component-Level Inverse Design of Transmon Qubits Using Neural Networks"
           authors: "O. Seidel, F. Abouzahr, A. Chakraborty, S.A. Shanto, et al."
           journal: "arXiv:2607.20795"
@@ -161,7 +164,7 @@
           journal: "In Preparation"
         - title: "Universal Hamiltonian Control in a Planar Trimon Circuit"
           authors: "V. Maurya, D. Kowsari, K. Saurav, S.A. Shanto, R. Vijay, D.A. Lidar, E.M. Levenson-Falk"
-          journal: "Under Review at PRX Quantum"
+          journal: "Physical Review Applied (accepted)"
     - year: 2025
       items:
         - title: "A Review of Design Concerns in Superconducting Quantum Circuits"
@@ -199,6 +202,7 @@
   contents:
     - year: 2026
       items:
+        - Selected Member, USC Dornsife Impact and Advancement Leaders (DIAL)
         - Peer Recognition Award (x2), Google Quantum AI
     - year: 2025 - 2026
       items:
@@ -274,6 +278,9 @@
     - Physical Review A — American Physical Society
     - Physical Review B — American Physical Society
     - Physical Review Applied — American Physical Society
+    - Physical Review Letters — American Physical Society
+    - PRX Intelligence — American Physical Society
+    - PLOS One — Public Library of Science
 
 - title: Skills
   type: nested_list

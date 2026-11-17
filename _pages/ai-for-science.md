@@ -20,6 +20,8 @@ I build machine-learning and agentic systems around scientific instruments, phys
 
 I develop surrogate and inverse-design models that connect superconducting-circuit geometry to Hamiltonian parameters. This work builds on [SQuADDS]({% link _projects/1a_project.md %}), an experimentally validated, open-source database and simulation workflow for superconducting quantum devices.
 
+The latest result is [QCap]({% link _projects/1b_project.md %}): a physics-corrected graph neural network that predicts the full Maxwell capacitance matrix of any planar superconducting layout from its GDS file in about a second. A fast thin-film physics solve gives a first estimate and the network, trained on about 40,000 Ansys Q3D simulations, learns the correction; on a component family it never saw, its median error is 1.05 % (MAE 0.132 fF, RMSE 0.188 fF).
+
 The research combines physics-aware feature engineering, neural networks, interpretable models, uncertainty-aware validation, and electromagnetic simulation. The goal is to shorten the path from a target device specification to a fabrication-ready candidate while keeping the result grounded in simulation and measurement.
 
 ### Autonomous scientific workflows
@@ -39,6 +41,7 @@ My scientific-computing work spans Python and C++, high-performance computing, c
 | Area | Public artifact | What it demonstrates |
 | --- | --- | --- |
 | Quantum-device design automation | [SQuADDS paper](https://doi.org/10.22331/q-2024-09-09-1465), [source code](https://github.com/LFL-Lab/SQuADDS), and [documentation](https://lfl-lab.github.io/SQuADDS/) | Experimentally validated simulation workflows, programmatic device generation, and open-source technical ownership |
+| Physics-corrected ML | [QCap paper docsite](https://lfl-lab.github.io/SQuADDS/qcap/), [models](https://huggingface.co/SQuADDS/QCap), [dataset](https://huggingface.co/datasets/SQuADDS/SQuADDS_PlanarCapacitance) and [browser demo](https://huggingface.co/spaces/SQuADDS/planar-capacitance) | A released, physics-grounded model that generalizes to any planar layout, with open data and reproducible accuracy |
 | Scientific datasets | [SQuADDS dataset](https://huggingface.co/datasets/SQuADDS/SQuADDS_DB) | Reusable device-design and simulation data for computational research |
 | Superconducting-circuit engineering | [Design review](https://doi.org/10.1088/2633-4356/ade10d) and [publication record]({% link _pages/publications.md %}) | Breadth across design, simulation, measurement, and device physics |
 | Scientific software | [GitHub profile](https://github.com/shanto268) and [project portfolio]({% link _pages/projects.md %}) | Implemented research tools across quantum hardware, detector physics, simulation, and data analysis |

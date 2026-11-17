@@ -32,7 +32,7 @@
     "AI for Science Researcher",
     "Research Engineer"
   ],
-  "description": "Sadman Ahmed Shanto is a USC Physics PhD candidate, experimental physicist, and research engineer whose work spans quantum processor R&D, superconducting-device design and fabrication, cryogenic measurement, quasiparticle physics, scientific machine learning, autonomous experimentation, and research software. His experience includes the Levenson-Falk Lab, Google Quantum AI, Quantum Elements Inc., particle-detector instrumentation, and computational transportation research. He is also the creator and lead developer of SQuADDS.",
+  "description": "Sadman Ahmed Shanto is a USC Physics PhD candidate, experimental physicist, and research engineer whose work spans quantum processor R&D, superconducting-device design and fabrication, cryogenic measurement, quasiparticle physics, scientific machine learning, autonomous experimentation, and research software. His experience includes the Levenson-Falk Lab, Google Quantum AI, Quantum Elements Inc., particle-detector instrumentation, and computational transportation research. He is also the creator and lead developer of SQuADDS and of QCap, a physics-corrected graph neural network for the capacitance matrix of any planar superconducting layout.",
   "homeLocation": {
     "@type": "Place",
     "name": "Los Angeles, California, United States"
@@ -281,6 +281,19 @@
       "name": "SQuADDS",
       "url": "https://github.com/LFL-Lab/SQuADDS",
       "description": "Created and leads an open-source validated database and simulation workflow for superconducting quantum-device design, optimization, machine-learning research, and programmatic layout generation."
+    },
+    {
+      "@type": "SoftwareSourceCode",
+      "@id": "https://lfl-lab.github.io/SQuADDS/qcap/#software",
+      "name": "QCap",
+      "description": "Created QCap, a physics-corrected graph neural network that predicts the full Maxwell capacitance matrix of any planar superconducting layout from its GDS file in about a second; released open source in SQuADDS with its dataset, models, browser demo and hosted API.",
+      "url": "https://lfl-lab.github.io/SQuADDS/qcap/",
+      "codeRepository": "https://github.com/LFL-Lab/SQuADDS",
+      "programmingLanguage": "Python",
+      "isAccessibleForFree": true,
+      "creator": {
+        "@id": "https://sadmanahmedshanto.com/#person"
+      }
     },
     {
       "@type": "CreativeWork",

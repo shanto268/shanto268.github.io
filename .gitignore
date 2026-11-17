@@ -13,3 +13,8 @@ vendor
 .idea
 .vscode/settings.json
 temp/
+assets/pdf/publications/*.pdf
+output/markdown/usc_involvement_verification_draft.md
+output/pdf/publication_first_pages_Shanto.pdf
+output/pdf/publication_acknowledgements_and_funding.pdf
+assets/pdf/publications/README.md
