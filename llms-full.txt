@@ -111,7 +111,7 @@ A complete publication list (with DOIs, authors, and PDFs) is available in [resu
 - **Board Member** — Quantum Device Consortium (QDC), 2025-Present
 - **Maintainer** — `quantum-metal` (formerly `qiskit-metal`), 2025-Present
 - **Workshop Organizer** — Quantum Device Design Workshop (QDW), Los Angeles, 2025-2026
-- **Board Member** — Quantum Computing Student Association (QCSA), USC, 2025-Present
+- **Board Member** — Quantum Computing Science Association (QCSA), USC, 2025-Present
 - **Lead Organizer** — Summer of Quantum in LA, 2025-Present
 - **Creator & Maintainer** — SQuADDS, 2024-Present
 - **President** — Graduate Association of Students in Physics (GASP), USC, 2022-2025
@@ -123,8 +123,8 @@ A complete publication list (with DOIs, authors, and PDFs) is available in [resu
 # Recent Honors
 
 - **Selected Member, USC Dornsife Impact and Advancement Leaders (DIAL)** (2026)
-- **Peer Recognition Award** ×3, Google Quantum AI, Mountain View (2025–2026)
 - **Peer Recognition Award** ×2, Google Quantum AI, Santa Barbara (2026)
+- **Peer Recognition Award**, Google Quantum AI, Mountain View (2025)
 - **Best Presenter Award**, Dornsife Industry Days (2025)
 - **USC Dornsife College Graduate Fellowship** (2021–2026)
 - **MA in Physics**, USC (May 2026)
