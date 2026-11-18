@@ -952,15 +952,17 @@
   "publications": [
     {
       "name": "QCap: a physics-corrected graph neural network for the capacitance matrix of any planar superconducting device layout",
-      "publisher": "Preprint (2026)",
-      "releaseDate": "2026-11-16",
+      "publisher": "arXiv:2611.22057",
+      "releaseDate": "2026-11-17",
       "authors": [
         "Sadman Ahmed Shanto",
         "Saikat Das",
         "Eli M. Levenson-Falk"
       ],
-      "summary": "QCap: a physics-corrected graph neural network that predicts the full Maxwell capacitance matrix of any planar superconducting layout from its GDS file; released open source in SQuADDS with its dataset, models, browser demo and hosted API. Preprint coming soon.",
-      "url": "https://lfl-lab.github.io/SQuADDS/qcap/"
+      "summary": "QCap: a physics-corrected graph neural network that predicts the full Maxwell capacitance matrix of any planar superconducting layout from its GDS file; released open source in SQuADDS with its dataset, models, browser demo and hosted API; preprint on arXiv (2026).",
+      "url": "https://arxiv.org/abs/2611.22057",
+      "pdf": "https://arxiv.org/pdf/2611.22057",
+      "arxiv": "2611.22057"
     },
     {
       "name": "Component-Level Inverse Design of Transmon Qubits Using Neural Networks",

@@ -31,8 +31,9 @@ Education: PhD in Physics, University of Southern California (expected January 2
 
 - [Publications](https://sadmanahmedshanto.com/publications/): complete, current publication list with DOIs
 - [SQuADDS](https://sadmanahmedshanto.com/projects/1a_project/): open-source validated design database and simulation workflow for superconducting qubits ([paper](https://doi.org/10.22331/q-2024-09-09-1465), [code](https://github.com/LFL-Lab/SQuADDS), [dataset](https://huggingface.co/datasets/SQuADDS/SQuADDS_DB))
-- [QCap](https://sadmanahmedshanto.com/projects/1b_project/): physics-corrected graph neural network that predicts the full capacitance matrix of any planar superconducting layout from its GDS file; preprint coming soon ([docsite](https://lfl-lab.github.io/SQuADDS/qcap/), [models](https://huggingface.co/SQuADDS/QCap))
+- [QCap](https://sadmanahmedshanto.com/projects/1b_project/): physics-corrected graph neural network that predicts the full capacitance matrix of any planar superconducting layout from its GDS file; preprint [arXiv:2611.22057](https://arxiv.org/abs/2611.22057) ([docsite](https://lfl-lab.github.io/SQuADDS/qcap/), [models](https://huggingface.co/SQuADDS/QCap))
 - [AI for science](https://sadmanahmedshanto.com/research/ai-for-science/): scientific ML, inverse design and autonomous experimentation, including the Quantum Elements agentic calibration work
+- [QCap preprint](https://arxiv.org/abs/2611.22057): physics-corrected graph neural network for the capacitance matrix of any planar superconducting device layout
 - [Inverse-design preprint](https://arxiv.org/abs/2607.20795): component-level inverse design of transmon qubits using neural networks
 - [Quasiparticle experiments](https://sadmanahmedshanto.com/projects/1_project/): 15 nm nanobridge-SQUID process (functional-device yield from under 2% to over 90%), hidden-Markov-model inference of quasiparticle occupation, Andreev bound state spectroscopy
 - [Projects](https://sadmanahmedshanto.com/projects/): all research and engineering projects

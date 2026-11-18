@@ -18,7 +18,7 @@ QCap predicts the full Maxwell capacitance matrix of any planar superconducting 
 
 The model is physics first. A fast thin-film method-of-moments solve gives a first estimate of how every pair of conductors couples, and a graph neural network, trained on about 40,000 Ansys Q3D simulations, learns the correction. On 4,009 test designs it agrees with Q3D to 0.177 % (MAE 0.016 fF, RMSE 0.025 fF), and on component families and classes it was never trained on it stays below 1 % (MAE 0.0036–6.6 fF, RMSE 0.06–6.6 fF).
 
-QCap is open source in [SQuADDS](https://github.com/LFL-Lab/SQuADDS) (`pip install "squadds[ml]"`), with the dataset, the models, a browser demo and a hosted API. The preprint is coming very soon.
+QCap is open source in [SQuADDS](https://github.com/LFL-Lab/SQuADDS) (`pip install "squadds[ml]"`), with the dataset, the models, a browser demo and a hosted API. Read the preprint on [arXiv:2611.22057](https://arxiv.org/abs/2611.22057) and the [paper docsite](https://lfl-lab.github.io/SQuADDS/qcap/), with explainer videos and tutorials.
 
 <div class="d-flex justify-content-center my-3">
     <div class="col-sm mt-3" style="max-width: 700px;">

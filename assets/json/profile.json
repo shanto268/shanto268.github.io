@@ -406,6 +406,35 @@
     },
     {
       "@type": "ScholarlyArticle",
+      "@id": "https://arxiv.org/abs/2611.22057",
+      "name": "QCap: a physics-corrected graph neural network for the capacitance matrix of any planar superconducting device layout",
+      "datePublished": "2026-11-17",
+      "url": "https://arxiv.org/abs/2611.22057",
+      "identifier": [
+        "https://arxiv.org/abs/2611.22057"
+      ],
+      "author": [
+        {
+          "@id": "https://sadmanahmedshanto.com/#person"
+        },
+        {
+          "@type": "Person",
+          "name": "Saikat Das"
+        },
+        {
+          "@type": "Person",
+          "name": "Eli M. Levenson-Falk"
+        }
+      ],
+      "about": [
+        "Superconducting circuit design",
+        "Capacitance matrix",
+        "Graph neural networks",
+        "AI for science"
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
       "@id": "https://doi.org/10.1103/hxdq-dnz8",
       "name": "Universal Hamiltonian control in a planar trimon circuit",
       "datePublished": "2026-10-13",

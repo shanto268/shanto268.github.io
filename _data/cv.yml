@@ -156,7 +156,7 @@
       items:
         - title: "QCap: a physics-corrected graph neural network for the capacitance matrix of any planar superconducting device layout"
           authors: "S.A. Shanto, S. Das, E.M. Levenson-Falk"
-          journal: "Preprint (2026)"
+          journal: "arXiv:2611.22057"
         - title: "Component-Level Inverse Design of Transmon Qubits Using Neural Networks"
           authors: "O. Seidel, F. Abouzahr, A. Chakraborty, S.A. Shanto, et al."
           journal: "arXiv:2607.20795"

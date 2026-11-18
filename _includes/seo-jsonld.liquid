@@ -165,7 +165,8 @@
       "isAccessibleForFree": true,
       "isPartOf": { "@id": "https://github.com/LFL-Lab/SQuADDS#software" },
       "creator": { "@id": {{ profile_url | append: '#person' | jsonify }} },
-      "sameAs": ["https://huggingface.co/SQuADDS/QCap", "https://huggingface.co/spaces/SQuADDS/planar-capacitance"],
+      "citation": { "@type": "ScholarlyArticle", "@id": "https://arxiv.org/abs/2611.22057", "name": "QCap: a physics-corrected graph neural network for the capacitance matrix of any planar superconducting device layout", "url": "https://arxiv.org/abs/2611.22057" },
+      "sameAs": ["https://huggingface.co/SQuADDS/QCap", "https://huggingface.co/spaces/SQuADDS/planar-capacitance", "https://huggingface.co/papers/2611.22057"],
       "keywords": "QCap, capacitance matrix, graph neural network, physics-informed machine learning, superconducting qubits, GDS layout, quantum design automation"
     }{% elsif page.url == '/publications/' %},
     {
