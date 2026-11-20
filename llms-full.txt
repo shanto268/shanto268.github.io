@@ -94,7 +94,7 @@ Created QCap, a physics-corrected graph neural network that predicts the full Ma
 
 ## Selected Publications
 
-- **QCap: a physics-corrected graph neural network for the capacitance matrix of any planar superconducting device layout** (*Shanto*, Das, Levenson-Falk) — [arXiv:2611.22057](https://arxiv.org/abs/2611.22057), 2026 ([paper docsite](https://lfl-lab.github.io/SQuADDS/qcap/))
+- **QCap: a physics-corrected graph neural network for the capacitance matrix of any planar superconducting device layout** (*Shanto*, Das, Levenson-Falk) — [arXiv:2611.22057](https://arxiv.org/abs/2611.22057), 2026
 - **Universal Hamiltonian Control in a Planar Trimon Circuit** (Maurya, Kowsari, Saurav, *Shanto*, Vijay, Lidar, Levenson-Falk) — [Physical Review Applied](https://doi.org/10.1103/hxdq-dnz8), 2026
 - **Component-Level Inverse Design of Transmon Qubits Using Neural Networks** (Seidel, Abouzahr, Chakraborty, *Shanto*, et al.) — [arXiv:2607.20795](https://arxiv.org/abs/2607.20795), 2026
 - **AgentQ: An LLM-Agentic Framework for Time-Domain Superconducting Quantum Chip Simulation** (Tang, *Shanto*, Wang, Pancotti, Nonaka, Levenson-Falk, Yao) — In Preparation, 2026
