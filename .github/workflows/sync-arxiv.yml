@@ -62,7 +62,9 @@ jobs:
         run: bash bin/check-seo
 
       - name: Create or update the review PR
+        id: create_pr
         if: steps.changes.outputs.changed == 'true'
+        continue-on-error: true
         uses: peter-evans/create-pull-request@v7
         with:
           token: ${{ github.token }}
@@ -93,3 +95,9 @@ jobs:
 
             Please review title and author matching, journal status, DOI, and venue
             metadata before merging. This workflow never auto-merges.
+
+      - name: Report PR creation permission limits
+        if: steps.changes.outputs.changed == 'true' && steps.create_pr.outcome == 'failure'
+        run: |
+          echo "Publication changes were pushed to automation/arxiv-publications, but this repository does not allow GitHub Actions to create pull requests with the default token." >> "$GITHUB_STEP_SUMMARY"
+          echo "Enable 'Allow GitHub Actions to create and approve pull requests' in repository Actions settings to restore automatic PR creation." >> "$GITHUB_STEP_SUMMARY"
