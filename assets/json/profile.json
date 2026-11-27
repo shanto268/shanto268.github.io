@@ -7,7 +7,7 @@
     "@id": "https://sadmanahmedshanto.com/#webpage",
     "url": "https://sadmanahmedshanto.com/",
     "name": "Sadman Ahmed Shanto — experimental physicist and research engineer",
-    "dateModified": "2026-11-17"
+    "dateModified": "2026-11-27"
   },
   "name": "Sadman Ahmed Shanto",
   "givenName": "Sadman",
@@ -448,7 +448,7 @@
       "@type": "ScholarlyArticle",
       "@id": "https://doi.org/10.1103/hxdq-dnz8",
       "name": "Universal Hamiltonian control in a planar trimon circuit",
-      "datePublished": "2026-10-13",
+      "datePublished": "2026-11-17",
       "url": "https://doi.org/10.1103/hxdq-dnz8",
       "identifier": [
         "https://doi.org/10.1103/hxdq-dnz8",
@@ -553,7 +553,7 @@
         },
         {
           "@type": "Person",
-          "name": "Eli M. Levenson-Falk"
+          "name": "Eli M Levenson-Falk"
         },
         {
           "@type": "Person",
@@ -641,7 +641,7 @@
         },
         {
           "@type": "Person",
-          "name": "Eli M. Levenson-Falk"
+          "name": "Eli Levenson-Falk"
         }
       ],
       "about": [
